@@ -1,7 +1,7 @@
 # -Software-Development-Course-Notes-on-Learning-Software-Development
 This repository contains my notes on the LinkedIn Learning pathway called 'Become a Software Developer'. This is a selection of 11 video courses on various aspects of software development - intended to be taken together to provide a holistic view of the field.  I wrote these notes with the intent of publishing them as a reference resource, with each txt file corresponding to a software development course in the learning pathway. 
 
-The CSS course notes in this repository were written in conjunction with completing its project coursework, which was completed in a separate repository (CSS-Feynman-Portfolio-Project). 
+The CSS course notes in this repository were written in conjunction with completing its project coursework, which has been published in a separate repository (CSS-Feynman-Portfolio-Project). 
 
 This is a list of the various files in this repository and a description of the associated course and instructor name: 
 * *Course Title: Programming Foundations: Web Security*
