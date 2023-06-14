@@ -1,0 +1,337 @@
+Course Title: Learning Python
+
+Description: Python—the popular and highly-readable object-oriented language—is both powerful and relatively easy to learn. Whether you're new to programming or an experienced developer, this course can help you get started with Python. Joe Marini provides an overview of the installation process, basic Python syntax, and an example of how to construct and run a simple Python program. Learn to work with dates and times, read and write files, and retrieve and parse HTML, JSON, and XML data from the web.
+
+
+***********************************************
+Chapter: Introduction
+***********************************************
+
+
+-----------------------------------------------
+Video: Learning Python
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:40            -> Python is one of the most commonly used coding languages -> programs, datatypes, modules  
+
+
+-----------------------------------------------
+Video: What you should know
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:05            -> concepts -> variables, functions, statements, terminals, editors, IDEs (integrated development environment, IDE) 
+
+
+-----------------------------------------------
+Video: Exercise files
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:16            -> course exercise files are on a git repo -> there are two files per video (one which is the code from the end of the video and one which is code from the beginning of the video) 
+
+
+***********************************************
+Chapter: 1. Getting Started
+***********************************************
+
+
+-----------------------------------------------
+Video: Choosing an editor or IDE
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:46            -> VS code is an IDE example (for editing code) -> in VS code open the course exercise videos 
+
+
+-----------------------------------------------
+Video: How to run the Python examples
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:17            -> using Python in the terminal -> you type Python3. He's cd'd into the exercise files in the terminal, then to open a .py file he's types python then the relative path to the file 
+
+
+***********************************************
+Chapter: 2. Python Basics
+***********************************************
+
+
+-----------------------------------------------
+Video: Building Hello World
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:20            -> interpreting Python in the terminal -> python3 in the terminal starts a Python environment -> >>> in the terminal is how you know it's reading Python -> it's an interpretive language -> e.g print("Hello world!"). In another example, he's set name=input("what is your name?") -> then it asks for the input, and if you type name it calls the value of name which you set. exit() <- this after the interpreter makes you go back into the command line 
+
+0:07:17            -> in VS code, he opens a blank .py file. Print("..."), adds an input function and runs it in the terminal in VS code. He's gone back and nested the previous code under a function -> then if __name__ == "__main__": main() <- execute the function part of the main program. This means when the code is imported into the program -> then it automatically runs 
+
+
+-----------------------------------------------
+Video: Variables and expressions
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:05:06            -> how Python works with datatypes -> there are x5 types, integers and floating points, booleans, sequences (lists and tuples, immutable), dictionaries (map keys to specific values). As an example, he's declared an integer as a string -> you can set a float equal to a string if you redefine it -> print(array_name[index-1]) <- zero indexed. Slice notation can be used to access a certain section of the sequence -> e.g array_name[1:5], start:stop:step. He's done an example with an array which contains different datatypes and printed the array. This is slice notation -> it can also be used to reverse the order of the array via -> [::-1], it's stepping through the entire thing backwards, which lists it backwards 
+
+0:08:06            -> dictionaries -> you give them the key of the item you want, and they return the value associated with the key -> they're like datasets in seaborn {one: "one", two: "two"}, then to call a value it's mydict["one"] <- one is the key. When you try and combine two different datatypes, e.g print("string" + 123) <- this returns an error because Python is a strongly typed language -> you can't combine a strong and a number. You can do print("string type" + str(123)) 
+
+0:09:22            -> global vs local variables -> he's defining a function called someFunction -> then called the function -> if you call a variable which is defined in a function, but you call it outside of the function, then the value of the variable which it returns is the one which is defined outside of the local variable, it's the one which exists in the global name space. Then he's del mystr -> it's deleted the definition of a variable which was previously declared -> this deletes ('undefines') the variable 
+
+
+-----------------------------------------------
+Video: Python functions
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:31            -> functions -> to modulate the code and make it reusable (reduce the amount of code which we have). Def function_name(arguments): function_body -> then have it print something. print(function) -> you can only call a function which has () brackets after it's name. You can call the function, or print the function -> if there are no () brackets after it then it returns none when it's called 
+
+0:10:42            -> he's defined a second function which takes two arguments and prints them out, then a third function which cubes the input and returns it -> then he's called the functions. It's returned the values. He's defined another function which a default value of x (one of the arguments). In that function, there is a for loop, for i in range(x):  <- so he's printing one number times another. You can reverse the order in which the arguments are listed when calling a function. Then he defines a new function -> multi_add(*args) -> the * means you can pass in a variable number of arguments -> then in the definition of the arguments he's looping over them 
+
+0:11:29            -> in that for loop, it was for x in args -> you can combine a variable argument list -> the argument list has to be a variable parameter -> *args has to be last in the definition of the function  
+
+
+-----------------------------------------------
+Video: Conditional structures
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:04:55            -> making decisions using conditional logic -> ifs -> if ... < ... :  in the definition of a function -> it will return errors if the test condition is false, which is why there is an else statement and not just an if statement. Then he runs the function -> he's done an if x<y, an elif x==y and an else x > y -> so if, elif, and else -> do this, then this then this if it's not true -> conditional statements -> if and else statements on one line. E.g: result = "x is less than y is x<y else "x is greater than or equal to y" -> then prints the result and runs the function -> you can combine both things on one line of code 
+
+0:08:16            -> in Python 3.10 and greater (it's a newer feature) -> match case statements -> instead of writing if, elif and else -> a more concise version is match value: // case "one": result = .... -> list out all of the case scenarios -> | is a pipe which means or -> so case "three" | "four" <- this is three or four -> case _: <- means in the case that none of the others are not dealt with (none of the other case scenarios are true, do this one) 
+
+
+-----------------------------------------------
+Video: Loops
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:06:07            -> loops -> there is an array we want to loop through -> for i in array_name: -> another example is the while loop: while(x<5): print(x) x=x+1 -> x belongs to the scope of the loop. Scopes. Another example is for x in range(5,10): -> instead of index variables, we have iterators -> we're iterating through a set of numbers, for d in days <- where days is an array we're iterating through and then we're printing out the value of the thing in the array. The break statement -> breaks the execution of a loop -> if x == 7: break <- if this condition happens then break -> the loop stops there, break the loop 
+
+0:09:28            -> continue statements -> if x % 2 ==0: continue <- if x is even then carry on with the iteration -> and if not skip it. So we have, continue and break -> there is no loop counter -> for i,d in enumerate(days): print(i,d) <- the enumerate function -> it's for .... in enumerate(what_you_want_to_iterate_through): -> then print out both of them 
+
+
+-----------------------------------------------
+Video: Classes
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:23            -> object oriented programming language -> create and use your own classes -> these can be used as modules (you can define your own modules). To define a class, class class_name(): <- this begins the class scope -> then def __init__(self): <- when the class gets constructed and initialised, it's a function in the definition for the class -> def __init__(self, bodystyle): -> you can call it self, or x or etc -> self is convention. Then in the init function it's self.bodystyle = bodystyle. He's defined another class called class car(vehicle): -> def __init__(self, enginetype): <- there is a class of objects called cars, and it's a type of vehicle, then it's initialised as -> we're filling in all of the different properties of the car (the engine type in this case) 
+
+0:07:24            -> the super class -> super().__init__("Car") <- to initialise the parent class. Then embedded in it, he's creating the different parts of the module -> self.wheels, self.doors = 4 etc. Then define another class -> class motorbike(vehicle) // def __init__(self, enginetype, hassidecar): -> super().__init__("Motorbike) <- it's initialised -> then if it has a sidecar, the wheels property takes this value etc -> fills in all of the case scenarios depending on what the objects could look like. All of those classes are under the type vehicle. Then he's defining different objects (instances of the class), car1 = Car("gas") -> and print(mc1.wheels) etc -> you can then access parts of the vehicles based off of the . notation 
+
+0:09:31            -> so, there is a base class (vehicle), two subclasses (the different types of vehicles, car etc) -> these inherent from vehicle -> then the super function super() -> then each of those classes have their own properties -> then in the base class -> we're adding another function called drive -> self.mode -> to define things in the module notation it's self.name_of_property -> each of the vehicles has a driving methods which overrides the default -> there is a superclass of vehicle -> so for car which is a class under the superclass -> to replace a default for it it's super().drive(speed) e.g 
+
+0:09:45            -> then he's calling the functions on the object -> there is a gas car, a gas electric etc -> you can print the different types which you define -> you can make it more complicated (brands of car, break, park, reverse etc) 
+
+
+-----------------------------------------------
+Video: Importing and using modules
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:05            -> importing modules -> library modules of code which you can reuse -> import math -> math.sqrt(4)=2 -> module_name.operation_you_want(argument) -> in VS code the different options for the operations are suggested. Another one is math.pi -> you can use modules to process xml and json / internet information and do dates and times  
+
+
+-----------------------------------------------
+Video: Using exceptions
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:04:17            -> exceptions -> exception handling -> bypassing errors. He's written code he knew would make an error message (1/0) -> try: // 1/0 // except: print("return this text when the message doesn't work") -> you're setting an error message for it to return. try: .... // answer = intput(What should I divide 10 by?") -> then num(int(answer) <- make the number the user enters into an integer -> except: ZeroDivisionError as e: print("..." -> so try this.... and except name_of_error as ...: -> then print out this code. A finally section -> section which executes code regardless of wheather an error occurred or not 
+
+
+-----------------------------------------------
+Video: Challenge: Palindromes
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:30            -> creating a program which detects a palindrome -> a function which tells if the word is the same as the word backwards -> it starts by asking for the word using the input() parameter -> the same thing works with numbers  -> and the function quite when the user types "exit" -> isalnum -> to tell if all of the values in the string are alphanumeric 
+
+
+-----------------------------------------------
+Video: Solution: Palindromes
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:00            -> in VS code -> more technical solution -> there are different answers to the same problem. While loop -> while (run): then [::-1] to list out the same thing in reverse (this is called a slicing method) -> x.isalnum 
+
+
+***********************************************
+Chapter: 3. Working with Files
+***********************************************
+
+
+-----------------------------------------------
+Video: Reading and writing files
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:36            -> using imported modules -> you can open files in Python. In an example file -> variable_name=open("file_name", "w+") <- write access and create the file if it doesn't already exist. for i in range(10): -> myfile.write("Content_of_file"), then myfile.close() -> so we have a function defined which opens a file and creates it if it's not defined already, then makes lines of text in a loop, then closes the file -> then when it's ran the file is created. You can add content to an existing file, instead of w+ -> you a+ -> which appends data to the file 
+
+0:06:20            -> then to read a file in Python, open("name_of_file", "r") <- read access, then check the file mode to see if it's been done correctly -> if myfile.mode == 'r': <- i.e if it's being read -> contents = myfile.read() print(contents) -> you set a variable equal to read the file, then you print the value of that variable. fl <- fl is file line, fl = myfile.readlines() -> for x in fl: print(x) -> it reads the file and iterates through each of the lines, then prints them out 
+
+
+-----------------------------------------------
+Video: Working with OS path utilities
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:05:22            -> finding metadata about a file, e.g the type and path in Python -> import os, from os import path, import datetime, from datetime import data, time, timedelta, import time -> print(os.name) -> print("Item exists:", str(path.exists("textfile.txt")). There is a path.isfile, and path.isdir attribute -> which asks is this thing a file, and is this thing a directory. path.realpath("...") <- this is the path of the file called .... in the computer. Then there is a path.split .. -> it's printing the path of the file -> one returned is the full file directory, and one is the directory in a tuple 
+
+0:09:28            -> there is another option for times -> time.ctime(path.gettime("file_name.txt")) -> print(datetiem.datetimefromtimestamp(path.getmtime("name_of_file")) -> this prints out the file time. Then there is date maths -> calculating how long ago the file was modified (current time minus a time from the metadata) -> td = datetime.datetime.now() - datetime.datetime... <- then printing it out in a readable format, depending on how much time had passed 
+
+0:09:44            -> so, print information about the operating system, then find the path of files in Python, then printing the real path and splitting it from the file name, then using times (modification times of files) 
+
+
+-----------------------------------------------
+Video: Using filesystem shell methods
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:05:16            -> creating files and getting information about files using the shell utility -> import shutil -> shell utilities, these can be used e.g to copy files -> it's a bit like code from the terminal, but in Python. path.realpath("file_name.txt") <- this returns the path of the file (set it equal to src) -> dst = src + ".bak" -> adding text to the file directory -> then shutil.copy(src, dst) -> it takes the file at the directory src and copies it to the directory dst, it's like cp in linux. To rename the original file, it's os.rename("origional_file_name.txt","new_file_name.txt"). Putting content into zip archives -> from shellutil import make_archive -> one, two = path.split(src)  <- takes the file directory stored in the src variable 
+
+0:08:55            -> shen shutil.make_archive("archive", "zip", root_dir) <- this zips a file, only on the condition that the file is there. from zipfile import zipFile -> then with ZipFile("testzip.zip", "w") as newzip: <- zip this file and call it this thing -> then underneath it: you can nest different lines of code (newzip.write....), it creates new zip file archives  -> it's like linux file management from the Python environment (n VS code, with the shell utilities module) 
+
+
+-----------------------------------------------
+Video: Challenge: Files
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:10            -> creating a program which creates a new directory, then a text file in the dir, then writes the amount of bites of the files in it -> the code should only count the files -> the code should iterate over the files in the directory and list information about it, and create a results folder with the information about the files in it -> mkdir -> it's linux from a Python environment -> and listdir (instead of ls) 
+
+
+-----------------------------------------------
+Video: Solution: Files
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:12            -> in the solution code -> import os -> totalbytes = 0 -> initialise the variable which will store the file sizes -> then os.listdir() <- this returns a list of all the files which are in the current directory, then he defined a for loop to iterate through them -> for entry in dirlist: -> then there is an if statement nested in there, which processes each entry -> this makes sure the item is a file and not a directory -> so we're making a list of all the files, iterating through them and then adding their size to a counter which increases each time a new file is iterated through 
+
+0:01:57            -> then, we're creating a directory (os.mkdir) -> and the file mode is w+ -> so we can write into it, and + creates a new one -> resultsfile.write -> he's written code which writes it line by line and each time a new file is iterated through a new line is added to the log file he's created in the directory 
+
+
+***********************************************
+Chapter: 4. Using Dates and Times
+***********************************************
+
+
+-----------------------------------------------
+Video: The date, time, and datetime classes
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:06:05            -> dates and times in Python -> classes and types for it -> from datetime import date, time, and datetime -> today = date.today() <- the current date -> today.day, you can also .month or .year -> you can get the weekday number (0 is Monday) -> he's done an example with an array of days of the week, and the 0th one is Monday -> days[today.weekday()] -> this returns which day of the week in the array called days which it is -> there is another function, the datetime.now() function -> the current date as well as the current time. For the current time, datetime.time(datetime.now()) 
+
+
+-----------------------------------------------
+Video: Formatting time output
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:45            -> formatting date/ time information -> from datetime import datetime -> then def main(): -> then now=datetime.now() <- this sets the current date and time -> then print(now.strftime()) <- it takes a string argument which takes one or more formatting codes (which are placeholders for date and time) -> e.g %Y returns the year in the text, ".... %Y" would return ... 20.. -> and now.strftime("%a, %d, %B") <- the B is the month, %y and %Y are the year -> day, month, year -> i.e you can use % to format the day in specific formats 
+
+0:06:57            -> you can also print location specific information -> print(now.strftime("%..")), where ... = c, c and X in different examples. This returns the location, date and time in the format for the country which the person is in ->  time formatting -> you can format the time information using a similar idea. now.strftime("%I") <- I is for the hour, M would be for the minute, %S second, %p am or pm -> without am or pm it does it on a 24 hour scale -> strftime, strfdate -> all the different codes which are listed to format the date and time information 
+
+
+-----------------------------------------------
+Video: Using timedelta objects
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:05:47            -> dates and times -> operating on them -> e.g calculate a date in the future given this date -> the time delta class -> from datetime import timedelta <- time delta class, a time delta is a change in time, change in time from a certain date. E.g print(timedelta(days=365, hours=5, minutes=1) -> now = datetime.now() -> then stores it in a variable. Then, concert it into a string -> str(now +timedelta(days=365)) -> you are adding a year to the current date. You can also create a time delta of, e.g str(now + timedelta(weeks=2, days=3). The next example is a date calculation using a date in the past -> t = datetime.now() - timedelta(weeks=1) -> then s = t.strftime("%A %B %d, %Y") -> so we have a variable which stores he current date and we're taking away a time difference of one week 
+
+0:08:53            -> in another example, counting the amount of days until the next April fools (time deltas can also be used for days in the past) -> stores the current date in a variable (date.today()) -> then april_f_d = date(today.year, 4, 1) -> sets the date -> then if april_f_d < today -> you can test if one date is greater than the other date -> then afd = afd.replace(year=today.year +1) -> if it's passed already, then the next April fools date equals the one in the next year -> time_to_afd.days 
+
+
+-----------------------------------------------
+Video: Working with calendars
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:47            -> calendars -> in text and HTML formats in Python -> import calendar -> c = calendar.TextCalendar(calendar.SUNDAY) <- this is a calendar with a week beginning on Sundays -> then str = c.formatmonth(2022, 1, 0, 0) -> format a specific month into a text string -> this returns a calendar when it's called in Python -> you can also change SUNDAY to MONDAY. calendar.HTMLCalendar(calendar.SUNDAY) -> there is another format of calendar, the HTML calendar 
+
+0:06:14            -> the HTML calendar from Python -> it returns a lot of HMTL, which can be pasted into an IDE to see the calendar -> it's a table which contains the calendar information. In another example, he's iterating over the days of a given month. for i in c.itermonthdays(2022,8):, this iterates through all of the days in the 8th month in 2022 -> there are zeroes at the end of the list -> because those numbers belong to the next month. The calendar class also returns information for the current locale -> you can loop over the numbers etc for a specific location (for day in calendar.day_name, print(day)) -> then it's printing them in the local language -> it would return the names which are specific to that location 
+
+0:08:47            -> another example -> e.g we want the date of the first Friday of each month -> you would calculate the first Friday in each month, and then calculate the Friday in that month. For m in range(1,13): <- this returns an array of weeks -> cal = calendar.monthcalendar(2022,m) <- it's iterating through 1-12, then all of the calendars for which the index of the month is that number. We know the first Friday is in the first two weeks -> weekone=cal[0], then 1 for week 2 -> then if weekone[calendar.FRIDAY] !=0: -> we're first figuring out if there is a Friday in week one or week 2 
+
+0:09:57            -> so we're using an index to figure out where the Friday is (in a week 1 or 2) -> weekday variable set -> then we're printing out that Friday -> which is calendar.month_name[m]. And in the output, it's a list of the dates for which there is a first Friday in the month (in the following year) 
+
+
+-----------------------------------------------
+Video: Challenge: Dates and times
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:04            -> count the number of a specific weekday during a given month and year -> e.g count the number of Sundays in a specific month and year -> run Python file in terminal -> it returns a list and allows the user to enter a day of the week, a month and a year -> write a program which counts the number of times a day appears in a month and year. You need to look at the documentation 
+
+
+-----------------------------------------------
+Video: Solution:  Dates and times
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:50            -> there are a lot of different potential solutions -> the thought process for it is - a while(run): loop -> try: ... -> try deals with exceptions -> it's printed out all of the different days to try, and then the user enters the day. The users choice is converted from a string to an integer number -> the exception handler -> except Exception as e: ... -> and if there is a result it's printed with the countdays function. The monthcalendar is used to retrieve a month and year -> when the function returns, it prints out the number of days within the month 
+
+
+***********************************************
+Chapter: 5. Internet Data Formats
+***********************************************
+
+
+-----------------------------------------------
+Video: Fetching Internet data
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:17            -> fetching internet data -> e.g json, xml, HTML -> in VS code, he imports urllib.request -> def main(): weburl = urllib.request.urlopen("url_name") <- this returns a web response object -> call the get code function, weburl.getcode() -> runs the Python file in the terminal -> this reads the data from the webpage. data = weburl.read(), then prints it out -> so he's read the data from the webpage into a variable and then printed out the variable 
+
+
+-----------------------------------------------
+Video: Working with JSON data
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:36            -> Python to connect to a json file (JS Object Notation) -> in this example, it's geological data feed. There is GeoJSON summary data feed on their website -> this is to get information about earthquakes from around the world. In VS code -> import urllib.request, and import json -> then def main(): and there is a url to the data, and a webUrl -> if (webUrl.getcode() == 200): then date = webUrl.read() -> then prints the results, so printing the results from the data and else print out an error message 
+
+0:06:17            -> then fill out the print result function -> he's written a function which json.loads(data) -> loads the json file. It takes the json file and loads it into the native object. Then, there is a title in the metadata -> if "title" in theJSON["metadata"] -> then he's printing it out in an if loop. There is a title key from the metadata tag -> and in this dataset there is a property which returns the number of earthquakes in a location -> print(counts, "events recorded") -> this returns the number of earthquakes in a given location 
+
+0:09:20            -> then printing out details from the earthquake data structure -> we want code which prints out the places where the earthquake occurs. For i in theJSON["features"] -> he's printing over the different properties in the JSON file. We're looking in the feature entries in the array, and printing in the properties object -> printing the place -> [][] notation to select the information we want. Then it returns a list of earthquake events. Now we want to print out a list of earthquakes with a magnitude of >=4. He's writing an if loop to do this -> with the [][] notation. Running this prints all of the places where the earthquakes were >= 4.0 in strength 
+
+0:11:02            -> he's doing another example where we print all of the events where at least one person felt the earthquake and reported it. Print("\n Events that were felt:") -> then he iterates through each of the lines in the dataset using the same notation as before -> [][] and a for i in loop -> then we have if felt reports != None: -> we're saying if a report exists, then we print out the place and time of the event for which that happened 
+
+
+-----------------------------------------------
+Video: Parsing and processing HTML
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:04:05            -> from html.parser import HTMLParser -> parsing structured data (HTML, JSON). Creating an HTML parser -> in the main function, we have the code needed to open and parse an HTML file. Once the file has been read into memory -> it's passed into a parser.feed(contents) function -> it calls functions which you override in the subclass. The code responds to the type of data which is being parsed -> self.getpos() <- this returns the line number and the relevant position. We have an HTML file -> and it's being passed line by line into the Python function. This is returning the file when the function is called 
+
+0:09:06            -> print text content and print over whitespace lines -> he's defined another function which is if data.isspace() and returns it -> in this example the parser is going through the file -> attrs. For example, counting the number of paragraph tags in an HTML file -> he's made a counter in Python. Then there is a global variable, and he's checking if the tag = "p" in HTML, every time it does, then the counter for the number of paragraphs increases by 1 each time. The next thing is printing out attrs -> if the length of attrs > 0 then it prints that there are attributes -> this shows how Python can be used to parse HTML using a parser subclass from imported modules 
+
+
+-----------------------------------------------
+Video: Manipulating XML
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:46            -> xml or HTML -> sometimes you don't want a parser which reads the document one line at a time. If you want to read the DOM, there is an XML mini DOM class. Import xml.dom.minidom -> then in the def main(): function he's defined a xml.dom.minidom.parse("name_of_file.xml") -> this is the file which we want to parse. print(doc.nodeName) -> print(doc.firstChild.tagName) <- we're searching for lines of code in the DOM, using Python -> in a defined function. Getting a list of elements from the DOM and printing each of them -> doc.getElementsByTagName("skill") -> this is in the definition of the main function in Python. Then he's printing the different skills which are listed in the HTML file 
+
+0:06:37            -> then create a new XML tag and add it to the document. doc.createElement("skill"). Then, setAttribute and .firstChild.appendChild -> he's adding new elements to the HTML file using Python 
+
+
+***********************************************
+Chapter: Conclusion
+***********************************************
+
+
+-----------------------------------------------
+Video: Where to go next
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:05            -> conclusion -> Python -> the standard library of modules. Using Python to access information over the internet and using it to parse information in XML etc. There is a list of further courses on LinkedIn Learning 
+

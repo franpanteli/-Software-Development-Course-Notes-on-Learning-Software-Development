@@ -1,0 +1,396 @@
+Course Title: Succeeding in Web Development: Full Stack and Front End
+
+Description: View Ray's LinkedIn NewsletterDo you want to become a web developer? Nowadays, web development isn't one job. There is a range of technologies and career options to explore. The core responsibilities are split two ways—between front-end developers who specialize in websites and applications and back-end developers who work with servers and databases—but you can also become a full-stack developer who oversees all aspects of a project. This course provides a map of the core technologies and advice about mastering them, complemented with the details you need to connect them to jobs. Senior staff author Ray Villalobos also provides tips on finding training, getting hired, and maximizing your earning potential in this lucrative and exciting field.
+
+
+***********************************************
+Chapter: Introduction
+***********************************************
+
+
+-----------------------------------------------
+Video: Becoming a web developer
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:48            -> web development             
+
+0:01:05            -> different types of developers 
+
+0:01:25            -> general developer knowledge/ technical skills 
+
+
+***********************************************
+Chapter: 1. A Developer's Life
+***********************************************
+
+
+-----------------------------------------------
+Video: Types of web developers
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:00            -> the course is aimed at people who want to be web developers 
+
+0:01:42            -> types of web developers -> most people are combinations of front end and back end -> front end is what is in front of the user (~1/3 rd of developers) -> front end is the UI, half of all developers are backend (servers / the cloud), full stack (front and backend) 
+
+
+-----------------------------------------------
+Video: Is the developer life for me?
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:00            -> all developers lie in between -> backend is quite common -> most people specialise in what they enjoy/ makes them more marketable (but what is marketable changes as well) 
+
+0:00:51            -> traits of a developer -> they are part of groups which work on small parts of bigger projects -> code reviews 
+
+0:01:07            -> open source projects -> people publish their work and others contribute 
+
+0:01:22            -> teamwork / taking in critiques 
+
+0:01:29            -> teamwork                    
+
+0:01:55            -> lifelong learners (people learn more than their formal education), things always changing 
+
+
+-----------------------------------------------
+Video: How much can I make?
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:29            -> back end development pays more because it's more technical 
+
+0:00:46            -> earning potential is a function of company / skills / years of experience 
+
+0:00:54            -> larger company employees earn more 
+
+0:01:03            -> more experienced earn more  
+
+0:01:24            -> most of it is problem solving 
+
+
+***********************************************
+Chapter: 2. Core Technologies
+***********************************************
+
+
+-----------------------------------------------
+Video: HTML as the foundation
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:00            -> HTML is for websites        
+
+0:00:23            -> HTML hypertext markup language -> for the content and the structure of the website 
+
+0:00:36            -> hypertext means it's linked to other documents / sites 
+
+0:00:47            -> information architecture -> how to structure a website 
+
+0:00:57            -> markup language (the text in the website) 
+
+0:01:15            -> markup defines the role each part of the content will have 
+
+0:01:28            -> detail orientated / structure / semantics 
+
+0:01:44            -> DOM = document object model <- this is what markup creates (structure of page ~ map of the content) 
+
+0:01:56            -> DOM is important for CSS and Java 
+
+
+-----------------------------------------------
+Video: CSS for design
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:08            -> HTML is the easiest language in web development, cf'd to CSS for design 
+
+0:00:33            -> specialisation -> site (UI/ UX = user experience) 
+
+0:00:42            -> CSS = cascading style sheets 
+
+0:01:05            -> CSS lets you add motion to the webpage 
+
+0:01:05            -> CSS -> for rules / style sheets to convert the DOM into visual form -> and how they cascade/ prioritise 
+
+0:01:40            -> same content looks different -> when you change the rules on the same HTML code 
+
+0:02:04            ->also adds interactive features 
+
+0:02:35            -> content has to be responsive -> i.e for different devices, there are also new versions of CSS 
+
+
+-----------------------------------------------
+Video: JavaScript for interactivity
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:41            -> java -> for interaction in a browser <- interacts with the DOM and interacts with content on the page 
+
+0:01:22            -> browser support issues -> browsers don't always keep up with new versions of the code -> developers use a transpiler to account for this 
+
+
+-----------------------------------------------
+Video: HTTP(S) for connecting
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:05            -> C3P0 was a protocol droid -> transferring between different ha-gauges, HTTPS -> it transfers information from html, the client is a server 
+
+0:01:47            -> HTTP2 -> revision of the HTTP language 
+
+0:01:50            -> HTTP verbs -> get, post, delete -> you send several requests 
+
+0:02:05            -> HTTP/2 allowed multiplexing (multiple server requests at once) 
+
+0:02:21            -> HTTPS encrypts the messages to and from the server 
+
+
+***********************************************
+Chapter: 3. Core Concepts
+***********************************************
+
+
+-----------------------------------------------
+Video: How the internet works
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:31            -> TCP/IP -> before the internet, computers transferring information would have to be connected 
+
+0:00:38            -> computers can form different types of connections 
+
+0:01:32            -> the messages are broken into packets -> the IP part explains where the packets go -> information is sent in chunks to different parts of the web 
+
+0:01:45            -> the web -> the connection between all of the tech 
+
+0:01:53            -> DNS = domain name server -> translate the names into IP addresses 
+
+0:02:46            -> URI <- uniform resource locator -> https protocol, LinkedIn domain and .com extension -> DNS server puts it into a number and returns a request to a server, which returns information back 
+
+
+-----------------------------------------------
+Video: Building accessible projects
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:00            -> hackers can hack vulnerabilities which are transmitted -> HTTP headers -> these can have a lot of information which people want to hack 
+
+0:00:44            -> accessibility -> making pages accessible for disabled people makes them more accessible for all people 
+
+0:01:04            -> assistive technologies -> developers make these easier to use or not 
+
+0:01:17            -> accessibility trees -> provides information to the assistive technologies 
+
+0:01:39            -> ARIA = accessible rich internet applications, there are also laws which ensure disabled people get equal services 
+
+0:02:02            -> important one is easy to read and large fonts with contrast, and easy to navigate with keyboard 
+
+0:02:37            -> another example is how well it works when filling out forms, how accessible it is 
+
+0:02:52            -> lighthouse tool -> helps identify points for improvement for accessibility 
+
+
+-----------------------------------------------
+Video: Design methodologies
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:07            -> iPhones and tablets -> webpages had to be re-designed -> they used to be designed for a fixed size -> but now the webpage has to be able to accommodate any size -> mobile first (can show less information on smaller devices) 
+
+0:01:16            -> designing for multiple sizes -> on the web all different devices have their own sizes -> adapting the website for any size -> mobile first -> simplify what is shown on smaller devices -> display: 
+
+0:01:44            -> positioning model -> default is that objects appear in the order in the code 
+
+0:01:51            -> FlexBox -> can alter dimensions to fit the space 
+
+0:02:34            -> GridLayout -> can control rows and columns > OOCSS SMACSS BEM, different ways of organising CSS 
+
+
+-----------------------------------------------
+Video: Development approaches
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:43            -> software developers have to adapt their skills as the technology industry changes. HTML, CSS, Java <- most common languages this is done in. There are examples of other languages and in some cases they can be more efficient. SAS -> this is one way of simplifying the code then translating it into other language (transpiled languages), these can also be used to write code which is compatible with older versions of the web 
+
+0:02:55            -> functional vs object oriented -> Java is in the middle. Functional -> flexible and less structured. MVC -> model view controller, code which combines the data (model) and the view (a temple for the code), then combining them via the controller.  Component based architecture -> separating architecture into different re-usable parts. 
+
+
+-----------------------------------------------
+Video: Version control
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:04            -> tests -> so the process constantly checks for problems -> the importance of flexibility for different approaches. Version control for teams of developers -> Agile, so what you're doing aligns to customer needs. This works by scheduling sprints -> where you build, test, replan the work every few weeks -> vs doing this in one go. DevOps -> the goal is to make the lifecycle faster. 
+
+0:01:14            -> so we have teams of software developers working together and designing code for a specific purpose / commercial need. Agile is working in sprints and doing different iterations of the process -> so that it aligns with customer needs and doesn't go off piece. DevOps -> which wants to shorten the time between the time the code is written and deployed 
+
+0:02:24            -> continuous delivery -> development teams make new features on existing software -> motioning / documenting how it works constantly. Managing different changes which all of the team members make on the code -> git -> everyone separately works on their version of the code and then those changes are merged -> version control 
+
+
+***********************************************
+Chapter: 4. Supporting Technologies
+***********************************************
+
+
+-----------------------------------------------
+Video: Back-end languages
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:00            -> servers -> computers which run software that receives and serves requests. Servers mostly run in virtual machines on the cloud -> network of computers which are ran by companies. Applications are specialised, and if it's a website it has a domain name. TLD is a top level domain (.com etc, there are company specific ones). Servers are elastic -> you can increase the amount of resources depending on the context. GCP (Google Cloud Platform), AWS, Azure. CDN -> content delivery network -> to create copies of the information on servers closer to the user -> so the product runs faster 
+
+0:01:11            -> schema -> like a scheme, structure 
+
+0:01:33            -> databases -> SQL -> structured query language -> "sequel". NoSQL -> this is another category of databases, which don't have schemas (pre-defined structures), their schemas are dynamic / disordered. These databases, almost structureless databases can run faster 
+
+
+-----------------------------------------------
+Video: Developer tools
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:00            -> back-end languages -> languages which merge the templates with the data -> PHP, Ruby on Rails. The stack is the set of tools (the stack of tools) which is used to manage the projects. Wordpress -> this is an example of a stack. Web developers need two languages, one for structured databases, NoQSL and one for merging it with templates. PHP, suggested. Wordpress -> powers 30% of the internet, so web developers benefit from knowing how to use it 
+
+0:02:21            -> IDEs for the software build process -> VS code - integrated development environments. These are more structured than basic text editors, and it can work with different code languages. Features to look for in IDEs -> when they can detect errors, suggest code and identity the language you're using. You code in languages which need to be transpiled. Build processes -> automated commands, for instance webhack (bundle code and removed unused pieces), babel (enables the code to work for older versions of the web) 
+
+
+-----------------------------------------------
+Video: Frameworks and libraries
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:30            -> frameworks and libraries -> Lodash -> can manage arrays more easily, dest practices. D3 libary -> for interactive charts. Jquery -> older popular sites, can access the DOM for front end developers, it can add carousels, models and cards. Bootstrap -> the oldest and most popular, material design. Angular, react, Vue.js -> java frameworks, Angular is the biggest one, there are different developers which specialise in different ones. These can be used to interact with the virtual DOM. 
+
+
+-----------------------------------------------
+Video: APIs and services
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:15            -> the importance for web developers of being familiar with one type of framework. Using / creating services and APIs -> services are tools offered by servers which provides access to some information. The purpose of this is to enable more easier sharing of information. API -> application programming interface. This may be used to share information between different social media sites. REST -> representational state transfer -> the retunes are commonly in json (javascript object notation) 
+
+0:02:02            -> OAuth -> authenticating the transfer of information rather than having to share passwords between social media sites. This allows for (once authenticated) one social media site to transfer to another one 
+
+
+***********************************************
+Chapter: 5. Education
+***********************************************
+
+
+-----------------------------------------------
+Video: What education do I need?
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:15            -> education - 1. Instructor-led training 2.Self study 3. On Project based learning 4. On the job training 
+
+0:01:23            -> instructor lead -> essentially a class, in schools, bootcamps / workshops / conferences. 70% of developers are self taught, software changes very quickly -> so it's important to learn the basics and the adapt to new technologies. Skills are -> reading documentation, examine other developers code, exploring new ideas 
+
+0:01:41            -> i.e you need to practice and make mistakes with real projects 
+
+0:02:06            -> learning on a job -> e.g startup / corporate environment (the benefits of software apprenticeships) 
+
+
+-----------------------------------------------
+Video: Traditional education
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:08            -> traditional education - higher education -> cost of an education (increasing at faster rates than inflation), they earn a million more over their lifetime than those without a degree, 65% of jobs require post-secondary educations. Benefits to university were -> problem solving and research skills, broad education (maths/ Physics), business courses (how to write proposals for decision makers) 
+
+
+-----------------------------------------------
+Video: Coding bootcamps
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:56            -> coding bootcamps -> designed to teach in condensed timeframe $12,000 in US, average of 14 weeks long, 88% placement success rate within 120 days. Some of them run 40 hours or more a week and teach skills not often taught in schools. They also have lower acceptance rates (10-12 weeks of intensive training, and some people otherwise have full-time jobs), most people don't get degrees associated with their degree 
+
+
+-----------------------------------------------
+Video: Online learning
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:00            -> 79% of bootcamp attendees went to university. Committing to a program and the cost of it aren't for everyone 
+
+0:00:43            -> online learning -> location independent, some resources are more useful than others -> if you have questions use stack overflow 
+
+0:01:00            -> LinkedIn Learning -> updated with new courses 
+
+0:01:23            -> you can fork -> create your own version of someone else's code, other resources are codependent, jsbin 
+
+
+***********************************************
+Chapter: 6. Getting a Job
+***********************************************
+
+
+-----------------------------------------------
+Video: How do developers find jobs?
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:14            -> job search -> networking, make contacts, find out who is hiring, find out the popular language/ frameworks/ tools -> 30% of people found work through friends, and <20% found it through websites -> companies like employee referrals -> best way of finding employee referrals. Meetup.com is the best website for finding local software events -> you contribute to them 
+
+0:02:10            -> the entire point of meet-ups is networking for opportunities/ to learn from other people. Conferences are more expensive but give access to more experienced people -> there are mostly always job boards at conferences. Hackathons are competitions with teams of developers over weekends -> sponsored by schools/ companies 
+
+
+-----------------------------------------------
+Video: The hiring process
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:00            -> add value to people at events etc 
+
+0:01:26            -> Hiring process -> companies want the right person for the job -> post it online and wait for applications, HR does this, they don't actually understand the skills in some cases -> if you have experience then some employers can train you. Not talking about salary in the beginning stages because you need to know the company is the right fit 
+
+0:01:44            -> the second stage is like a coding assignment -> you might go through several of these in a process 
+
+
+-----------------------------------------------
+Video: Compensation
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:00            -> there is then a final interview -> where you research the company and the person you're meeting -> managers hire the people who they want to work with -> importance of being polite/ asking questions about the company 
+
+0:00:51            -> how developers are compensated -> how it's calculated and works -> increase 2-5% per year, which is lower in comparison to inflation -> at new jobs you want 15% or more of what you're currently making 
+
+0:01:42            -> how much the compensation package is worth (insurance/ stock options/ bonuses, hiring and annual etc) -> ask about them in the final interview before offers, quality of life benefits (vacation and time off) 
+
+0:02:12            -> some people with 5 years of experience can make 20-30% more -> it's about years of experience and rare and valuable skills -> asking questions is also a way of gauging how they respond 
+
+
+-----------------------------------------------
+Video: Negotiating the best deal
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:00            -> network / apply online, go through technical assessments etc, then negotiate after they want you for the job, then think about the offer you have 
+
+0:00:59            -> once you're chosen for a position then you negotiate the offer -> in the interview process before you're made an offer, if you're asked to say what you want to make say "I'm not ready to negotiate salary at this point, until you're ready to make me an offer" -> then ask them what the offer is -> you need to know the numbers -> what you're making now etc 
+
+0:01:55            -> comparing current job to new job and justifying adjustments-> asking for an offer letter, then several days to think it through -> take the time to go through the numbers carefully 
+
+0:02:28            -> you can negotiate with your current company who can give you a counter offer / promotion -> companies are also competing for you, if you make a meeting with your manager and say that another company has offered you a job 
+
+0:02:56            -> you need to be willing to walk away -> not sure is the right offer, thank you for your time etc, then they can make you another offer/ you can walk away from it 
+
+
+***********************************************
+Chapter: Conclusion
+***********************************************
+
+
+-----------------------------------------------
+Video: Next steps
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:29            -> importance of going through a process -> HTML / CSS / Java, building projects as soon as possible 
+
+0:00:47            -> how it doesn't have a finish line 
+

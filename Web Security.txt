@@ -1,0 +1,396 @@
+Course Title: Programming Foundations: Web Security
+
+Description: Learn about the most important security concerns when developing websites, and what you can do to keep your servers, software, and data safe from harm. Instructor Kevin Skoglund explains what motivates hackers and their most common methods of attacks, and then details the techniques and mindset needed to craft solutions for these web security challenges. Learn the eight fundamental principles that underlie all security efforts, the importance of filtering input and controlling output, and how to defend against the most common types of attack. This course is essential for developers who want to secure their websites, and for anyone else who wants to learn more about web security.
+
+
+***********************************************
+Chapter: Introduction
+***********************************************
+
+
+-----------------------------------------------
+Video: The importance of security
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:01            -> security -> this needs to be considered when the program is being written -> this course is web security principles and best practices 
+
+
+***********************************************
+Chapter: 1. Security Overview
+***********************************************
+
+
+-----------------------------------------------
+Video: What is security?
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:00            -> web security -> protected, safe from harm / espionage -> this course is security for websites. Websites are key parts of brands (these contain information and financial information). Awareness + protection = security -> we are aware of the risks and threats, and then take action to protect against them as web developers. By knowing more common types of attacks against webpages, we can direct the most resources towards protecting against those 
+
+
+-----------------------------------------------
+Video: Why security matters
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:13            -> why security is important -> if you set up a website, it can be complex - but the more complex the more likely there will be parts of it which can be exploited. There are consequences for a lack of security -> theft, loss of control (the website is used for unintended purposes). Another example is to flag emails as spam which aren't spam (to wreak havok) 
+
+
+-----------------------------------------------
+Video: What is a hacker?
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:39            -> a hacker -> white hat hackers and black hat hackers <- white hats are good (e.g ethical hackers), black hats deliberately exploit attacks for personal gain. Curious users -> these try submitting different numbers for instance, script kiddies (these run scripts which other people wrote, and the scripts are usually old and well known). Another example is hacktivists -> political activists (these are only a problem for controversial groups), criminal hackers are other people (scammers, theft of credit card details etc), trophy hunters (people who hack sites to prove their skills). For instance, companies (investment banks/ governments) who value security -> deliberately targeting them to prove their skills. Governments are other hackers -> advanced persistent threats (the government hires hackers with a large amount of resources) -> these attack for spying purposes 
+
+
+-----------------------------------------------
+Video: Threat models
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:05            -> one examples of government hacking is Forbes hacking -> the thought of the day section of the website downloaded malware onto the users' machines 
+
+0:01:24            -> threat models are used to model the risks and potential threats to organisations -> we have something, what are our most valuable assets, what are the most valuable assets to our attackers, where are our vulnerable spots, how do we protect each of them etc 
+
+0:02:06            -> we consider who the attacker is, how they would attack, what the high value assets are and what our vulnerabilities are -> in other words, we imagine how an attack would happen from the different perspectives of the people involved and how we can prepare for that to happen 
+
+0:03:02            -> the type of hacker we have to deal with depends on the website we are making (if it's political, we're under threat from hacktivists for example). We should also prioritise it based off of how valuable the thing we're protecting is (if we're protecting a million pounds we put it in a bank, £1 can go in a house). It's like - investing in the protection of what we're making in accordance to the potential threat level (actual vs perceived threats) 
+
+
+-----------------------------------------------
+Video: Total security is unachievable
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:48            -> nothing is 100% secure, but the aim is to look at where the most risky points are and mitigate there, to put more resources into the weakest parts 
+
+0:02:48            -> heist films -> failure points <- people are creative in getting around seemingly impenetrable security. There are ways of getting around the security which we don't expect (for instance as software updates occur). Zero-Day vulnerabilities -> vulnerabilities people don't know exist. No computer is fully secure -> we should allocate resources according to the threat model. The goal should be to make the weakest points stronger and less difficult to exploit -> there can be new attackers / objectives and it is important to continually re-assess where the risks lie 
+
+
+***********************************************
+Chapter: 2. General Security Principles
+***********************************************
+
+
+-----------------------------------------------
+Video: Least privilege
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:20            -> general security principles -> the principle of least privilege -> you wouldn't give house keys to your cousins. Another example is in buildings, you wouldn't have access to the Chemistry department if you studied Physics. It's a 'need to have access' basis, the principle of least privilege. Each person should be given the least amount of access possible -> e.g HR people should not be able to see accounting information and people shouldn't be able to edit their own privileges 
+
+0:03:41            -> code access -> code should be given the least privilege possible to access other parts of the code. We are controlling access to systems and resources -> and also have principles in case to prevent access once it is granted 
+
+0:03:47            -> the principle of least privilege limits damage from attacks to the site / accounts which were targeted, and these may have limited privileges 
+
+
+-----------------------------------------------
+Video: Simple is more secure
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:17            -> simple is more secure -> it's easier to secure smaller houses than larger houses. Keeping the systems smaller means they are at less risk. Use clearly names functions and comments, explain why that approach was chosen in comments, explain the expected format of the output for functions, make notes about security concerns 
+
+0:02:19            -> built-in functions are better than custom functions (they are better tested and more error resistant). Remove cruft from the code -> code which we no longer need. It's getting rid of features we no longer use - getting rid of things we no longer use and keeping it simple reduces the level of information which can be targeted 
+
+0:02:45            -> refactoring -> making it simpler. Don't repeat yourself -> which means, if we have duplicates of code, then changing the code to be more secure might only change one version 
+
+
+-----------------------------------------------
+Video: Never trust users
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:41            -> trust nobody -> only extend trust as far as you must, you don't know what peoples' intentions are when it comes to security. Our threat model needs to include users who are anonymous and can be from anywhere around the world -> users might be authorised but be using stolen credentials. People who we trust (insider threats) can also abuse their privilege -> e.g if employees change their opinions. Contractors are also people similar to this, they have access to the organisation but are less loyal to it. Users can also delete information by accident -> users can be tricked or information can be run in the background  
+
+
+-----------------------------------------------
+Video: Expect the unexpected
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:38            -> expect the unexpected -> security is proactive not reactive. You have to assume you will be hacked -> 
+
+0:01:10            -> edge cases -> security needs to be proactive, not reactive -> you need to figure out how it will happen and then prevent it before it happens. You have to think about each of the different things the user could try -> edge cases are exceptional cases which we don't expect 
+
+0:02:20            -> to imagine edge cases, brain storm all of the things which could go wrong -> there is the path we expect, the user searches. Other cases - no text, too much text, symbols, emojis, characters in other languages, duplicates of forms which are slightly edited 
+
+
+-----------------------------------------------
+Video: Defense in depth
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:15            -> defence in depth -> skydivers have two parachutes against the threat of gravity -> defence  in depth is layers of defence to slow the attack, so people are too tired by the time they reach through them. Defence in depth is spreading your risk over multiple different forms of protection. We are protecting against physical, technical and administrative attacks. Physical -> protecting against physical harm (video cameras and locks etc). Technical controls -> hardware, software, network protections. Administrators -> firewalls, intrusion detection, antivirus software, event logging, data backups 
+
+0:03:40            -> multi-factor authentication and the least privilege principle to code access and design. It's the concept of multiple layers of defense to protect the data (least privilege and encryption -> the attacker has access to the hacked account, but only that hacked account and not the password because they're encrypted) 
+
+0:03:57            -> administrative controls -> training, writing a security policy, risk assessments, periodic security reviews, data-handling procedures, monitoring and penetration testing -> e.g who is notified if there is a problem early in the morning 
+
+
+-----------------------------------------------
+Video: Security through obscurity
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:28            -> security through obscurity -> there is more it's more secure to withhold or obscure information because it's useful to an attacker." Loose lips might sink ships" -> the more information the attackers know the better for them and the worse for the targets. Information should be kept on a need to know basis -> the least amount of information necessary to complete the job. Footprinting -> performing reconnaissance on a computer by exploring / researching what security vulnerabilities are -> gathering information about -> servers on the network, security procedures, activity patterns and information waste and disposal practices, domains and subdomains, ID address ranges, server ports, software (e.g does the URL include .php file extensions - so the attacker can tell the language, another example, get rid of the server information and software information in the code) 
+
+0:03:39            -> the hacker has to plan for all possibilities and research the vulnerabilities first. WHOIS information -> the hacker can find the owner of a domain name -> social media and website contact information -> there is an option to hide information from the database. Knowing the names of the users can help guess their usernames, having their information posted online (e.g emails or university they went to) can also make it easier to target specific people with phishing emails (especially if we know their email address). Knowing peoples' holiday times can also be useful. Use stack exchange but with an anonymous username, because then you're exposing potential security vulnerabilities in the system 
+
+0:04:19            -> security through obscurity works well, but when combined with other defences -> e.g a safe works, but a safe obscured behind a painting works better. Obscurity should not be used as a standalone defence  
+
+
+-----------------------------------------------
+Video: Deny lists and allow lists
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:01            -> deny lists and allow lists -> lists which allow something and lists which deny something. Deny lists (black lists / block lists, e.g of IP addresses, actions users can't take, datatypes the server won't take) and allow lists (white lists, the usernames which can access a website). For instance, items A, B and C -> adding different combinations of A, B and C to allow and deny lists. One example is a webform -> users should be able to add information but not delete sections of the HTML which make the website. If new tags are added to the HTML they will be disallowed -> restrict items by default and use allow lists  
+
+
+-----------------------------------------------
+Video: Map exposure points and data passageways
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:21            -> map your exposure points and data passageways -> awareness + protection = security. Mapping defines the attack surface -> all of the points the attacker could find information in or out (e.g a castle different entry and exit points, we have paths the data takes -> which can be mapped, including how it's stored). Mapping data input -> URLs, forms, cookies, session data, database reads, APIs, you need to be suspicious of all of them. Mapping data in transition -> internet, wireless communications, network hardware, network software. Databases -> these require sending information and the pathway of information needs to be tracked. Keeping data safe while it's not in use -> databases, hard drives, the cloud, portable media (USBs/ CDs/ backup files) 
+
+0:03:18            -> map where data is output -> cookies, session data, the different language types for the code, database writes, APIs, log files. Looking at the flow of data -> CIA -> data confidentiality (protecting personal information, credit cards and passwords e.g), integrity (making sure data is correct and can be trusted), availability (making sure data is available when needed, e.g denial of data when ransomware is in the system) 
+
+
+***********************************************
+Chapter: 3. Filter Input, Control Output
+***********************************************
+
+
+-----------------------------------------------
+Video: Regulate requests
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:23            -> example -> passing through airport checkpoints -> defence in depth (multiple points of defence, e.g x-rays and dogs). Filtering input is controlling the data which comes in -> regulating requests. Http requests go between browsers and web servers -> websites are selective about which requests are accepted. GET requests are sent when links are submitted and POST requests are submitted when forms are completed. We also have CONNECT, DELETE, HEAD, OPTIONS, PUT and TRACE - and we only want the webpage to accept the expected requests 
+
+0:03:46            -> another criteria is the request response format -> content-type is used to inspect the format of the coming data and accept is for the format of the response to it. The format (pdf etc), we're telling the webpage what the acceptable data formats for it to send and receive are. Other types are IPs, URLs, user-agent strings and sizes. We tell it to reject certain files or requests if any of them are too large etc. We can use firewalls and proxys to do this 
+
+
+-----------------------------------------------
+Video: Validate input
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:02            -> validating input -> we want to make sure only good data is allowed into the webpage. The incoming data needs to be inspected. Malicious data can be sent through standard pathways -> we need criteria for this (e.g what is acceptable and unacceptable, this depends on the context we're dealing with). There are common validations (e.g the length of the data, a first name can't be longer than 50 characters). We can also validate the type of data, format (e.g of emails), if it's within a certain range and if it's unique or repeated (this requires checking it against an existing database) 
+
+0:03:53            -> in PHP, there are also specific cases for booleans -> we're using validation to check only specific formats of data are allowed. This reduces the potential for malicious data which can become vulnerabilities to be submitted 
+
+
+-----------------------------------------------
+Video: Sanitize data
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:05:57            -> unacceptable inputs are rejected/ ignored -> sanitisation <- we are cleaning the data before it's processed. Typecast all the data to make sure it's in the right format -> i.e 1 == "1", we're converting it into types which can be compared. You can construct a map of data pathways -> how the data is transferred through the system and cleaned depends on which languages it is written in. Characters can be encoded -> e.g < can be replaced with &lt, another one is > is &gt -> we replace characters which could be used to harm the system with new encoded characters. Another example is \" 
+
+0:06:27            -> data which is coming from database should also be sanitised, in case a hacker has changed the database or the information has changed 
+
+
+-----------------------------------------------
+Video: Label variables
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:18            -> label variables -> to keep track of which data has been sanitised or not (which data is safe or unsafe to use). E.g dirty, raw, unsafe vs clean, sanitised, safe <- deliberately labelling information according to if it's been cleaned or not 
+
+
+-----------------------------------------------
+Video: Keep code private
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:07            -> code should be private -> what is going on behind the scenes shouldn't be shown to the users. We control the visibility of the code which limits the information hackers can see. Public and private directories -> public directories are ones the public can see and private directories are ones only we can see. The webserver is configured to only show information to the public which is stored in the public directory. We set the public directory as the public root  -> it's better to make php private. Distinctly organising the code into public and private  
+
+
+-----------------------------------------------
+Video: Keep credentials private
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:04:10            -> keep credentials private -> credentials shouldn't be put in the hard code, they should be put in separate files (separating credentials from the code). Version control systems -> git, SVN and mercurial -> adding credentials to version control is risky because people who the code is shared with can abuse it (or lose their computers). Files with credentials should be hidden from version control -> this encourages others to create their own versions. Don't reuse passwords -> if one is stolen then other accounts are less compromised. How developers store credentials -> in hashed formats. If the servers can de-crypt a password, then so can people with access to it -> using SSH keys are more convenient (these create two mathematically linked keys, key pairs). Public keys need private keys which interact and authenticate it 
+
+0:04:30            -> SSH keys can be required for all users and passwords can be disabled 
+
+
+-----------------------------------------------
+Video: Keep error messages vague
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:40            -> hackers can use information response -> e.g username not found vs password not found -> they know something is a username -> so return login failed instead (tell the user as little information as possible). Have in-browser error reporting enabled on your projects / websites -> turn this off when the webpage is made public. 404 - not found, 500 - something went wrong. Keeping error messages general limits the information hackers can get about how the webpage failed 
+
+0:02:17            -> webservers have their own default applications -> if something goes wrong then the error pages will look the same -> you don't want error messages to be too detailed because they could be used against the sites 
+
+
+-----------------------------------------------
+Video: Smart logging
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:18            -> logging -> evidence after an incident -> this can also become a security liability (we need to be careful about how it's logged and which information is logged). We need to log error, sensitive actions and suspicious activity (for instance requests looking for vulnerabilities, some people probe sites with automated scripts looking for wordpress admins). Log the data and time when events happen, the source (IP, user - if they are logged in), action and target, URL, parameters, cookies, backtrace (files and functions used by the code on the way to the action) 
+
+0:03:05            -> logs should be kept in restricted private areas. Sensitive information should not be recorded, e.g passwords / payment information in plain text. Production.log.1 etc -> you can rotate your logs in different files (log rotate in linux). We create logs to protect against instances / security breaches 
+
+
+***********************************************
+Chapter: 4. The Most Common Attacks
+***********************************************
+
+
+-----------------------------------------------
+Video: Types of credential attacks
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:02            -> 2009 -> attacker cracks Twitter support account and hijacks US president account. The password was 'happiness.' Credentials can grant users easy access. There are different attack types -> theft (people steal usernames and passwords/ find them over emails and in storage -> these are searchable, another example is leaving the password on sticky notes on computers, data breaches -> once passwords are stolen they are published, even encrypted passwords can be stolen / hacked), brute force (trial and error using an encryption algorithm -> the total time depends on the possibilities^password length x time per attempt), dictionary attacks, credential surfing 
+
+0:04:40            -> time per attempt decreases as computers become faster -> e.g specialised hardware rigs -> so passwords need to become more complicated. Dictionary attacks prioritise words from dictionaries, rather than random characters -> words from dictionaries are prioritised because people think of these when making passwords. Obvious passwords are also checked -> passwords -> and existing passwords on public databases are also tried. NCC-1701 is also common in leaked databases because it's from Startreck 
+
+0:05:12            -> credential stuffing -> taking passwords from database breaches and trying them across different sites -> this is done using automated software, because users reuse passwords. Hackers change the password for an account once they know it works, because other hackers are also trying credential stuffing 
+
+
+-----------------------------------------------
+Video: Strong passwords
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:51            -> strong passwords -> admin passwords need to be secure -> long passwords with symbols and no dictionary words -> long simple passwords can be harder to crack than shorter complicated ones. It's avoiding patterns and reusing passwords -> principle of least privilege. Every time you reuse a password, you're giving one word more complex access. There are password managers -> software which stores passwords in encrypted passwords -> form autofill etc (LastPass, 1Password, Dashlane, KeePass). SSH keys are another alternative -> these are sent automatically. Two factor authentication is another example (a phone or a piece of hardware, a UB key) 
+
+0:03:47            -> text messages can be sent but are weaker because they can be taken from stolen phones or intercepted. There is also password hashing -> we use encryption algorithms to hash the passwords of users. Bcrypt / blowfish. You can also force users to choose more secure passwords, and not setting limits to passwords. Login throttling -> making the user wait time after failed login attempts (these cripple brute force attacks). Another example is forcing users not to send passwords over emails etc 
+
+
+-----------------------------------------------
+Video: URL manipulation and insecure direct object reference (IDOR)
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:14            -> URL manipulation attacks -> editing the URL of the webpage -> this can be done by mistake and can reveal private webpages (e.g adding text to an a URL can show an unpublished version of the webpage). These can also be used to explore the file system, or show information about the user with the given ID name in the URL -> try all different ID names and gather information about all users. /wp-admin is another example -> this is used for word press admins. Attackers can access privilleged resources they shouldn't be able to see / use -> IDOR insecure direct object reference <- users aren't verified / authorised 
+
+0:04:18            -> direct object reference -> it's insecure if the user isn't verified -> if the invoice has a URL then other people can take the invoice and reuse the URL -> it could contain information about peoples' card details. Databases, files, directories, scripts and functions are examples -> insecure direct object references. These can be prevented -> consider edge cases and define allow-lists and reject lists. Configure the web-server to handle errors. Validate privileged pages and actions 
+
+0:05:18            -> you can change direct object references to indirect object references -> e.g if the user can see a list of the different previous orders they've made -> a direct object reference would use those numbers / codes in URLs which hackers can find. Changing them allows for the URLs to be indirect -> the importance of using indirect object references 
+
+
+-----------------------------------------------
+Video: SQL injection
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:59            -> SQL injection (SQLI) -> untrusted data is used to construct SQL queries -> most web applications rely on databases, and 80% of databases rely on SQL. OWASP -> open web application security project. Attackers can easily detect and exploit it -> e.g in login forms. It can search where a username is stored in a string and bypass the login stage. It can be used to probe the database structure, to steal data, to add or change data, to destroy data, to bypass authentication (evaluate it as true without verification). An example is a child whose information was used in an injection attack to delete entire rows in a table -> WHERE, INSERT, UPDATE, DELETE, SELECT and ORDER BY are commonly used 
+
+0:05:09            -> blind SQL injection -> vulnerabilities can exist on pages but not change the response to the browser. E.g if there is no feedback to tell the browser if it's worked or not -> there is an SQL sleep function which pauses the server for 5 seconds, and if the webpage slows then we know the attack worked. Another method is to join a new query to the original one -> and if it's worked then code is used which makes the code run slowly. This is used to determine each of the different letters for a username, column name and the values in the table rows 
+
+0:07:02            -> solutions to SQL injection -> limit the application's database privileges -> don't give it permission to drop, truncate or delete tables. Don't allow the application to connect as the root user -> principle of least privilege. Sanitise the input -> escape data which is input in SQL -> put a ' in front of information. There are SQL sanitisation libraries. SQL prepared statements -> data has to match specified types and can't interfere -> allow lists and validate data before using queries -> use it along side prepared statements  
+
+
+-----------------------------------------------
+Video: Cross-site scripting (XSS)
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:14            -> cross-site scripting attacks -> when attackers inject code into the webpages (HTML, JS) -> then other peoples' browsers execute it. This is when webpages output data without sanitising it. XSS -> one of the most common web application flaws. Reflected, stored and DOM-based attacks. Reflected attacks -> JS code is put in a URL string / form data and the script runs in the browser. E.g clicking on a link -> the web application returns the resulting HTML -> if an attacker posts the HTML (e.g with an email which includes HTML and JS) -> you can also try it with false information to test it for attacks 
+
+0:03:32            -> cookie data can be stolen, downloads can be. It can also be coded to avoid detection -> and it's de-coded when received. Scripts in return HTML executes the file it receives. Stored and DOM based attacks aren't immediate and occur when JS from storage is planted -> then when the code is executed the attack occurs 
+
+0:06:13            -> DOM-based attacks happen using the existing site -> places where data is output. Write validations, use allow lists, sanitise all data depending on the type of code, another one is using HTTPOnly cookies -> HttpOnly in the code (this is on a per cookie basis). CSP -> Content Security Policy -> information sent to a browser about which information can be used (e.g no remote loading). These can regulate CSS files -> Google has tools for examining CSP 
+
+0:06:32            -> Google has tools for examining CPS 
+
+
+-----------------------------------------------
+Video: Cross-site request forgery (CSRF)
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:02            -> cross-site request forger attacks -> when an attacker tricks a users browser into sending a request to another site. The request isn't a genuine user request -> CSRF. E.g getting hiding a link in an image -> if the image fails to load then the forged URL request can still be sent. This can be used to take advantage of a user's logged in state, or to forge votes for an online system. When users don't logout, the cookies are still stored on the computer. If the image source on another website has a fraudulent URL attached to it, then the users cookie information from the previous bank site is still on the user's machine 
+
+0:04:33            -> forged post requests can also be submitted -> there don't need to be submit requests (it's submitted automatically when the page loads in this attack example). CRF attacks are to make state changing attacks -> the attacker just sees the results indirectly (e.g attacks happen to increase page views for ad revenue, ballot stuffing, changing a users email address etc) 
+
+
+-----------------------------------------------
+Video: Cross-site request protections
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:40            -> how to protect websites from cross-site request forgery attacks -> use get requests for retrieving data, not for actions which make changes. Use post requests for actions which make changes. E.g image source requests send get requests, not change requests. The strongest prevention is a CSRF token -> a token is generated and stored on the user's machine in the session data -> the token is included in the form data. The code which processes the data can compare the data is authentic and not forged (it needs a token to be accepted) 
+
+0:03:56            -> for instance, encrypting one string can return another string. If a website is vulnerable to cross-site scripting then an attacker can work around it by using another website -> you need good XSS defences. You should have HTTP referer headers, including custom headers to Ajax XMHHttpRequest. Some actions are sensitive (changing important information) -> in which case a second confirmation should be required (CAPCHA/ asking for passwords again) -> automated attacks don't respond to these 
+
+
+-----------------------------------------------
+Video: Cookie visibility and theft
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:50            -> browser cookies can be easily viewed, manipulated and stolen. Users can inspect their own cookies in the browser -> you can also inspect them using the developer tools in the webpage. Cookie data is also sent in traffic -> it can be hacked on open wifi networks (e.g in public). Cookie data can ping URL hackers own, and the hackers can steal cookies (they can download them or use them to forge requests -> they can also be used to modify values). The biggest prevention is using them to store information which isn't sensitive -> e.g language preference 
+
+0:04:36            -> store sensitive information in sessions (session IDs -> these can be looked up in requests). Session ID is in the cookie data -> some protections are still required. HttpOnly cookies make them unavailable to JS -> SSL certificates are suggested to be used -> these encrypt information in transit between servers and users. Secure cookies should also be used -> HTTPS (vs HTTP). Cookies should be given expiration dates -> the domain, subdomain and paths should also be considered. Sensitive data should also be encrypted if it's not stored on the servers. Cookies can also be digitally signed to prevent modification -> running then through algorithms 
+
+
+-----------------------------------------------
+Video: Session hijacking
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:08            -> session hijacking -> a hacker steals the user's active session (session IDs are stored in cookies). Users can access webpages again once they have for the first time -> according to the session ID to see if the user has previously been authenticated. The attacker can steal the session ID -> and then transfer money and send messages to co-workers etc. This is done by eavesdropping on pubic wifi networks 
+
+0:04:41            -> to prevent cross-site scripting -> validate input, sanitise output, content security policy, cookie settings: HttpOnly, Secure, Expire, HTTPS. Login pages should only use HTTPS, and session cookies should be marked Secure -> global settings -> expire and remove old sessions when the user logs out. Session IDs should also be re-generated after logins 
+
+0:05:02            -> user agent strings describe the browser type being used, comparing IP addresses are also less reliable forms of protection 
+
+
+-----------------------------------------------
+Video: Session fixation
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:42            -> session fixation -> the attacker gives the user a session ID which they control. It's not authenticated, the attacker has to check when it's used. It is less of a threat than it used to be in PHP -> but can be executed using a 'person in the middle' style attack. To prevent this from happening -> only accept session ID from a cookie, use cross-site scripting defences 
+
+
+-----------------------------------------------
+Video: Remote code execution
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:03            -> Remote Code Execution (RCE) -> the attacker can use the computer remotely from theirs. This is one of the hardest attacks to execute and OS's typically have defences against them -> avoid using system execution functions or disable them. Avoid using these functions with dynamic data, sanitise the data and authenticate all code involved 
+
+
+-----------------------------------------------
+Video: File upload abuse
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:12            -> file upload abuse -> uploading files which are too large, doing it too frequently or uploading the wrong file type. Attackers can also upload malware disguised as other filetypes -> randomware is another example. This can be mitigated by forcing users to login first and scanning files for malware. There are also limitations for maximum file sizes, firewalls and there is anti-virus scanning software available for uploaded files 
+
+
+-----------------------------------------------
+Video: Denial of service
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:36            -> denial of service -> denying authorised users access to services they would otherwise have access to. Denial of service -> flooding a system with too many requests, crashing is another example -> a deliberately triggered crash. These can be because of revenge / extortion / activism. Distributed attacks can use thousands of computers together -> botnet -> for example mirai malware -> these attacks can be used for home routers e.g. The longest attack lasted for 12 days 
+
+0:05:03            -> is denial of service in the threat model? -> i.e is it a threat? Are we protecting a site which is reasonably at risk (e.g of activism)? Then there are experts who offer mitigation services. Traffic can be non-malicious -> to tell if it is, you can throttle (limiting the rate of requests to servers), filter (placing limits on which requests are allowed to servers), sinkoling (redirecting requests) or blackhole the traffic (re-routing all requests to nowhere). These can be done using firewalls or ISPS 
+
+
+***********************************************
+Chapter: Conclusion
+***********************************************
+
+
+-----------------------------------------------
+Video: Next steps
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:20            -> foundations of web security -> general security, filtering input, controlling output -> other checks -> keep software updated (these are designed to prevent against attacks), backup data (automatically and to offline hardrives -> e.g randomware can affect cloud services). Secure your domain (they can be hijacked), DNSSEC -> domain name system security extensions. There is more beyond the scope of this course -> anti-virus, firewalls. Join the security community -> Twitter is where news about security breaks 
+

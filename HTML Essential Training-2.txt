@@ -1,0 +1,477 @@
+Course Title: HTML Essential Training
+
+Description: Hypertext Markup Language (HTML) is the foundation of website and web application development. It allows you to ensure that your content is understood by both segments of your audience: the people who watch, read, or listen to your content, and the computers that display it. In this course, learn how to craft excellent HTML with the pieces that HTML itself has to offer. Instructor Jen Simmons highlights all of the fundamental concepts you need to use HTML thoughtfully. She focuses on semantic markup: tagging content as what it is, and not just for formatting, convention, or convenience. This has far-reaching impact for those who consume the web differently; it ensures that when a screen reader or a system (like a search engine) consumes a page, it knows exactly what it contains and how to categorize that information.
+
+
+***********************************************
+Chapter: Introduction
+***********************************************
+
+
+-----------------------------------------------
+Video: What is HTML?
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:33            -> HTML -> websites, apps, other software, words images, forms, video and audio -> programming languages are more consistent than human languages -> HTML is for people to interact with the computer 
+
+
+***********************************************
+Chapter: 1. HTML
+***********************************************
+
+
+-----------------------------------------------
+Video: The role of HTML
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:04:05            -> HTML, CSS, Java <- HTML hypertext markup language (tells the computer where things are, is a declarative language, it is flexible), CSS (cascading style sheets, for the style of the website, less resilient than HTML), Java (interactivity, the most powerful one, but it also stops if there are errors; is more fragile) <- you can code a website and expect for it to work 5 years from now, and across multiple devices (different types and sizes). Combing these languages allows us to benefit from their different levels of resilience, robustness and power 
+
+
+***********************************************
+Chapter: 2. Formatting Text
+***********************************************
+
+
+-----------------------------------------------
+Video: The syntax of HTML elements
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:26            -> HTML -> <p> = paragraph, it's a tag, -> knowing which tags to use when -> opening and closing tags </p> (this is a closing tag) -> <p> paragraph text </p> <- you're marking on the website where the paragraph is, tagging it -> the element is the entire thing, <h1>, <article> <- hypertext markup language, marking the content to show the computer which different parts of it mean what 
+
+0:04:04            -> <p> paragraph <em> text <em> </p> <- emphasise it, you can have the elements nested inside each other -> it creates a document tree -> DOM tree = document object model tree -> accessibility tree (making them accessible for disabled users) 
+
+
+-----------------------------------------------
+Video: Paragraphs
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:04            -> a common mistake is to forget the closing tag 
+
+
+-----------------------------------------------
+Video: Headlines
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:10            -> paragraph element -> code pen website -> it's like Overleaf for LaTex, but for HTML. In this example, there is text written in the content for the website, then she's wrapping each paragraph in <p>'s and </p>'s. So the browser knows those are paragraphs 
+
+0:03:18            -> headlines -> structure on the page <h1>, all the way up to <h6>. They have hierarchy, it's like 1st place is more important, so the text is larger. Knowing which level of headline to use when. There are also elements of CSS, she's removed one and the format of the page has changed. She's looking at an example website from the New York Times and showing the structure / hierarchy of the headlines in it 
+
+
+-----------------------------------------------
+Video: Bold and italics
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:06            -> plan how the levels of headlines will be used in the specific context 
+
+0:04:46            -> bold and italic -> there are two of each -> when the browser is verbally vs visually emphasised, <I> is only for visual italics, <em> is for emphasis italics, for people listening to the content this emphasises it (but <I> doesn't. Bold -> <strong> vs <b>, strong changes the voice when it's read over by assistive technology. If you want it bold you can use CSS to redefine the styling -> but if you're not changing an entire title e.g and just a section of text, then you can use <b> and <I> 
+
+
+-----------------------------------------------
+Video: Lists
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:28            -> lists -> a navigation bar on websites are lists of links -> three types -> unordered, ordered, definition lists -> wrap each item in the list in an <li> element (it's like a bullet point), <ul> means unordered list 
+
+0:05:02            -> so <ul> then the elements in the list <li> first item </li> and at the end of all of them is </ul> -> the list elements are embedded in the list. For ordered lists, it's <ol>, this is for ordered lists vs unordered lists <- they're similar but they have different wrapping elements, can also have definition terms -> <dt> means definition term -> <dd> is definition description -> you wrap the entire thing in <dl>, for definition list 
+
+
+-----------------------------------------------
+Video: Quotes
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:15            -> semantic -> relating to meaning in language or logic 
+
+0:03:31            -> quotes -> cite and block quote -> <blockquote>, <cite> (from who said it, around their name), <q> is for quote elements -> this is in text, what you put around "what someone said". The quotes are either in line, other elements can be block elements <blockquote> <p> <ul> <- block quotes, paragraphs, unordered lists 
+
+
+-----------------------------------------------
+Video: Dates and times
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:00            -> <q> and <blockquote> -> one is for inline phrases and one is for block phrases -> you can either quote something like a [quote] - said by, or "quote it in the text", that's the difference between them (one is block and one is inline) 
+
+0:03:40            -> dates and times - time of day, date or span of time -> the time element -> <time> May 8, 2005 </time> -> use an HTML attribute -> <elementname attributename="">, <time datetime="2025-05-08">May 8, 2005</time> <- the time needs to be in a specific format -> year-month-day (from big to small, backwards), and the year is in three digits and the day and month is in two <- you can also include the timezone (there is a specific format to this) 
+
+
+-----------------------------------------------
+Video: Code, pre, and br
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:07            -> the dates get formatted in similar ways for different languages (but you can look it up for the specific format) 
+
+0:01:56            -> code, pre and br <- when she's typing in HTML around the part she wants to look like code she's written <code> ... </code> -> marking it up as code (hypertext markup language), &lt; &gt -> for less than and greater than signs 
+
+0:04:28            -> <br> and <pre> -> the browser ignores some of the code -> she's doing an example with a poem and in between the lines there are breaks (parts of the same sentence are on new lines), she's put <br> (there is no </br>, just <br>, equivalent to \n in LaTex). <pre> and <\pre> <- it takes into account the structure of the words you put into the editor, rather than forcing them into one paragraph 
+
+0:04:36            -> pre and code -> to show the block and structure in the text 
+
+
+-----------------------------------------------
+Video: Superscripts, subscripts, and small text
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:00            -> semantic = content. Subscripts (<sub> </sub>), superscripts (<sup> </sup> footnotes and squared), small text in HTML -> MathML is a specific maths mark up language -> more powerful than HTML. For fine print, for instance copyright information at the bottom of the page -> <small> around the copyright information -> to show it has little providence <- so we have small, sub and sup 
+
+
+***********************************************
+Chapter: 3. Understanding the Power of HTML
+***********************************************
+
+
+-----------------------------------------------
+Video: Debugging HTML
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:46            -> inspect HTML -> seeing the HTML of a website you're on -> right clicks on the webpage and does "inspect element" / tools > web developer > inspector (for Firefox) -> and in there there are a lot of different tabs -> one is the inspector -> three different tabs (HTML, CSS, etc) -> the leftmost pane is HTML (this course), the DOM (document object model) was created by the browser from the HTML which was input into it -> it's showing an almost hierarchy of information 
+
+0:03:06            -> she goes to other websites she likes / who were made by respectable people, reads the HTML from them, then learns for her own code 
+
+0:04:31            -> HTML inspector in dev tools to debug mistakes -> example where the DOM thinks there should be 5 items in a bulleted list, but one of the items in the list is 0 (the browser takes the HTML and reads it), and where the output looks off goes back to the developer tools to fix it 
+
+
+-----------------------------------------------
+Video: HTML attributes
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:47            -> attributes in HTML -> for elements <p> etc -> it's almost like options. Global attributes -> can be applied to any HTML element. Class attribute -> can use to attach a reusable name to any element (e.g using CSS you can then style all of the elements of the class with a specific format). Id is another one which targets CSS, but you can only use specific ones once. They are useful for Java, or for targeted links -> there are only one element with that ID name. Class is for multiple and ID is for one. 
+
+0:02:37            -> she's doing an example -> there is a table of contents which is hyperlinked -> content editable attribute means the customer can write on the webpage -> but it doesn't actually change the HTML, Java would be used to capture what was typed -> for instance <blockquote contenteditable="true"> ... </blockquote> 
+
+0:03:53            -> the interaction for the user, the screen, keyboards and assistive devices -> the browser links to HTML to implement everything. HTML also has a language attribute <p lang="...">. Another one is dir -> which shows if the text is read from left to right. But - class, id, lang, dir 
+
+
+-----------------------------------------------
+Video: ARIA roles
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:13            -> ARIA roles are another type of HTML attribute -> normally the elements are fine, but if they're not then use ARIA roles. There is a lot of consideration for disabled people -> it's like a layer of information which shows things which applications need to know to be accessible 
+
+0:03:41            -> example -> instead of saying "hello world," it will say "h-e-l-l-o w-o-r-l-d", there is an accessibility tree. In dev tools, there's a tab for accessibility -> and there is the tree. It's a tree which the browser builds from the HTML content, the DOM tree is built from the HTML and the accessibility tree is built from the DOM tree. There is an aria-label attribute -> which you use to say "hello world" rather than the longer version. 
+
+0:03:58            -> ARIA roles -> to make the website accessible / inclusive 
+
+
+-----------------------------------------------
+Video: Formatting HTML
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:17            -> inside the HTML file -> options for formatting the code. In this example, there are extra  spaces in between words <!-- <- this is a comment in HTML and it's closed by --> 
+
+0:04:09            -> you can comment out things which aren't working. Another one is upper case vs lower case -> all the elements were in upper case. HTML was invented in the late 80's -> when there were MB's of RAM, newer elements use whole words and older ones used less characters to save storage. Not all of the elements have closing tags </.....>, but some of the older elements (like <image>) don't. The best practice is to currently use closing tags 
+
+
+-----------------------------------------------
+Video: Weird characters
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:18            -> these products were made by people 
+
+0:03:14            -> > < &, when we want to use these in the code -> sometimes they don't show in the code (it's like in LaTex, when they have to be inserted as symbols). This is where an entity has to be used -> in this case it's &...; <- there are also symbols, for instance for the copyright symbol -> which can be typed itself, or inserted as a character entity. Non-breaking space -> browser looks for a space to wrap the line of text. &nbsp -> when you don't want it to start something on a new space, like a page break in Word 
+
+
+***********************************************
+Chapter: 4. Linking and Navigation
+***********************************************
+
+
+-----------------------------------------------
+Video: Links
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:29            -> links on a webpage -> in the 1980s people were obsessing over links -> the concept of a hyperlink -> a link you would click to go onto another page -> this took 20 years of innovation to make 
+
+0:02:30            -> <a href="link for the website">Text for webpage </a>  <- hypertext reference, you have the text on the webpage and the link it connects to 
+
+0:04:45            -> the URL which is put into the href attribite -> href="...." <- you can put the entire link in there, these are absolute URLs, with http or https. Http = hypertext transport protocol -> vs https -> the s stands for secure (it's the same thing) 
+
+
+-----------------------------------------------
+Video: URL paths
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:36            -> URL paths -> relative URL -> to point to different files (paths to files), e.g blog/march-9.html <- look in the blog file and find the file called march-9.html <- folder names don't have extensions, and /'s tell it to look in that region (it's a path to the file we want to link to) 
+
+0:03:03            -> another one is, like linux ../images/logo.gif <- relative path which doesn't start from the root 
+
+0:03:19            -> the ../ means go up a level in the file directory/ tree 
+
+
+-----------------------------------------------
+Video: Navigation
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:22            -> www.example.com/people/index.html <- that's a directory -> it's going to a URL which is a folder and looking for a file called index.html -> not for images or CSS. Considering how URLs affect customer experience -> relative URLs like relative paths can be useful if there are a lot of links from the website to other ones 
+
+0:01:01            -> example, wanting to make a main menu or navigation bar from a website -> nav element -> there is a bullet point (unordered) list, <ul>, and each of the elements in the list are <li>'s (that's a bullet point), then each of them are hyperlinked to another site in the webpage. It's a bullet point list and everything in the list is hyperlinked to somewhere else in the website. Then she's added a layer of CSS over the top to format the hyperlinked bulleted elements in the list into a navigation bar. 
+
+0:02:04            -> wanting assistive devices to understand it's a navigation bar -> use aria attribute role = "navigation" and aria-label="main menu". CSS is like the language which we use to make webpages look pretty (massive oversimplification), but we mark the navigation bar as the navigation bar in HTML for accessibility reasons. Graphic designers can also see it in the code this way. 
+
+0:02:38            -> a second example on a navigation bar -> breadcrumb navigation bar Home > Blog > etc and they're all hyperlinked, <ol> is an ordered list -> and it's wrapped in a <nav> element, there is also an aria label 
+
+0:02:52            -> there is a third example of a navigation bar which is at the bottom of the page -> it's wrapped in <footer> and it's a list of two hyperlinked privacy policy / terms of service 
+
+
+***********************************************
+Chapter: 5. Images and Graphics
+***********************************************
+
+
+-----------------------------------------------
+Video: Images
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:04:06            -> images -> there is an image element <img>, <img src="" alt="" width="..." height=".."> <- source tells the computer where to look for the image (in this example it's a file directory). Alt attribute, it's a description of the image which is read out for people who have accessibility issues to describe the picture. The size of the image is stated in pixels, the order of the attributes is irrelevant. The browser also calculates the layout / dimensions of the file in this case -> instead the size of the image can be stated 
+
+
+-----------------------------------------------
+Video: Image formats
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:04:12            -> image file -> there are different formats -> we want small files and high quality images -> the highest quality with the smallest file size. GIF -> good for large areas of single colour (but they can be pixelated, also transparent, e.g for small films), SVG -> logos, icons, vector file (can be scaled), scalable vector graphic (it's an entire programming language), you can export SVG files like other file formats, JPG -> good for compressing photos for the web (uncompressed makes the website take too long to run), PNG -> for images which need transparency, photos and images 
+
+0:04:47            -> try several file types and see which works best -> there are also new file types which come out 
+
+
+-----------------------------------------------
+Video: Responsive images
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:43            -> high resolution image for images with big screen and shrink it for people with smaller screens. High resolution images have a lot of pixels -> which you don't want to put onto smaller screens (slow), but won't work on desktops. The picture you use for phones and larger screens -> they need to have different qualities. You use HTML to deliver different image files for different screens, you give it several images and then the browser decides which one is the most relevant for the device and network speed 
+
+0:04:23            -> <img src=... alt=... width=.... height=...> <- for image and source. You create different versions of the same image and the browser downloads the one which is the most appopreate -> screen density, connection, user settings -> it can download a lower quality image deliberately e.g if it's on data saving mode. srcset="https://.... ", then later srcset="https:... 2x, https:... 3x" etc there are a few different links for the same image of different sizes -> the aspect ratio is the most important thing 
+
+
+-----------------------------------------------
+Video: Responsive width
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:37            -> it's choosing the image before CSS runs 
+
+0:01:47            -> different sized images based off of width of page -> the previous video was width element and source set attributes to change the image based off of the device size -> this the device choosing which image to use based off of the size of the screen and density of the image (so also consider screen width) -> and in this case we tell it the screen size -> choosing the image based on the assumption that the image needs to take up the entire page 
+
+0:02:34            -> image element -> we want the browser to consider the width as well as the density of the image -> then the browser chooses the image based on an assumption that the image takes up the entire width of the screen. Sizes attribute -> listing which size image to use at which media query 
+
+
+-----------------------------------------------
+Video: Responsive pictures
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:03            -> srcset attribute -> you indicate if it's for the screen size or which image has how many pixels -> it allows you to specify which size image for which media query. Size -> allows you to tell it the relative size the image should take up on the screen 
+
+0:02:34            -> responsive pictures -> in the previous examples, for instance if we want to use different images on large screens, but on smaller screens want to use an image which is more zoomed in. For this, use the picture element <picture> <source media="(min-width:600px)"...>  </picture> <- it's essentially telling it if the view port is smaller than a certain size it's using the cropped image 
+
+0:05:12            -> it's using srcset to give it a link to the image and set the width, that repeated over multiple different widths -> so as the screen changes size the image it's using corresponds to the size of the screen. Mostly the viewport (screen) is one size. When people make websites they upload an image (one image) -> so the code needs to automatically change it to different sizes depending on the size of the screen (in this example she's doing it saves 500K per photo) 
+
+
+-----------------------------------------------
+Video: Figure and figcaption
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:11            -> but the entire purpose of that is to save space for the user. This is how to add captions to images -> <figure> <img> </img> <figcaption> </...> </figure> 
+
+
+***********************************************
+Chapter: 6. Media
+***********************************************
+
+
+-----------------------------------------------
+Video: Audio
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:52            -> audio on webpages -> add them in with HTML. <audio> </audio> <- <img> is older and doesn't have a closing tag, audio also has src attribute to link to where the audio file is. You need to tell the browser you want controls in the browser -> you can make those using more code. <audio controls src="..."> </audio> <- controls adds pause, play etc. Loop -> makes the file loop, autoplay -> it plays as soon as the page opens . You can nest a lot of different sources in the <audio> 
+
+0:03:29            -> you can add different sources with alternative file formats -> for example, an older browser only supports a certain file formats, so you provide multiple of them. ogg -> this is another file format -> there is a potential new file format for audio. The whole idea of software developers having to keep up with new tech 
+
+
+-----------------------------------------------
+Video: Video
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:00            -> syntax for supporting multiple file formats -> list multiple files in separate source elements, the browser uses the first one it's familiar with. You can also add text in the <audio> tag in case the browser supports none of the file types 
+
+0:04:28            -> video -> example, teaching -> the web can transmit video. <video src="..." controls> </video> <- imports the video and adds controls. H.264 has the widest file support across browsers -> entire videos can't travel across the internet at that speed because they're too large. Codec attempts to take these, decrease their size and display them to the user. H.264 is a codec which is widely used -> but it costs fees to use and is not open source. There is new similar one AV1 which is royalty free and doesn't charge. You can use h264 and webm 
+
+
+-----------------------------------------------
+Video: Captions and subtitles
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:00            -> HTML can't send different sizes of video under different devices. You want the quality of the file which is sent to them to depend on the network speed -> adaptive bitrate streaming. This requires a server farm -> an alternative method is to use embedded code from a video hosting service 
+
+0:03:37            -> subtitles / captions -> there might be background noise / sometimes people don't have headphones / can't understand the accent. Adding captions to videos -> track element. The user can turn the captions on or off from the webpage -> wvtt - web video text tracks. It's a txt file with a vtt extension. There is a <track> element inside the <video> </video>, => it's <track src="...." kind="captions" label = "English" srclang="en" default>. There is also an option to translate it to Spanish -> it's exactly the same code just for Spanish -> and there are two of them, so now the captions can be in multiple languages. kind can also be "descriptions" -> for example -> a description of what is happening in the video. Chapters -> it's like chapters on YouTube 
+
+
+-----------------------------------------------
+Video: Embedding other media through iframes
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:00            -> a lot of times captions are required by law for accessibly 
+
+0:03:02            -> video hosting services -> embedding it into a webpage. Embedding is taking content from one site and embedding it into another site. There is an embed code for videos -> e.g if you go to YouTube you can share and find the embed link -> paste the link into HTML and it will be embedded in the page. You can also change the height / width. There are security considerations when doing this -> sometimes things are set to only be embedded somewhere. If you have content -> then you need to think about who is embedding what etc  
+
+
+***********************************************
+Chapter: 7. More Ways to Identify Content
+***********************************************
+
+
+-----------------------------------------------
+Video: Generic elements: div and span
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:00            -> telling the computer which language the code is in. <html lang="en-US"> e.g, this is wrapped around the entire website. en-GB, alt -> important for spell checkers. Lang -> you can leave it as en. In text <span lang="..."> if the language changes in text -> some languages are read from right to left -> this is the fit attribute, ltr, rtl. Charset -> this is an attribute ASCII (1960s), Unicode (modern, this defines ~140,000 characters to include the different languages -> including emojis, it's the entire question of, which symbol are we using?) <meta charset="UTF-9"> inside head element 
+
+0:03:11            -> wrapping a group of elements, <div>, <span> -> divs are used to separate elements (it used to mostly only contain divs and spawns, this sheds light on the value of semantics -> don't use divs and spans for everything.
+Div is a block line and span is an inline element. She's doing an example where we have a paragraph -> <div
+class = "box"> -> it's using CSS to make a box around the code. Div and span -> takes class, id, aria -> they are
+last resorts 
+
+
+***********************************************
+Chapter: 8. Putting It All Together
+***********************************************
+
+
+-----------------------------------------------
+Video: The HTML page
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:25            -> HTML files -> people go to web pages which have URLs -> there is always a URL involved -> the web server sends back the html file for that page. Previously, this was contained in an HTML file and some images (HTML or THM), now it's stored in a database -> CSS files, Java files, etc -> what users see is a combination of different files. But, the process os the same -> go to a URL, sends request for an HTML file, browser reads it. The HTML file contains links for the webpage 
+
+
+-----------------------------------------------
+Video: Document head
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:01            -> The structure for the HTML file -> the file starts with a doctype declaration (this implies the version of HTML, if it's modern etc), <!doctype html> <html> </html> (you're telling it it's html, and inside the <html> you can tell it the language), <head> (for the metadata), <body> (for the content) 
+
+0:03:18            -> inside the <head> you can use <meta> to give it metadata about the page, this includes <meta charset="utf-8">, <title> Insert text </title> (the title here is the name of the page which is listed at the top of the tab). Without the meta tag it assumes the page is a desktop layer to be shrunk for e.g a phone. There is also a description in the meta tag, which is used to search in SEO. Metatags. Another is link elements -> link to other assets to load. Rel attribute (which asset it is), href (link to the asset), we can use links for the style sheets, favorcons etc -> they load in the order they're listed 
+
+
+-----------------------------------------------
+Video: Structuring content
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:00            -> the script tag -> it loads a javascript file (can be put at the end of the file rather than in the head). The head provides metadata / general information about the HTML file 
+
+0:04:14            -> in the body -> main (around the content of the page, once per webpage, where the main content is), header and footer (head is not header, footer contains copyright information for instance), article (wrapped around any articles, e.g teaser cards/ tweets), section (wraps around sections of content, e.g parts of an essay, zones of a website), aside (for marking something off to the side, e.g in a sidebar / extra information / adverts) 
+
+
+-----------------------------------------------
+Video: Examples of putting it all together
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:06            -> entire web pages are made off of nested elements. Find a website you want to replicate (not copy, use for inspiration), right click on it and see its HTML 
+
+
+***********************************************
+Chapter: 9. Forms and Interactive Elements
+***********************************************
+
+
+-----------------------------------------------
+Video: HTML form basics
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:14            -> form fields -> e.g buying things online through forms. These happen through form elements and not divs and spans. This is built into the browser -> this is an example form for a newsletter (want name, email fields). <form> <label> Name <label> Email <input> <button> Button text </button> </form> <- the input element is a replaced element (means put the form here, it doesn't have a closing tag because it's older). Then you can add CSS for styling it. There are also methods for setting up backends for the forms -> don't use a get method it's not secure 
+
+0:05:39            -> <form action="success.html" method="get"> <- the data wasn't printed out when filled in the form, so added name="email" into the <input> label (<input name="email">), adds <label for="email"> and then <input id="email"> to link them -> for and id links them. Alt. you can put a label around both of them -> the importance of labelling things 
+
+
+-----------------------------------------------
+Video: More on forms
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:25            -> the form collects text -> <input name="name" id="name" type="text"> <- text is the default type, it can be "email" -> then the HTML site makes the user input the email into that form. You also mark the button as a submit button -> placeholders, placeholder="email@gmail.com" <- a placeholder is different to a value (the value just stays there is you refresh the page, it's for including data in the form); the information included as a value is written in the form 
+
+
+-----------------------------------------------
+Video: Additional form element types
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:28            -> putting different types of data into forms -> adding CSS. type = "password", type ="tel", type = "search" -> these are attributes in the <input> tag -> when you put it in password for instance, the text the user types is dotted out. Some sites bring in integrated password holders. The "tel" type opens up the number on OS's. There is a <textarea element -> which adds a text box on the form with a scroll bar. Date, colour and file can also be added -> type = "file", "color", accept="image/*" multiple <- allow multiple files. When it expects dates, it shows a calendar, file shows an interface for adding files and only lets selects certain file types the code allows 
+
+0:04:40            -> check boxes -> type="checkbox" checked (in the input tag), this lets the browser know that the box should start off as checked. Select list -> select and option elements -> <filedset> (there is a legend in here in the example code) </fieldset> 
+
+
+***********************************************
+Chapter: 10. Structuring Tabular Data
+***********************************************
+
+
+-----------------------------------------------
+Video: When to use tables
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:04:12            -> HTML tables -> you can use HTML tables for tabular data, but use them when you're actually making a table (?). Before CSS was made to style webpages, people would make pictures headlines in photoshop and use them in their websites in a table -> wasn't accessible / reusable / findable. HTML Athena -> she's not a fan of it -> they should be used for tabular data (if you would put it in a spreadsheet, that's what tables are for) -> not breaking up parts of a webpage before CSS was more widely used 
+
+
+-----------------------------------------------
+Video: Building table rows
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:25            -> to make an HTML table -> different HTML elements <table> (this wraps around the entire table), <tr> (table row), <th> (table header), <td> (table data, for the data in a cell) -> you can just use an online HTML table generator but it might be important to know for job tests/ for information's sake 
+
+0:02:56            -> wrap the entire thing in <table> </table>, <tr> </tr> for each row we want, then we populate the row with data via a <td> (table data), aka <- table row, table, table data -> <img src="...."> is another example in the table, put the content for the headers in the first row <th> = table header, and there is one of them for each of the rows 
+
+0:03:11            -> so - tr (row), th (header), td (data) 
+
+
+***********************************************
+Chapter: Conclusion
+***********************************************
+
+
+-----------------------------------------------
+Video: How to keep learning and HTML specifications
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:56            -> HTML -> can be used in social media/ search engines 
+
+0:01:48            -> MDN is a website which you can look up different elements for different HTML elements 
+
+0:04:10            -> specifications -> all browser maker representatives meet to debate and discuss what the browser should do and those are written up in specifications -> browser engineers use these -> web standards, this is to standardise the processes across all browsers. The current HTML version / specification is 3. There is a specification for each version of HTML which is posted online -> and there are versions which are specifically for software developers. She also suggests WCAG web content accessibility guidelines -> Aria to make the code / HTML more accessible. Another suggested extension is knowing CSS 
+
+0:04:23            -> don't remember everything just look it up 
+

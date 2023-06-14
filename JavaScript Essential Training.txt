@@ -1,0 +1,816 @@
+Course Title: JavaScript Essential Training
+
+Description: View Morten's LinkedIn NewsletterJavaScript is a scripting language of the web. As the web evolves from a static to a dynamic environment, technology focus is shifting from static markup and styling—frequently handled by content management systems or automated scripts—to dynamic interfaces and advanced interaction. Once seen as optional, JavaScript is now becoming an integral part of the web, infusing every layer with its script.Through practical examples and mini-projects, this course helps you build your understanding of JavaScript piece by piece, from core principles like variables, data types, conditionals, and functions through advanced topics including loops, and DOM scripting. Along the way, instructor Morten Rand-Hendriksen provides challenges that allow you to put your new skills to the test.
+
+
+***********************************************
+Chapter: Introduction
+***********************************************
+
+
+-----------------------------------------------
+Video: JavaScript: The soil from which the modern web grows
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:04            -> Java -> modern web applications, servers, computer environments. Vanilla, React, JAMStack, node based server environments, future applications -> HTML is web content, CSS is web style, Java is web applications 
+
+
+-----------------------------------------------
+Video: How to use the exercise files
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:10            -> the exercise files are on github -> the files have before and after states -> there are links to the documentation in Java (MDN is the official source for Java documentation) 
+
+
+***********************************************
+Chapter: 1. JavaScript: A Brief Introduction
+***********************************************
+
+
+-----------------------------------------------
+Video: JavaScript: First contact
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:38            -> Java frameworks -> React, Vue, Angular, Svelte -> it's the language for applications on computers/ on the web/ servers -> JSX, TypeScript -> the course is structured to take apart complex things, break them down and build them back again -> JSX - syntax extension of Java created for the React extension. It is an extension -> components of it are objects/ methods/ arrays etc  
+
+
+-----------------------------------------------
+Video: Navigating the JS landscape
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:19            -> Vanilla Javascript, ECMAScript -> there are a lot of different things under the umbrella of Java -> rapidly developing space, and each part of it is for a specific purpose. Vanilla JavaScript -> standard Java -> ECMAScript, for European Computer Manufacturers Association (the description of how the language should be interpreted  by browsers). ES6 etc (most current version) - Babel is used to convert the version back to the version the computer can read. TypeScript -> opinionated coding language -> some developers need features not provided by Java -> TypeScript -> opinionated coding language (look at the file name). Javascript frameworks -> React JS, Vue JS, Angular JS -> these add abstraction layers on top of applications to streamline things 
+
+0:04:28            -> build tools -> helper applications -> these turn Java into code for the browser (babel). Node.js -> NPM node package manager -> Java is the underlying language for applications. Learn Vanilla JS and then specialise and optimise the knowledge 
+
+
+-----------------------------------------------
+Video: Tools for working with JavaScript
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:20            -> Java on computer -> modern browser (install all the possible browsers, Chrome has all the developer tools), code editor (VS code is standard, free, all operating systems), live server environment -> this simulates the files on a computer, browser console, needs to be linked to the code editor -> in this example he's using Live Server -> inspect in FireFox to see the console. You can directly interact with the Java on the page from the console 
+
+
+-----------------------------------------------
+Video: Linting and formatting
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:04:26            -> formatting and linting -> writing code free ƒrom errors and which follows guidelines -> VS code contains software which helps this. ES Lint and Prettier are extensions in VS code which are to aid in this. Prettier -> makes the formatting prettier (indentations, brackets, so everything is aligned), ESLint (spell check for Java, so the code is consistent), node.js -> these make the experience of Java more enjoyable. Node can be downloaded - > and the extensions need installing. In VS code view > terminal > npm install -> then file > preferences > format on save <- prettier and ESlin automatically format the file before it's saved  
+
+0:06:26            -> Prettier is to e.g add semicolons at the end of the lines -> if you're working in a team standard rules for the codes can be defined to ensure everything appears uniform 
+
+
+-----------------------------------------------
+Video: Get to know the browser console
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:06:09            -> the Java console -> when you write Java, you write in a code editor. The console is for interacting with the code in the browser -> script JS ->  in VS code you can click "Go live" in the bottom RHS of the console, and the code opens in Chrome (it's like a ipynb), then he opens a file and in that file right clicks and opens the developer tools (by inspecting the webpage in Chrome). In the console, you can edit the code. He's done an example in the console when typing e.g backpack with code defined in Java, and in the Chrome console the code from VS code shows (and autocompletes as you type) -> back end is in the code editor and from the console it can be inspected and de-bugged 
+
+
+-----------------------------------------------
+Video: JavaScript language basics
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:04:29            -> axioms of writing Java -> the browser reads it from top to bottom -> define all variables and functions and objects -> define things which you are using later, before they are used -> there are also comments in Java, there are comments and verbose comments -> in verbose comments you can entire the datatype. You can also comment out certain lines of code in order to debug it. With space and white space -> use indentation to visualise the hierarchy. On the bottom of the page, there is tab-size -> you can indent using spaces (Prettier can be used to do this automatically). Prettier also manages semi-colon use 
+
+0:04:46            -> Java is indifferent as to wheather there are semicolons at the end of each line or not 
+
+
+-----------------------------------------------
+Video: Learning JavaScript backward
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:11            -> quotation marks -> this is developer preference ("" or '') -> there are different coding standards, be consistent. If you are consistent then tools can automate the consistency 
+
+0:02:55            -> Learning Java backward -> advanced objects and methods -> then datatypes and the DOM, then methods, functions and events (going backwards) -> concepts are used before they are explained -> Java requires understanding the context in which the concepts are used. MDN is the official website for Java documentation 
+
+
+***********************************************
+Chapter: 2. Up and Running with JS
+***********************************************
+
+
+-----------------------------------------------
+Video: JavaScript in an HTML document
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:50            -> where you write the Java in an HTML document -> inline or as an external file (like from the CSS course), things inside the script tags can be rendered as Java -> commonly this is at the end of the HTML document because this is what the browser renders last -> if you include Java in the middle of HTML it can muddle up the order the page is rendered in. It's an anti-pattern -> there are modern tools (next video) 
+
+
+-----------------------------------------------
+Video: JavaScript as an external file
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:55            -> the <script> tag in an HTML document contains Java code and is most commonly placed at the end of the page -> you can also separate all of the java and all of the html into two different files. There are also certain error messages -> and in this case there is one because the browser is rendering the code from top to bottom 
+
+
+-----------------------------------------------
+Video: Modern JavaScript loading
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:19            -> modern JS loading -> the browser reads each line of code from top to bottom and executes it. It needs Java and HTML in most cases. There is a rendering problem where the Java is included in the code before the elements are referenced -> moving the script tag to the end of the documents is a way of solving this, but this also creates other problems. Async and defer keywords -> reference a script and point to the file . HTML > JS download > JS execution (content/ render blocking), it needs to be in an optimised order. The async keywords tells the browser to parse the HTML and the Java, rather than doing this in different orders (which creates a render blocking issue). Defer -> parse the HTML and if encounter Java, then load it at the same time, then when it's complete execute the JS 
+
+0:04:11            -> async / defer -> this is the standard way of rendering JS. If not using them, then place the <script> with the JS in it at the bottom of the HTML 
+
+
+-----------------------------------------------
+Video: JavaScript modules
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:54            -> JS files become large -> JS modules allow certain sections of code to be placed into different files -> import backpack from backpack.js e.g -> then export default backpack at the end of the document -> it's like a function which is outputting the entity, except that the function is the entire file -> it's almost like embedding a file with a function inside another file -> defining modules (similar to Python) -> you can set the type equal to module. Java modules -> used in React/ Vue, also in Vanilla JS 
+
+0:04:10            -> example -> there is a backpack object in the script.js file -> changing the code in the console (when you inspect it in Chrome) doesn't affect the file it came from -> putting an object into module 
+
+
+***********************************************
+Chapter: 3. Objects
+***********************************************
+
+
+-----------------------------------------------
+Video: Objects: A practical introduction
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:04:50            -> Java is a prototype based object oriented programming language -> objects are involved in Java (coded objects) -> each object has different properties, and there are different prototypes of them -> you can change the property values using methods, you can also have objects nested into different objects 
+
+
+-----------------------------------------------
+Video: Object containers
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:09            -> JavaScript Object -> collections of objects and methods. A constant is first created and named (const backpack, the object is the backpack), const backpack = {} <- this is a JS object and the object is empty. Each property is a name value pair -> name: "Everyday Backpack", this can be colours, strapLength etc -> each new property is on a new line. Objects can also have methods, which are name value pairs -> the value is a function/ call to a function. this. is also a commonly used keyword, which refers to the current object 
+
+0:02:21            -> containers called variables -> constant variables -> const backpack = { <- on the RHS of this is the object -> you can change the properties of the object, but not if the object is there or not (you can't change constants, if you try to do this you get an error message 'alignment to constant variable'). 
+
+
+-----------------------------------------------
+Video: Accessing objects
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:18            -> object properties -> name: ".....", <- these are separated by commas, and have to be named according to specific nomenclatures (strapLength). You can call an object by it's name in JS -> e.g in the console (in Chrome inspect), type the variable name and its value is returned. Console log -> console.log("Text example", backpack) -> it's like  input() in python, the output takes a general format 
+
+
+-----------------------------------------------
+Video: Accessing object properties
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:05:21            -> individual properties and methods -> dot and bracket notation -> console.log("",....) <- similarly to Python, backpack.pocket.Num can be referenced -> it's like accessing parts of a Python module, in this case it's parts of the object and the object is backpack. Bracket notation -> wrap the property name in quotation marks and square brackets -> very similar to Python arrays, selecting certain elements -> you can create property names which break conventions -> bracket notation allows the bypassing of this -> you can parse date even when it doesn't follow name conventions 
+
+
+-----------------------------------------------
+Video: Object methods
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:06:18            -> objects can contain functions ->  a method is when an object is inside a function, these are added to the object as a property -> toggle lid and new strap length -> toggleLid(...) { e.g -> function () { ... } <- to make the function run you call it's name(), in a function call -> it's like Python functions -> you can pass an object to the browser and change the values of the variables in the user's computer (but not in the source code). This. refers to the current item. As he's changing the strap length it's console.log("...", ...) -> the browser reads JS from the top to the bottom -> backpack.newStraplength(10,15) <- the strap length has been assigned a new value 
+
+
+-----------------------------------------------
+Video: Practice: Build a new method
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:54            -> creating methods to change properties -> pass values into functions via brackets, the current object is "this", any property can hold any value 
+
+
+-----------------------------------------------
+Video: Classes: Object blueprints
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:04:13            -> creating object templates using classes -> similar to Python. Classes work as templates for an object type -> attributes are inherited every time there is an instance of the class. Then in HTML the classes are imported as modules. To create classes in JS -> class Backpack { constructor{ <- then there are a list of all the properties -> i.e the parameters are first defined, and then their default values are defined via this.name_of_the_value -> then there are methods -> which are apart from the constructor methods at the beginning of the definition of the class 
+
+0:06:27            -> constants are defined via const ... = .... { -> you can log out the everyday path function -> then to create new objects you import Backpack from "relative path to file.js" 
+
+
+-----------------------------------------------
+Video: Object constructors
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:49            -> object constructor functions -> capitalised names -> it's a function which names new objects -> keywords and dor notations -> one.two = ... <- you're assigning values 
+
+
+-----------------------------------------------
+Video: Practice: Build a new object with a constructor
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:11            -> classes -> creating new classes based off of the objects -> e.g different colours of bags -> start with fully built up object and then migrate the objects over one by one 
+
+
+-----------------------------------------------
+Video: Global objects
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:27            -> on MDN webdocs -> there is a full list of the global objects -> he's adding a new parameter to the backpack class (the date the backpack was bought), then defines the default -> the date is listed as a string -> then inspect the element and change the string listing the date it was bought -> the entire point of doing this is to compare the date bought to the current date (to calculate the age of the rucksack). The date object -> takes any str and converts it into ms which have passed since 1970 -> then uses methods to convert it into a usable parameter 
+
+0:07:14            -> const rightNow = new Date() <- there is a constant which is equal to new Date -> he's using the documentation online to pick the pre-defined module which returns the date -> then there is another function which has been defined -> let now = new Date(); <- he's defining (let ... - ....) variables -> then defined the time as the difference between when the bag was bought and the current date -> then unit conversions to return the days since the backpack was bought. To call the method, console.log("....", ....) 
+
+
+-----------------------------------------------
+Video: Challenge: Create a new object type
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:00            -> making a series of object types -> defining methods and properties (methods operate on the objects), it's very similar to Python -> object oriented language 
+
+
+-----------------------------------------------
+Video: Solution: Create a new object type
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:22            -> creating new object types -> import new files in HTML as a module -> which contains a class of object (Book) -> there are also modules defined there (reading the current page of the book and marking it as read), commenting the order of the different properties. You can also include the year as an str, in case you would like to use certain operators which typically apply to strs, but on the date -> then he's defined multiple instances of the class of book objects 
+
+
+***********************************************
+Chapter: 4. Sidebar: String Output
+***********************************************
+
+
+-----------------------------------------------
+Video: Mix text and variables with template literals
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:35            -> how to output content from JS to an HTML document -> when you're inspecting the element in the console, change something and then -> how you use that to generate HTML. Use JS to inject new HTML into the document. The entire document is an object in the browser 
+
+0:06:19            -> DOM. The document object and return -> when you change one of the items in the console (after inspecting it in the browser), then the browser makes a document object model of the document -> you cna manipulate it using a template literal. The property values are in the JS object -> document.body.innerHTML = "some text" -> you can change the file in the console. Then, you can make a copy the code from the HTML and save it in another document. `` <- these are 'back ticks,' you can mix HTML with JS literal -> it's called a template literal -> add a placeholder $(name_of_object) -> then it sends over the name of the object 
+
+0:07:02            -> you can also run advanced functions -> template literals 
+
+
+-----------------------------------------------
+Video: Traditional string output
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:43            -> template literals -> for outputting HTML embedded in JS. This can also be done using strings -> e.g putting HTML into JS code -> e.g "<h1> $(everyfayPack.name) </h1>" -> instead of doing this, strings don't accept template tags -> you need to "<h1>" + everydayPack.name " + </h1>" 
+
+0:03:16            -> string concatenation, trying to output JS and HTML at the same time (to concatenate them) 
+
+
+***********************************************
+Chapter: 5. DOM
+***********************************************
+
+
+-----------------------------------------------
+Video: DOM: The Document Object Model
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:37            -> models of objects -> in this course the example he's using is a backpack -> there can be different instances of the same class of object  -> we have mental models of objects, e.g the class of bags has straps -> and there are different variables which have different attributes -> object models for backpacks. In this example, there is a set of stages you can use to remove objects from the backpack. We organise objects in hierarchical structures - > </> <- in HTML this creates a DOM, a document object model -> the hierarchy of things in the document 
+
+0:03:56            -> being able to traverse the document object model tree using JS 
+
+
+-----------------------------------------------
+Video: Access elements with querySelector methods
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:27            -> how to access elements in the DOM using JS. 
+
+0:03:26            -> how to access elements in the DOM using JS -> he's opened the code in a webpage -> there are two methods -> query selector and query selector all -> these use CSS queries to find elements in a tree. Inspect in Chrome -> console -> document.querySelector("main") <- it highlights the specific elements in the browser page which you type. Document.querySelector(".maincontent") <- this does the same thing using the class name. Or, Document.querySelector(".main li:last-child") <- this returns the last child of the list. All CSS combinator selections work (it's using CSS in JS) -> using JS, CSS and HTML and combining them 
+
+0:05:22            -> Document.querySelectorAll() <- returns a node list which looks like an array -> document.querySelectorAll(":main li") <- this returns a node list, and in the list is the separate items on the webpage. He's still typing in the console for the inspected webpage. Again, document.querySelectorAll("main li").forEach(item => item.style.backgroundColor= "red") <- this selects the items in the main list on the webpage, then sets the background colour equal to red -> you can also target just the last item by .forEach(item => item.style.backgroundColor= "blue") <- to target the last element in the list of items on the page 
+
+0:06:05            -> expand the HTML to target specific things -> e.g the spans in the project -> the selector uses CSS queries -> essentially to target certain elements in the console after inspecting the code on a webpage 
+
+
+-----------------------------------------------
+Video: Access elements using older methods
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:27            -> two other methods to access elements -> getElementsByClassName() (this has the plural of elements, returns an array like object of all the nodes or child elements matching the query, open the console document.getElementsByClassName("name_of_class")) <- then it returns an HTML collection (this is a list of HTML terms) and Document.getElementById() (this has the singular of element). Query selector and query selector all -> more modern 
+
+0:03:37            -> so document.getElementByClassName("packprop") <- this returns an HTML list of all of the backpack properties (the backpack is the example class of objects). document.getElementByID("everyday") <- this returns the document object of the ID. In older code, developers use IDs to target objects -> in some older code, HTML documents are full of IDs -> now we have the query selector methods. It's -> how you select specific objects from the code 
+
+
+-----------------------------------------------
+Video: Practice: Find an element
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:28            -> moving up and down the DOM tree -> you use query selector and query selector all methods to find elements in the DOM tree. When you are in the console from inspecting the webpage and want to target a specific element on the webpage, you can use queries. You can also target elements which are nested in other elements 
+
+
+-----------------------------------------------
+Video: Modifying element classes
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:01            -> modifying the classes of an element in some way -> if you have a class and want to change the behaviour of some of the elements without using CSS -> you can just add and remove a class (e.g hiding and showing a panel, or buttons etc), this is called class manipulation. There are two ways of modifying this -> Element.className (this holds a string listing all the classes appended to an element). document.querySelector("h1").className <- typing this into the console after inspecting the page highlights the h1 heading in the webpage 
+
+0:01:32            -> then document.querySelector("h1").className <- this returns the class (in HTML <... class=...>) of the object which was selected on the inspected webpage from the console. You can also change this using document.querySelector("h1").className = "new-class" <- this changes the class of the object in the DOM, by which I mean in the inspected webpage, he's used the console to change the class of one of the elements (coded it in JS, changed the HTML), then that's changed the class of the object 
+
+0:03:14            -> you can't just replace the classes with a new class -> this is important because in JS frameworks the term 'className' is used to avoid collisions with the JS 'class' keyword. Depending on the keywords -> you could end up with an unintended outcome. To get around this, use the classList property -> this gives a dom token collection of all the classes appended to an element. Example -> goes back to the inspected webpage, then in the console document.querySelector("...").classList <- there is a list on the inspected webpage, and this returns the classes of each of the elements in the list. In the document, select the list, then list out the classes of the elements of the list 
+
+0:04:42            -> it comes with it's own set of methods to manipulate the classList -> classList.add("new-class") e.g <- this adds new-class to the element in the first list of the HTML code (in this case), but it's done with Java. It's like a find and replace search tool, but in code. There is a classList.add, a classList.remove and a.toggle (this removes a class if it's there and adds it if it's not) -> these are method (e.g the toggle method). There is a replace method -> .replace("packprop","new-class") <- there is a new class 
+
+
+-----------------------------------------------
+Video: Attributes
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:00            -> if you want a string -> and you want the output of the classes to do something else with className 
+
+0:01:53            -> there is another one, .getAttribute("alt") <- it's searching for the desired attribute -> 
+
+0:02:00            -> JS can modify the attributes of elements -> these are stored in the attributes property. You can't use array methods on attributes, because they contain keys and values (more complicated than arrays). In the console of an inspected webpage -> document.querySelector("img").attributes -> returned NameNodeMap -> you can open them and get a full breakdown of the webpage attributes (it's a long list). There are methods which operate on these attributes. document.querySelector("img").hasAttribute("src") <- it's a boolean, we select the image on the page, then ask if it has the attribute called source 
+
+0:04:01            -> .getAttribute("...") <- returns the value which has the attribute ... (in some cases this can be ""), you can also set the attribute -> setAttribute("alt", "type text here") <- this appends text to the existing attribute. To remove -> you have - setAttribute (add something to an attribute you specify), removeAttribute (delete something from the specified attribute), and getAttribute (to return it). Everything in the tag is considered an attribute -> if you target an element with a class, then the class also shows up as an attribute -> you can use these methods to manipulate classes 
+
+
+-----------------------------------------------
+Video: Inline style
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:52            -> inline style -> if the webpage has inline CSS, e.g <p color:...> you can lift out the element which has this in the console of the inspected webpage. document.querySelector(".site-title").style <- this returns a CSS style declaration -> it contains every possible property (you can set the property). If you call style.color = "name_of_a_colour" <- the colour of an element changes on the inspected webpage. style.backgroundColor = "pink" e.g -> you can also then inspect it and see the colour has changed (under CSS text). Instead of hyphens, the properties have been camelCased 
+
+
+-----------------------------------------------
+Video: Add DOM elements
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:18            -> to access, modify, add and remove classes, attributes and inline styles from any element in the DOM -> state change of an element (add / remove a class), move data from one element to the other (add a data attribute), change appearance of an element (add an inline style) -> query selector methods. I.e using JS to modify inspected code for a webpage in the DOM, document object model (it's a model of the initial HTML file, which can be altered using the console when inspected in a browser) 
+
+0:01:44            -> to add DOM elements -> example -> used a template, then targeted an HTML property and changed it using const main = document.querySelector("......") (this is to select certain elements in the HTML page, using JS, and setting them equal to a constant) -> then there is main.innerHTML = content; <- this is how JS was used to inject HMTL. The problem with this is, text can disappear where you inject HTML (it's replaced). There is another approach, which adds the HTML after the other content. We have a DOM of the HTML -> and we're modifying the inspected webpage using JS (for applications) 
+
+0:03:47            -> add a DOM element and place it where you want it to appear in the document (in a process which creates new content). First, create a new element for the backpack content, populate it, then append it to the existing element. So, we have a DOM of an HTML page, and we're trying to modify it using JS. We're first define a new const -> const main = document.querySelector(".maincontent"); <- whenever we refer to main it knows it's all of the content. Then another const is defined, which equal to const newArticle = document.createElement("article"), this is a blank article to populate with code, then -> newArticle.classList.add("backpack") -> makes a few new articles. Then, injects the articles into the HMTL -> want to append it to the main content -> Parent.Node.append() method <- takes the parent node (which is main) and adds the new articles onto the end 
+
+0:05:24            -> main.append(newArticle); <- this adds the new content onto the end of backpack on the webpage. This method can also be used to add strings. Another way is ParentNode.prepend(). You can also use Node.appendChild() <- this returns the element -> see MDN web docs, under web AIS -> elements. He likes insert adjacent element -> so you can add elements before or after certain elements 
+
+
+-----------------------------------------------
+Video: Challenge: Add a new element
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:38            -> building new elements and adding it to the DOM -> in this case it's a navigation bar. This also needs CSS so it appears horizontal -> the stages of doing this are -> create a new element for the navigation menu, add an unordered list with items, add a navigation menu to the DOM after the header, place it items next to each other horizontally using CSS. JS and CSS -> these two are often written together 
+
+
+-----------------------------------------------
+Video: Solution: Add a new element
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:08            -> thought process to add a navigation bar to the DOM -> JS is used to modify the DOM, it's like an application. It's for applications. He made a new constant with a list for the different elements in the navigation bar (const is like a Python variable) -> then added a class to it (a blank navigation bar) -> then added it to the site header. So he's done two separate things, made the content for the nav bar, and then made the nav bar. Then linked them by injecting the list into the nav bar -> used the query selector to append it to the site header (this is a class at the top of the HTML page) 
+
+0:02:38            -> then he added style to it in CSS -> set the links to block and add padding to move them apart 
+
+
+***********************************************
+Chapter: 6. Sidebar: Variables and Data Types
+***********************************************
+
+
+-----------------------------------------------
+Video: Variables: Containers for everything
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:10            -> being able to name things   
+
+0:02:19            -> naming objects or groups of objects -> objects in containers -> you can have a virtual container -> you can also put an array of objects, numbers, strings and groupings of objects into containers. Variables are types of containers, because they contain the value the variable takes -> it's taking up space in a container in the computer memory 
+
+
+-----------------------------------------------
+Video: Scope
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:03            -> fundamentals of JS -> variables, datatypes, operators. Variables -> var statement -> var x = 1; <- the variable x has a value of 1 -> container could then return 5 -> being mutable means it's value can change. You could then container = "red" and the value would change. You can also var x = 1, y = 8; <- this defines three variables which can be called separately, by typing their names into the console. You can also var empty <- this is an empty variable (it's a container) 
+
+0:03:10            -> in MDN webdocs, var is a globally scoped variable -> if you change the value of a variable, in the rest of the code that value is changed. This can cause practical issues -> in this example, the colour and the text of a textbox was made using JS -> then query selector was used to select boxes and their values were set (select it. instruction in JS). One of the colours was changed in this example -> then a function is defined which sets the colour of the title as blue. A scoping issue is then created when the code is placed in the wrong order -> *JS is sensitive to the order of the code on the page* 
+
+
+-----------------------------------------------
+Video: Let
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:38            -> there are two new types of variables, a let and a scope -> the let statement defines a change within it's local block (rather than changing the code for the entire webpage in the console). Where there was a scoping problem (the order of the code affected the colours on the webpage in the console), and to fix this he's written let color = ".." where there was an issue with the global scope (local vs global scope) 
+
+0:04:34            -> to call a locally scoped let from outside the local scope -> console.log("...",) <- copy it and paste it outside the function scope -> so the colour in the function was locally defined, and then globally called -> so it returned an error when it was called from the console on the inspected webpage -> it only exists locally and not globally. It gives you control over where the variable exists and how it is controlled -> for most cases, use let not var -> let ...= "..." vs var = "..." <- one is 'I just want to set this equal to this here,' and the other is 'I want to set this equal to this in all cases 
+
+
+-----------------------------------------------
+Video: Const
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:38            -> const <- this defines a block scoped constant, it's constant and can't change -> vs a variable. In this example, he's tried to change the value of a constant in JS, which didn't work and returned an error in the console 
+
+
+-----------------------------------------------
+Video: Data types
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:00            -> use a const for any unchangeable variable -> you know if you try and assign a new value to the constant, the browser stops rendering the code at that point. You can change the status and properties of what the constant holds -> you can add new properties to it, you can't re-assign them because it's a constant -> this is used for data which you don't want to re-assign 
+
+0:03:07            -> what can be put into variables -> JS is a weakly defined language -> you don't have to state which type of variable something is. Floating point number -> this is the same as decimal. null <- this is nothing (this is the same as nan in Python). Two types of undefined -> creating a variable and not giving it a value, or giving it a value of no value, then there are objects {...} and arrays (like numpy arrays in Python, [similar formatting]). You can put any datatype in a variable -> it just depends on the type of operator 
+
+
+-----------------------------------------------
+Video: Assignment vs. comparison
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:30            -> in Python, a==b is a boolean value - JS is the same in this case. He's done an example where let a = 5, let b = 4, then a == b is False -> he's defined a function for it -> he's writing JS in VS code, then testing the output in the console of the inspected webpage. console.log("...") is the output it gives in the console (output this..), and console.error asks it to return a certain error. If you change one of the numbers equal to a string -> if they were the same number then they would be equal in this example (because they're not the same type, but they look the same) 
+
+0:04:33            -> you can do absolute equivalent tests -> if you do 5=="5" it will come out as true. The value is the same, but one is a string and one is a float. To distinguish between them, it's 5==="5" then it will be false <- this is called absolute equality. There are also comparison tools, if ( a > b), a < b, >=, <=, != (not equal to, this is the same as Python) 
+
+
+-----------------------------------------------
+Video: Math operators
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:04:32            -> computers -> calculating. Maths operators -> let x = 5; in comparison to Python x=5. Like Python, it also does modulo (remainder of) %. ** is to the power of. ++a (this adds 1 to a), --a (this takes away 1 from a) 
+
+0:06:06            -> when you add two numbers and one of them is a string and one of them isn't, you get a different output to if you had taken them away 
+
+0:06:06            -> another one is -> 5 + "4" ! = 9, 5 + "4" = 54. But, 5 - "4" = 1 
+
+
+***********************************************
+Chapter: 7. Arrays
+***********************************************
+
+
+-----------------------------------------------
+Video: Arrays explained
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:26            -> lists / arrays -> either you need to group objects or order them etc (they're lists). Arrays store, retrieve and can be used to re-order objects. pop pops one of the objects out of the array and returns it, push appends (pushes) an element onto the end of the array. Shift -> adds an item to the front of the array (shifts the rest of the items along to fit it in) 
+
+0:02:44            -> reverse, slice, join etc    
+
+
+-----------------------------------------------
+Video: Arrays in code
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:04:35            -> an array is a type of object -> const collection = [1,2,3]; <- it's the same notation as Python, but you need to put const before it and end the line with ;. Then to print the value contained in the array, it's console.log(array_name); <- it's zero indexed like Python. If you want the nth element it's array_name[n]. You can also const array_name[n] = value; like in Python. It can be any datatype -> collection[collection.length] = "new item" -> this adds an item to the end of the array. 
+
+
+-----------------------------------------------
+Video: Array methods
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:04:59            -> array methods -> see MDN webdocs (static and instance methods). In this example, there is an array let array_name = [....,...,...]; In Python, the elements are appended -> in JS it's console.log(array_name.join(", ")). | is a pipe. There is also array_name.push("item 1", "item 2") <- adds items to array (pushes them to it). array_name.unshift("item 1", "item 2") <- this moves items to the front of the array. array_name.pop("item 1", "item 2") <- removes element from end of array. The next one is backpackContents.forEach(function (item) { .... } <- and in there is a list with a new item and the item is returned -> he's defined a function which creates an element which is an HTML list element and can be injected into the list in the console using JS 
+
+0:05:20            -> you can define a function which extracts the first element in an array with a length >=5 -> in this case, it's let ... = array_name.find(function (item) { } <- and then the function is defined which is if the length of the item >= 5 then the item is returned. So he's defined a variable, and used a method which searches through the array using a function which he's defined. The variable finds an item in the list according to this function (and this can be done from the console of an inspected HTML webpage) 
+
+
+-----------------------------------------------
+Video: Challenge: Build and modify an array
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:24            -> build and modify an array -> creating an array, then use different methods to move the items, sort them alphabetically, find a specific item, remove an item with a specific content in the array. You can nest methods inside other methods -> when you are working with arrays/ methods -> you can nest methods inside other methods (e.g search for an element and then operate on the element) 
+
+0:01:42            -> the challenge is to use the MDN documents to search for different methods for the array 
+
+
+-----------------------------------------------
+Video: Solution: Build and modify an array
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:42            -> thought process -> define a new array const name_of_array = []; <- to remove the last item, name_of_array.pop(); <- console.log(); is equivalent to the print function in JS (it outputs it in the console log) 
+
+0:02:43            -> then to sort the array in alphabetical order it's array_name.sort() -> and when you console.log("...") (aka print  it) in the console 
+
+0:02:44            -> then to remove the last item in an array -> array_name.pop() <- it returns the data from the end of the array. Then you can use the push method to push the item to the front of the array -> instead of pop it's push 
+
+0:03:31            -> when you sort the items in alphabetical order, the if there are elements in the array with capital letters -> then the terms with the capital letters come first 
+
+0:05:08            -> if you sort items in alphabetical order, then you need to lowercase the items, e.g USB -> usb. Another example is to search for an item -> in this case searching for the item in the array which is called "notebook" -> const foundItem = array_name.find(item => item === "notebook"); <- set a constant equal to a found item, which is equal to the find method on the array, searching for the item which is called "item" in the array 
+
+0:05:36            -> to find and remove an item -> let remove  = "notebook" <- sets a variable equal to the name of the item in the array which we want to delete. Then name_of_array.splice(name_of_array.indexOf((remove),1), then console.log($(remove), name_of_array). So, we want to remove the variable from the list with the value "notebook" -> then the next line splits (splices) the array into the item we want to remove and the rest of the array -> and then the last line prints the results 
+
+0:06:44            -> apart from ...remove), 1) you can add another number which would add another element into the array 
+
+
+***********************************************
+Chapter: 8. Functions and Methods
+***********************************************
+
+
+-----------------------------------------------
+Video: The real-world function
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:33            -> sorting objects -> which ordering system you want to sort the object, then sorting them -> size, weight, colour, brand etc -> there are a lot of different metrics to sort by ->  humans sort objects innately, computers  need algorithms to do it. There is an algorithm to sort -> e.g picking the last used dates of objects, then comparing two items -> bubble swap etc according to the date of used items. Logic -> functions. Based off of the outcome of each stage, the computer makes a decision -> this is what the subconscious mind does in people (we don't think consciously about it, we just sort the items) 
+
+
+-----------------------------------------------
+Video: Functions and methods
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:58            -> this chapter is about functions and methods in JS -> how they work and use cases. Data and how to handle it -> JS is used for functions (scripting language). Functions are functions which sit on themselves, and methods are functions which sit on objects. function ....(arguments) { let .... =.... return ...}. It's similar to Python but functions not def, and let instead of just setting the value of a function. Declaring a function in a local scope can be available everywhere else in the script -> it can be redeclared. Don't rename a function with the name of a previous function 
+
+0:02:18            -> functions are parsed in the order they appear in the code -> define a function before it's used, e.g by another nested function. You can also define a function through a function expression -> const ... = function (arguments) let... { <- you set a constant equal to a function -> so we can either define a function, or we can define a function by defining a constant and setting it equal to a function -> so what does it mean if a constant equals a function (if the function is supposed to output something different depending on its arguments?) 
+
+0:04:06            -> a function expression is -> constant equals the function -> then we define the function -> it's a function which doesn't have it's own name, this is the preferred method for defining a function -> because it's local and not global -> you can't accidentally override it -> they exist only in the scope it was created. Essentially it's safer to define the function via the const approach 
+
+0:06:18            -> only existing in the scope it's meant to is called being not hoisted. To call the function, you call_the_function() -> you can print the value by doing this in console.log(function_name) <- console log is like the print function. NaN is not a number. There is also an immediately invoked function expression (IIFE), brackets are put around the entire function and then another () are put around the end of the function definition -> this defines the function and outputs the value as soon as it's defined 
+
+
+-----------------------------------------------
+Video: A standard function
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:34            -> example -> there is a function defined, then another function which is equal to a constant defined, then main.append is used to add something to the constant which the function is defined as -> and main is query selector main. You can reuse the function on many different objects. In this case, he's defined a function which is a constant -> then embedded HTML in there via newArticle.innerHTML= ...... <- and then appended that to main, which is everything in the browser. Then he's called the function which defined adding that content to the page in the console -> you can also retrieve information from the page in a similar way 
+
+
+-----------------------------------------------
+Video: The arrow function
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:01            -> functions become complex -> they have names, parameters (these can be nothing, but the two brackets are always there), {}, and some functions return data 
+
+0:00:59            -> arrow functions -> these are used in place of writing function expressions, and they have different properties. See MDN webdocs (official documentation). => { 
+
+0:03:28            -> it's in JS when you see the implies maths symbol =>. In the definition of a function, you delete the word 'function' and replace it with a => (this is called an arrow function). You don't have 'function', you have => <- this means it's a function and sometimes it can have no arguments, so just const = () => <- it's a function with no arguments (=> means function). Arrow functions can only be called after they have been declared, in comparison to regular functions (this is improper practice as it is). Another point is, you can't use arrow functions when declaring methods in an object -> you need to use a proper function is you have objects defined in it 
+
+0:04:45            -> you can also simplify the arrow function notation but in some cases  reduced models can be harder to understand (see MDN documents, the JS documentation) 
+
+
+-----------------------------------------------
+Video: Arrow functions and "this"
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:50            -> the arrow function, scope and this keyword -> .this can be used inside any object -> e.g in the definition of a function, for a variable defined in the function (like an argument of it), then to reference it in the code it's this.volume e.g or this.x, this.name_of_variable. If you call a function in the function -> issues may arise. In this example, he's defined a function in a function, and the function in the function uses this.volume (volume is the input for the larger function it's embedded into). But, there is also a volume defined in the code outside of the definition of the function, and this is the volume which the function in the function has uses when it was referenced. To get around this, he's defined the first function as a function, and the embedded function in that function as a '=>' 
+
+0:04:13            -> the scope is when the variable it uses in the function (the value it uses) is global and not local 
+
+
+-----------------------------------------------
+Video: Practice: Build a function
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:13            -> functions -> declaring functions to write, call and use them -> expressions, declarations, arrow functions. Creating a function declaration -> then doing something an an element in the DOM in it (query selector to find an element / adding a class etc), then calling the function and defining a variable in it 
+
+0:01:23            -> then doing an arrow function 
+
+
+-----------------------------------------------
+Video: Pass data to a function with parameters
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:04:56            -> using functions with arguments -> e.g tipping function -> function inputs are sum and percentage -> then let inputs = ..., etc inside the definition of the function -> then he's called the function with the values of a sum and percentage for the tipping function. ${...} inside the definition of the function prints its value. He's then altered the function to take a prefix argument, which moves £30 to 30£ for currencies which use this notation (e.g Norwegian KR) 
+
+
+-----------------------------------------------
+Video: Return values from a function
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:05:13            -> tip calculator function example -> outputs the content into the console of the inspected webpage -> it probably doesn't always have to be inspected. In this case, he's modifying the tip function with a part which converts different currencies -> there is a piece of code which transforms numbers into international number formats -> you pass in a number and it formats the number for a piece of currency. const formatter = ( value ) => { <- this means it's an arrow function, for that section of code, then he's defined let formattedValue, and returned it. This function was used in the tipping function, but defined separately -> he's defined the fomatter function to take a number and from the MDN webdocs, copied a line of code and pasted it into the KS -> then defined another argument into that function in which the user types their location (so the local currency is defined) 
+
+0:06:57            -> he's done different examples with the tip function -> working in different functions. This was an example with one function using the output from another function 
+
+
+-----------------------------------------------
+Video: Practice: Pass values between functions
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:17            -> passing data to and from functions -> i.e inputting values into arguments and passing it between different functions -> defining a function which takes the input for the URL of an image and then formats it when called. A main function which creates a new article element, populates it with content from the object properties and returns the object. The second function, which creates a figure element, populates it with the image, a caption and returns the figure back to the main function. Then the query selector to append it. The thought process is -> put the object into the main function, then the figure function, then return everything back to where the main function was called 
+
+
+-----------------------------------------------
+Video: Callbacks
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:05:01            -> if you have two functions which rely on each other and you want to control the order they're executed -> the sequence -> this example is with the tipping function from before -> there is a function defined which uses a function which is defined below it (the code isn't going down line by line, exactly, because functions can have functions embedded in them which are defined below them). He's inserted the embedded function into the other function and included it as an argument -> there could be several versions and by putting the embedded function as the argument to the function as it's embedded into, it makes the code more readable 
+
+
+-----------------------------------------------
+Video: Conditional if...else statement
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:05:50            -> conditional logic statements -> if else -> this is very similar to Python. There is an example on the webpage where the status of the bag is closed or open, in this case it says true or false, which we want to convert into open or closed. if (object_Name.embedded_Item == true) { . Else... etc -> you can console.log(...) and it prints out the output. Testing for a condition and looking for the condition to be true or false. He changes different values in the code -> you need to use === or e.g === "True" could return false. Turnery operators -> console.log(... . .... ? "open" : "closed") <- if ... is open, output "open", if not then output "closed" 
+
+
+-----------------------------------------------
+Video: Logical operators
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:31            -> conditional statements -> a condition ( >= <- larger than or equal to). Other ones are <= , !==, && (if you have two conditions), then to print them out it's console.log(). | | is the or statement and they're called pipes -> you can check for and, or or both 
+
+
+-----------------------------------------------
+Video: Conditional switch statement
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:05:12            -> defining a function which classifies the backpack into old, used, etc based on it's age. Switch statements -> instead of a lot of < > statements in a function, use switch statements. Case clauses -> case '...': <- they list all of the case scenarios, you can also use them to search for ranges. switch (true) -> then you can use conditional statements -> so switch (true) { .... } <- ... = case (then condition), then new line with how the variable changes, then break; -> he repeats these, listing all of the different case scenarios. Then there is also a default -> in case none of the cases are satisfied -> console.log('..... ${text it prints in the console if none of the conditions are satisfied}) 
+
+0:05:12            -> defining a function which classifies the backpack into old, used, etc based on it's age. Switch statements -> instead of a lot of < > statements in a function, use switch statements. Case clauses -> case '...': <- they list all of the case scenarios, you can also use them to search for ranges. switch (true) -> then you can use conditional statements -> so switch (true) { .... } <- ... = case (then condition), then new line with how the variable changes, then break; -> he repeats these, listing all of the different case scenarios. Then there is also a default -> in case none of the cases are satisfied -> console.log('..... ${text it prints in the console if none of the conditions are satisfied}) 
+
+
+-----------------------------------------------
+Video: Looping through content
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:22            -> loops -> what should happen at each iteration -> const stuff = ["..."] <- looping through each of the elements in an array and listing it in a webpage -> so we have the array in JS -> create an unordered list -> define it as a constant -> loop through the array and add each of the items to an HTML list, then add the list to the end of the HTML page. The for loop -> this is how you loop through an array -> for (let i = 0; i < stuff.length; i++) { <- it's the same as Python but different notation, for i in, and i++ is adding 1 to the counter each time. A for, of loop -> for (const item of stuff) { <- specify which loop, for as long as we have items in this array, carry on iterating through them 
+
+0:05:03            -> stuff.forEach((item) <- this is the preferred way for dealing with it -> take each of the items and perform a function on it -> for each vs for if <- this method actually performs a function on it (a defined function, rather than some operations). In another example -> for (const ... in ...) {...} <- it iterates through the items in a group of objects an operates on them in the conditions which are after the text 
+
+
+-----------------------------------------------
+Video: Using the map() array method
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:40            -> the maths method for arrays -> it takes an array and creates a new one which is the initial one, but operated on -> this is in comparison to looping through the entire thing and changing each of the elements -> here a new array is created. Use the for each loop to move through each of the items -> what it's doing is creating a new <li> item (a constant), then setting the item we're iterating through in the loop through the array equal to that element in the list (to that list item), then adding it to the list. You can also do this differently -> create a different element using the map method by changing the loop into a map element. const ... = ... . map((item .... <- he's changed it to .map in the loop definition. Then return the list item. So -> using that function takes each item from the array, maps it into a list element and prints out the list element. Then running it in the inspected webpage console lists out the webpage as a list 
+
+0:04:40            -> you want to create a more complex array and operate on it before outputting it -> the map method in JS is to get from items in an array, and changing them into a bullet pointed list on an HTML webpage 
+
+
+-----------------------------------------------
+Video: Challenge: Build an advanced function
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:03            -> the map method creates a new array 
+
+0:01:40            -> building an advanced function -> there is a new folder, data.JS -> import backpack -> you add a new constant const .... which is an array -> then you export it. Then importing it into JS, looping through it and outputting the elements from the list into an array. Map through the data in the array to output an HTML article -> then add them to the main element 
+
+
+-----------------------------------------------
+Video: Solution: Build an advanced function
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:42            -> problem solving thought process -> in one JS file, you define two separate objects -> so, const ... = new object_name { .... <- then list the object attributes -> you do this twice, put it in a const backpackObjectArray = [....,....,....] <- so you define two different types of backpacks (in this case), then put them in an array, then export that array on another line -> export default name_of_array_containing_the_two_arrays <- this is the first JS file, it defines two objects 
+
+0:02:18            -> then in the second JS file -> you import the file from the first JS file -> import ... from "insert the relative path name to the file"; -> then we want to iterate through it -> const content = .... .map((backpack) => { <- this is for returning the input array into a new array (it names a copy of it) 
+
+
+***********************************************
+Chapter: 9. Events
+***********************************************
+
+
+-----------------------------------------------
+Video: DOM events explained
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:41            -> headlamp example -> it has different features (button / brightness / flashing mode / battery indicator). Event handling -> e.g the button being pressed and released leads to a response -> there is a trigger and a response happens 
+
+
+-----------------------------------------------
+Video: Typical DOM events
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:47            -> event handling with DOM events. There are different events -> e.g reloading the browser, clicking something -> anything which happens that triggers it -> in JS we listen for the events and program responses to them. Because it's a language for web applications, we're dealing with events and programming responses. The mouse has coordinates on the screen. We have event listeners -> these listen for different events -> find an element we want to listen to an event for (e.g the button) 
+
+0:02:29            -> we are saying, listen for something -> and when it happens, run this function -> e.g button.addEventListener("click", () => { ....("") 
+
+0:05:13            -> an event listener -> you can add it to any object in the browser window (or the entire browser window) -> e.g whenever the mouse moves run this which returns the x and y coordinates of the mouse on the webpage. In the console, there are event objects (these give information about the event which was triggered, e.g what thing was being tracked, it returns information about the event). In JS, there is another example which looks for the mouse entering a container and turns it blue -> there is an event for mouse enter and one for mouse leave. Everything in the browser is an event and you can add event listeners to it (to any element in the window or the DOM) -> when this trigger happens this happens -> this can be in the form of a callback 
+
+
+-----------------------------------------------
+Video: Event listeners
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:11            -> event listeners -> methods added to targets -> you attach something to an event, if the event happens then the event listener is triggered and a certain function is called. E.g when a button is clicked (event), then the event listener logs the event in the console (it's done via element_name.addEventListenet { .... <- this is camel case. "click" console.log{... <- in the event that the button is clicked, record it in the DOM (document object model in the inspected webpage) 
+
+0:03:51            -> target_name.addEventListener(the_event_listening_for, callback_function [,optional_argument_rarely_used_set_to_false]); <- the standard format for event listeners. E.g adding an event listener to the button, the event we're listening for it is being clicked, and then recording the event in the DOM. In this example, there are buttons and clicking them on the webpage does nothing. We want to click the button which says "open" and have it change to "close." He's adding event listeners to each of the buttons on the webpage in the JS file (not in the inspected webpage console log) ->  he writes a new constant, const button = backpackArticle.querySelector(".lid-toggle"). Then append an event listener to it -> button.addEventListener <- so he's added an event listener by calling the button a const, then defining an event listener to it in the format of name_of_const. then adds event listener 
+
+0:04:53            -> opens the console in the browser -> he triggers the event on the webpage and looks in the DOM -> one of the parts of the document in the console lists the path. Then he's setting a turnery operator -> an operator which is executed when the event is triggered. In this case, the event is the button being clicked and he's defining an operator which is changing the text in the button. To do this, console.log(event), then he's defined an if function (if the button is open then make it say closed and vice versa etc) 
+
+
+-----------------------------------------------
+Video: Practice: Experiment with event listeners
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:29            -> there are a lot of different DOM events you can listen to -> this video is the different types of events which can be listened to -> there is a grid of them on a webpage. E.g using an event listener to add CSS to add a highlighted box around part of a webpage when there is a mouse hovering over it. Another one, adding en event listener to grid cells to change their background colours when hovered over, or clicking a key on the keyboard and changing it's colour -> there are examples on the MDN reference webpage 
+
+
+-----------------------------------------------
+Video: Advanced event listeners and "this"
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:41            -> expanding the functionality of the event listener -> there is a button which can be clicked and says closed/ open etc every time it is clicked and there is text beside it with its status -> he's updating the status in the text beside the button to change when it's clicked. He's taken one line of code in the function which changes the text on the button from open to closed -> copied that line and changed it for the button. So, there is one line which is for the text on the side of the page and one for the text of the button and they're in the same event listener -> when the event happens, multiple things happen -> all in the same function, two lines of text on the page change and the event is logged. This is in the file for the JS code 
+
+0:04:24            -> once the code is changed, he always tests it. With arrow functions (when you define a function with the => notation), there is no this. .... attribute -> but there is with regular functions. So, in the JS code for the event listener, if you use a this. ... attribute, then it returns an error when executed in the inspected webpage console. So he's changed the function in the event listener from a => arrow function to a regular function and it's worked. There is another constant he's defined, which is a function with all the information about a rucksack -> all the properties, then the this. element has been used to search for the specific element inside all of the elements 
+
+0:06:05            -> see if the ID matches the element of the parent ID -> and if it does, then use the turnery operator to change the status of the buttons -> he's done it using the this. ... keyword (which required changing the function from an arrow function => to a regular function, because arrow functions have no this. attribute)  
+
+
+-----------------------------------------------
+Video: Pass arguments through event listeners
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:38            -> accessing the event object or passing an argument through to the callback function -> when you define event listeners, they can have arguments -> and you can capture the value of that argument in the console log in the event listener function. The event is the argument (in this example) -> the event is automatically an argument in the function and logged in the console log when the event happens. Then in the browser if you call the event it will print it out in the console log 
+
+0:03:57            -> in another method -> let ... = "text" -> then he's added an event listener to a button and normally it takes a regular function -> he's made that a function of another parameter and defined that function to alter the state of the event listener. This allows different arguments to be passed into the function -> and in the inspected browser console it's returning an error. It's important to -> not break the callback function in the JS code because of the .this code -> => arrow functions can't take .this, it will return an error message. To work around the issue, it's added an extra argument -> button, and changed the reference from .this to button (you take the variable which is represented by .this and name it, then the error message in the console goes) 
+
+0:04:50            -> there is another argument event -> and it's being logged in the console -> as are the arguments (in this case). You wrap the function around another function to enable it to take arguments ("using the callback function as a function wrapper to call other functions") 
+
+
+-----------------------------------------------
+Video: Challenge: Create an event listener
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:15            -> creating event listeners -> with two input boxes where the strap length of the bag can be input and then the text on the page changes with it. The event which triggers it is the strap length of the bag is submitted. It's been created from forms (which is how the information is entered, this is made using JS) -> the DOM changes when somebody types information into the webpage (and then is reset when e.g the page is refreshed) 
+
+0:02:59            -> he's suggesting two different methods -> import ... -> create an event listener by adding an event listener to each of forms in the JS, the other suggested method is to search for the specific backpack features, and makes the distinction between the left and right rucksack strap 
+
+
+-----------------------------------------------
+Video: Solution: Create an event listener
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:40            -> creating event listener -> his thought process is to think about the final result we want (what do we want, and what does the code look like), the form that we want to inject the code into -> there is an HTML type of object called form -> this is the field which allows the user to enter the text in on the webpage. There are two straps (left and right), and so two of these forms (one for each). The form, so the user can enter the new length of the strap. Then let .... = ...., in the code -> he's used a query selector to select the items which contain the length of the straps of the bag. Then, passed those values into a new function new_strap_length which has been defined -> stored the strap lengths in an array 
+
+0:06:10            -> so we have an array with the strap length, and an arrow function -> which goes into each of the items in the array -> then .getAttribute on it and creating a constant which creates the form for the new length of the strap to be typed into on the webpage. Also using a template literal -> a form type in this case. $() is where the user types the information into. When you submit a form, it tries to reload the page -> e.preventDefault() <- this stops it from reloading the page when the form is filled with the new strap length. Then, .querySelector() <- find the input and then take the value (which is in the form). Then change span to the new value (in inches) -> he's also written code which wipes the box clean after the new strap length has been typed into it 
+
+
+***********************************************
+Chapter: 10. Troubleshooting and Validating JS
+***********************************************
+
+
+-----------------------------------------------
+Video: Troubleshooting JavaScript in the browser
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:04:40            -> troubleshooting in JS -> using the console (inspected webpage section). In an example, he's in the console log and there is an error message. There is a file the error occurs in and the line -> the console tells you where the error in the code is. Sometimes this is not clear enough, so developer tools > source -> he's clicked on the line with the code we want to inspect with the debugger -> then clicks F9 and the browser goes through the line section by section -> it tells you exactly what values are being passed into that function 
+
+
+-----------------------------------------------
+Video: Making sense of a React component
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:04:28            -> JS frameworks (react/ vue) -> he's imported React from "react" and PropTypes from "prop-types" -> then he's set a constant which is an object -> the cursor is a pointer when it hovers over images. Then he's also defined a constant -> and at the end of the file the constant (in this case photo) is exported. In the const photo, there are the different properties of the photo, and an arrow function -> with another constant. Another arrow handler function -> which listens for clicks on the photo, then a jsx part which is an extension of JS in a different format. Then export using PropTypes() -> the developer sets rules for what the different properties look like (e.g the source property is required etc). Then, we have different sets of methods using arrow functions (not in JS but in React, in JS the code would break 
+
+
+***********************************************
+Chapter: Conclusion
+***********************************************
+
+
+-----------------------------------------------
+Video: Next steps on your learning journey
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:48            -> JS can be used to do things which HTML can't (e.g to pull content from any data source as an object) -> to add interactivity. Everything is an object -> there are additional topics. There are always new developments in JS -> modern features -> software developers need to learn and keep up with the latest developments in JS 
+
+0:03:31            -> MDN webdocs, stack exchange 
+

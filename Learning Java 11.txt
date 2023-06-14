@@ -1,0 +1,450 @@
+Course Title: Learning Java 11
+
+Description: Java is one of the top five programming languages, and is used for websites, embedded controllers, and Android app development. Interested in learning how to code with Java? Join instructor Kathryn Hodge as she helps you get up and running with this popular language. Kathryn covers all the basics: Data types, strings, functions, and loops. She helps you control the flow and logic of your code, and debug your project to make sure it runs perfectly. Along the way, she provides real-world examples and introduces challenges that allow you to practice your new skills. This course is perfect for developers who need to get up to speed with Java fast, as well as for beginning programmers who want their first taste of this popular language.
+
+
+***********************************************
+Chapter: Introduction
+***********************************************
+
+
+-----------------------------------------------
+Video: Welcome to learning Java
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:59            -> JS for beginners -> to make applications. JS developers are some of the better paid developers -> loops, functions, classes. Debugging programs 
+
+
+-----------------------------------------------
+Video: What you should know
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:34            -> the course is designed with no prior knowledge of JS required 
+
+
+***********************************************
+Chapter: 1. Getting Started with Java
+***********************************************
+
+
+-----------------------------------------------
+Video: What is Java?
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:44            -> what is JS -> coding language for applications (web, mobile, desktop, web servers, embedded systems - Java programs). JRE - Java Runtime Environment. JDK -> java development kit this installs the JRE automatically 
+
+
+-----------------------------------------------
+Video: Downloading Java on your computer
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:30            -> JDK - Java development kit -> this includes the JDE and can be downloaded. SE - standard edition - in this course the JS version is 13.0.2 and can be downloaded 
+
+
+-----------------------------------------------
+Video: Exploring the command line
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:33            -> the command line -> aka the terminal -> it's like file management but without a GUI, in Windows it's the command prompt. dir in Windows is the same as ls in Mac -> you can drag a folder into the terminal and it's path will be printed. She's going through linux commands in the terminal -> cd'ing into folders, ls, mkdir etc 
+
+
+-----------------------------------------------
+Video: Your first Java program
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:18            -> writing JS -> get a text editor, in this case Sublime Text -> for writing JS in a txt file. JS is verbose -> there is code which you add with every program (there is a lot of code which each document needs). Every JS program needs a class -> she's creating a class and calling it hello works. public class HelloWorld { } <- then public static void main(String[] args) -> the main function is the entry point to the function. System.out.println("text") <- the system gives you access to the output functionality of JS. Public -> out of the scope of the course 
+
+0:03:50            -> file > save > .java extension -> the file name and the class name have to match 
+
+
+-----------------------------------------------
+Video: Hello World in the command line
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:21            -> she used Sublime to write the code, and is now using the terminal to run the code. JS code and compiling it -> in the terminal, she finds the file and javac [name of the file] -> this compiles the code and creates a java class file in the folder -> then to run it it's java [name of the file without the extension] -> then it runs in the terminal. She's gone back and changed the source code -> you need to recompile the code in the terminal before re-running it again. Java c and java -> come for compiling the code and one for running it. You can combine both of these 
+
+
+-----------------------------------------------
+Video: Exploring an integrated development environment (IDE)
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:25            -> IDE - integrated development environments -> to write and compile the code (rather than doing it in separate processes these are combined) -> for building and executing code, with built in features and a GUI (compared to the terminal). Intellij IDEA -> this is the IDE she's using in this example (it's an application for writing, compiling and building code). This IDE has a navigation pane with project metadata -> the main information about the project is in the src folder. On the top right hand side, there are debugging tools 
+
+
+-----------------------------------------------
+Video: Hello World in an IDE
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:55            -> she's making a new JS file -> new > java class -> it's automatically populated with code we need in the IDE. main -> and the IDE automatically fills in the code (code completion). public static void... -> System.out.println("....."). Then left click the class and run the file, the IDE has it's own terminal on the bottom of the screen -> this is the console (like when you inspect a webpage, except this is in the IDE). Then there is a play button in the top RHS of the page 
+
+0:03:32            -> there is a code editor where we write the code and a debugger in the IDE -> a bug button next to a play button in the IDE (also code completion features). You don't need an IDE, it can be done in the terminal, but is used for productivity reasons 
+
+
+***********************************************
+Chapter: 2. Building Strong Foundations
+***********************************************
+
+
+-----------------------------------------------
+Video: Primitive data types
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:35            -> data is information which is stored and processed by a computer -> name, age, status of anything e.g on or off. Data types -> the classification of different pieces of information, a set of different possible values. Two categories -> primitive - boolean, int, double, char. The second type is reference types. Boolean -> true or false. Int -> whole numbers. Double -> a decimal number. Char -> character (a single letter or symbol) 
+
+
+-----------------------------------------------
+Video: Data types and variables in Java
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:05:26            -> primitive types -> the basis and foundation of JS datatypes. Data in JS -> in this example, we're creating a database about the information of different students. E.g an age can be an int or a double -> the initials are chars (single characters). Creating JS which represents the data -> in an IDE with the automatic JS code defined, e.g int .... = 15;  for the age of the student. Int is the datatype, label, then it's value. double = ...; and then char ....= 'K'; <- e.g for the initial. Another one is boolean ...=...; <- we're stating the datatype variable_name = ...; In another example, System.out.println(e.g); <- to get the program to print all of the results 
+
+
+-----------------------------------------------
+Video: Strings in Java
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:18            -> primitive datatypes in JS -> boolean, int, double, char. To store and reference text, there are different types called reference types -> strings (sequence of ordered characters, chars are single characters, "string" - it depends on the order of the letters. Organise char data pieces in a specific way). In an example, she's added a String name_of_student = "Emily" -> you can add the first and last name in the same string, or do them in two separate ones 
+
+
+-----------------------------------------------
+Video: Using indexes with strings
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:20            -> taking a string and extracting the first and last names -> the ordering of the string matters -> in a string, each letter has an index (zero indexed). Then we have charAt <- take a character at a specific location, the argument it takes is the index of the character we want (e.g the 0th character in the string). In this example, System.out.println(StudentFirstInitial). It's studentFirstName.charAt(0); and the output is the initial of the student. The output can also be the last element in the string 
+
+
+-----------------------------------------------
+Video: Concatenating strings in Java
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:48            -> printing separate strings in the same line -> combining different strings (adding them together), e.g add the first name and the surname. System.out.println(studentFirstName + " " + studentLastName). A literal string "is one surrounded by quotation marks." Then running the program in the IDE prints out the strings combined 
+
+
+-----------------------------------------------
+Video: Input and output in Java
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:59            -> outputting information using System.out.println() -> creating several values and printing them out for the user -> in this example, this process is repeating with information which the user can input via arguments. E.g -> Scanner System.out.println("..."); <- then input = new(Scanner.in) <- so we have a new input, which the user can type in when the program runs -> she's also imported java.util.Scanner; -> and input.nextDouble() <- which assigns the student GPA value to the variable. Then System.out.println(...) -> this program is used to update the values of the different attributes for the students in the database by a user 
+
+
+***********************************************
+Chapter: 3. Control Flow
+***********************************************
+
+
+-----------------------------------------------
+Video: Mapping out program control flow
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:55            -> representing data in JS using datatypes and variables. In this chapter, it's adding decision making logic -> control flows -> the order in which the instructions are executed. Create the variables and printing them out. Manipulating control flow -> how much time a given line of code is executed is a function of conditions. Example -> fortune teller program -> it's a function of different case scanarios. She's written out pseudocode in a flowchart -> the diamonds ask questions, the start and end are circles and the other boxes are squares 
+
+0:03:41            -> then convert the decision blocks from the flow chart into JS -> if with the condition, then do this etc 
+
+
+-----------------------------------------------
+Video: Operators in Java
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:21            -> we have a flowchart -> there is a condition and the code which is ran if it is true, then false. To convert the code into decision blocks in JS -> relational operators, e.g inputtedNum < 5 -> depending on if it converts to a boolean e.g this can be used to convert it into the decision blocks. We have < > == >= <= != (!= is not equal). True or false depending on the variable 
+
+
+-----------------------------------------------
+Video: Decision-making with if in Java
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:51            -> we're trying to get the fortune teller program flowchart into a JS program. She's running through the flowchart -> Scanner scanner = new .... <- the user is entering a number and it's being saved for the fortune teller -> if the number < 5 etc -> this is what the outcome depends on. The number is saved as inputted num -> if statements are examples of control flow statements -> if the condition is true, then we execute the next block of code. So we have if, if-else -> if (...) {} else ... -> only the if and else blocks are ran separately. Then she checks the code -> interpret the answer stage of the problem solving thought process 
+
+
+-----------------------------------------------
+Video: Understanding scope in Java
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:30            -> scope and how this relates to if statements -> only the if block or the else block was executed. Scope -> the conditions under which a block of code are used -> this is {} braces <- the if and else block are separate. E.g creating different blocks in the program. Another example is creating an int number in the scope -> you can reference it or change it's value. In another example, we have a string value which is defined outside of the if else condition -> it can be accessed outside of the if block. The scopes of variables -> where they have been defined and where they haven't 
+
+
+-----------------------------------------------
+Video: While loops (conceptually)
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:32            -> loops -> code is repeatedly executed depending on a boolean condition -> which is a while loop for control flow. There is an example flowchart for this -> an example is songs on repeat, which can be represented on a JS flowchart. The condition can always be true -> in which case the loop never stops (e.g the song is on repeat and never comes off of it) 
+
+
+-----------------------------------------------
+Video: While loops in Java
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:45            -> creating a while loop in JS -> e.g flowchart for playing a song on repeat. The thought process is to create the different case scenarios in a flowchart, and then convert them into JS, then to test out the code. In this case, there is a boolean which is true if the song is playing on repeat -> then she defines a loop for if the song is on repeat or not. Then if(....) {} <- if the song is on repeat or not. Then we have another block after this -> which saves the output of the code. Running this in the console in the IDE implies the song is on repeat 
+
+0:03:10            -> she's running the code for every possible case scenario in order to test it 
+
+
+-----------------------------------------------
+Video: Challenge: Multiple choice
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:21            -> code challenge -> if statements, while loops, variables, IO. Multiple choice questions in JS and three possible answers with control flow and IO -> then depending on if the answer is correct or not it will print out different messages. // comments in the IDE, then take the user's input and check if it matches the one stored in the system 
+
+
+-----------------------------------------------
+Video: Sample solution: Multiple choice
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:41            -> thought process for creating an MCQ question program in JS -> we have a question and multiple different answers -> then defined the correct answer in an str, string .... = ....; <- name of variable with the correct answer. Then we ask the question via system.out.println(question) -> then the user is presented with the different answer choices. Scanner scanner = new Scanner(....); <- we create a scanner which reads in the answer the user enters in. Then adding in an if ... else ... loop for the different case scenarios the user enters. Then she's testing all of the possible answers which the user can enter 
+
+0:04:10            -> we're comparing the answer the user enters to the correct one which is stored in the system. It's -> case sensitive -> the importance of testing out the code with different cases (upper and lower cases, two different case scenarios). To fix the problem, she's changed all of the cases of the letters in the answers to lowercase. Then, she's used another option which converts the user's input into all lowercase letters 
+
+0:04:48            -> then she's using a while loop to allow the user to enter multiple different guesses. More multiple choice questions can also be defined -> these could be defined in a general class of data structures to avoid repeating multiple lines of code 
+
+
+***********************************************
+Chapter: 4. Debugging in Java
+***********************************************
+
+
+-----------------------------------------------
+Video: Debugging syntax and logical errors
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:04:04            -> error messages and debugging to remove them -> the errors are bugs. How the program executes the code -> this can be understood from print statements. Syntax errors -> spelling (the computer can't understand the code, so the program won't run). An IDE tells you which line has the error -> it's like (in this example) a spell checker for the code, and tells you e.g where a semi-colon is missing at the end of a line. Then she's running the code to test it. Syntax errors are logical errors (they deal with the syntax, the program can run but not as the user expects). To debug it -> look for different parts of the program which aren't working and go back to the code which is producing them 
+
+0:04:35            -> e.g System.out.println(....) <- you can use print statements to test parts of the code where the program isn't behaving as expected -> this is a part of the problem solving process when you're interpreting the code you made, you test it. In this case, the error message was because of a value the variable help 
+
+
+-----------------------------------------------
+Video: Debugging with an IDE
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:04            -> debugging code without print statements in an IDE -> there are tools in IDEs for debugging code. Breakpoints -> these are tools in IDEs -> intentional stopping points in an IDE (the program is stopped at that point in order to evaluate the internal state of the code). E.g instead of using print statements you pause the code there as it executes. In this example, we have a program in the IDE and a break point. There is a specific run in debug mode option in the IDE -> she's ran it in the debug mode and it's stopped at the breakpoint, then returned information about the program. There are also variables which are in scope -> where you can return the value of the variable 
+
+0:03:41            -> step over -> to just run the next line of code -> you can get the IDE to execute the code line by line 
+
+
+-----------------------------------------------
+Video: Challenge: Find the errors
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:04            -> print statements, breakpoints and debugging tools. In this example, there is a program which calculates the area of a triangle and we're looking for errors in the code 
+
+
+-----------------------------------------------
+Video: Sample solution: Find the errors
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:45            -> how to find and solve errors in the challenge program ->  the IDE can find syntax (spelling) errors. Then she's testing the code -> by running the program -> and where it doesn't work as it should, it indicates areas in the code to inspect. Then, putting breakpoints at the points where the code breaks when it's executed. Then she's running the debugger on those lines. The thought process is -> look for spelling errors, then run the code and see where it doesn't work, then inspect the code where it doesn't work using a debugger in the IDE, by using breakpoints 
+
+0:04:20            -> once she's gone through the debugging process, then she's testing the code again, and repeating the debugging process until all of the errors are resolved 
+
+
+***********************************************
+Chapter: 5. Functions in Java
+***********************************************
+
+
+-----------------------------------------------
+Video: What are functions? (conceptually)
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:49            -> functions -> control flow of the program. Creating programs which are readable and easily understood by other software developers -> functions are a series of steps in association with a task. You can use the label or the name for the task to call the function once it's defined. The syntax here is name_of_function(); <- to call the function. Benefits of functions -> to organise the code in a meaningful way and avoid reusing code (you only need to define the function once) 
+
+0:04:25            -> when you change a function, you only need to change one definition in the function, and not the entire thing as it's reused 
+
+
+-----------------------------------------------
+Video: Defining functions in Java
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:01            -> defining functions -> we have a series of steps which need defining in JS. If the function has been defined, it does not call it (you need extra code to call it). public static void function_name() {} <- then when defining the function, it's e.g System.out.println("....): <- the program pauses until the user types an input and presses enter. Scanner input new Scanner(System.in); <- we're checking if the user entered a word into the console. We also have import java.util.Scanner; -> there is another one -> System.out.println("..."); <- we are outputting the result 
+
+
+-----------------------------------------------
+Video: Calling functions in Java
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:05:06            -> we have a defined function -> then to call it, write the function_name(); <- calling the function is running it. The IDE is filling in the name of the function when the first few letters of its name are typed. She's stepping over each line to see how it has been executed. Local variables are defined in functions and have limited scope. She's running the code to understand the control flow. Then scroll through the code and looking at each line -> when the function is called, the program is looking back to where that function was defined in the code 
+
+
+-----------------------------------------------
+Video: Parameters in Java
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:34            -> dynamic functions -> functions which don't have inputs (the output is always the same). This video is using arguements with functions, e.g a tipping function (tip rate, tax, cost of meal, adding all the costs and outputting the results). It's we want the function to do this, then converting it all into logical steps to put into code. The tax rate can also be location dependent 
+
+0:04:04            -> in JS -> we have the function being defined with 'public static void function_name() {}' <- in the {}'s, we have a few formulae being defined; -> then outputting the result to the console System.out.println("...."); <- the println is to print to the console (in the IDE). You can also put the arguments in the ()'s and give them default values. These values are local and can only be used within the confines of the function. To call the function, you need arguements unless default ones have been defined or there aren't any 
+
+0:05:18            -> the order of the arguments in a function matters when calling the function 
+
+
+-----------------------------------------------
+Video: Return types in Java
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:53            -> system.out.println() <- for printing data. To output data from functions using return types -> when you define a function and return the result. E.g a function which splits the bill when tipping -> the number of people would be an input. You would return the output of the calculation. Jn JS -> public static void function_name() {} <- void is the return type (every function defined so far returns void (nothing)). If you change void to double, the function will return two numbers -> so return result; <- in the definition of the function (it's like Python) 
+
+0:04:54            -> public static void main() {} <- she's defining another function which divides the cost of the meal between the number of people -> this inputs the cost of the meal and the number of people. Then we are using the debugger -> so she's added breaks in the code. Take the value of the variable in the function and access it in a separate part -> with return types you can make a part of the function accessible in a different section of the program 
+
+
+-----------------------------------------------
+Video: Using built-in functions in Java
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:47            -> creating functions in JS (user defined functions) -> this video is using built in functions. Built-in functions -> println is an example to print out results. Operations on datatypes are another example -> "red".equals("blue"). The dot operator is another one -> you use it to access functions which are embedded in different sections of built-in code. Sometimes custom and sometimes built-in functions are used. In an example, she is talking about an exponential function -> there is already a builtin function for this, you don't need to do it. To find the builtin functions you google it 
+
+0:04:38            -> there are different examples online (do this before you think about making a function). In the IDE, she's typed the builtin function, and it's suggesting the input parameters. She's then tested the code and it's worked. The benefit of this is - you don't have to define the function yourself, and there are examples on the internet. Reuse other peoples' code first before creating your own. Pre-defined functions are generally tested and robust 
+
+
+-----------------------------------------------
+Video: Challenge: Salary calculator
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:14            -> defining a function, calling a function and various functions which exist. We want a function which calculates an employee's salary given the amount per hour and the number of hours worked. The amount of paid holiday is also considered 
+
+
+-----------------------------------------------
+Video: Sample solution: Salary calculator
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:24            -> defining a function which calculates the salary in JS -> you can make the data returned double -> we times the amount per hour times number of hours times the weeks per year, for the amount per year. Then we save the result in a variable called salary. When testing the code, we do error checking on if someone types a negative number of hours worked. To adjust the code to that, she's entered an if loop, which negates the salary if it's negative. There is also extra optionality for unpaid time - which takes away the pay of the employee if they take unpaid time off 
+
+
+***********************************************
+Chapter: 6. Classes in Java
+***********************************************
+
+
+-----------------------------------------------
+Video: Classes in Java
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:54            -> program design -> how we can make programs readable to other software developers. We need to write code which other software developers can read and understand, and which we can come back to e.g 6 months from when it's written. An easy way of doing this is by defining classes - for example, on-repeat functions. Using functions to define things in code - classes act as blueprints, which have attributes and methods. E.g a default triangle - the properties are a base, three sides and the length of the sides. The attributes define a datatype and are a variable which hold a specific value. Classes can define behaviours - e.g code which calculates the area of a triangle, it can be a behaviour to the triangle class. A method is another name for a behaviour. You can add behaviours to define which class of triangle it is (e.g scalene etc) 
+
+0:04:42            -> manipulating or using attributes of the classes -> there are multiple ways the same function can be defined -> multiple ways of approaching the same problem etc. Static -> if the function doesn't use the methods of the class 
+
+
+-----------------------------------------------
+Video: Constructors in Java
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:34            -> functions -> you have to define functions / classes in order to use them. E.g defining the class of triangles, and then generating instances of triangles from them. Instances are objects from the class blueprints -> different types of triangles, e.g. Constructors -> every class has a constructor -> how you create triangles from the class of triangles. Constructors -> () we also have return types -> the constructors return instances of the class (they construct them). Initialise the attributes with values -> e.g base, height and side lengths can be initialised. Each of the parameters have a name 
+
+0:06:01            -> e.g class_name(argument_1, argument_2) {} <- then in the {} it's this.base=base; this.height=height; etc -> it's the definition of all of the different parts of the triangle. this. -> we're talking about the attibute of the class. We initialise with the value given in the base and the height parameter e.g -> this is a constructor function, it's a function for making triangles (instances of triangles). To create new triangles, it's Triangle name_of_shape = new Triangle(argument_1, argument_2, argument_3); <- in JS the syntax is ; (or not) at the end of each line 
+
+0:06:39            -> in this example, the class is a datatype -> we're creating a new datatype by defining the class (it's a way of storing and organising data) 
+
+
+-----------------------------------------------
+Video: Creating a class in Java
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:53            -> you can use this.... to assign values to attributes. These become highlighted when they are used and are accessible (in this case) throughout the triangle constructor class. Methods -> functions which belong to a class. For example, a find area function in a triangle class). To define this, in the triangle class -> public double findArea() {....} -> then return (and types the equation for it using this...... notation); 
+
+
+-----------------------------------------------
+Video: Creating instances in Java
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:35            -> making triangle instances -> e.g in the main method file -> she's separated the files out from each other. Then, public static void main(....) {} <- and in the {}'s -> Triangle triangle_name = new Triangle(arguments); <- the notation is similar. Then she's testing the code using breakpoints -> there is a lot of testing in the code. In the constructor, she's created an instance of the triangle and in the IDE she's initialised the values of the attributes. She's stepping through the different instances of the triangle class we have in the IDE debugging tool, and you can see the values of the side lengths for each of the triangles is different 
+
+
+-----------------------------------------------
+Video: Instance methods vs. class methods
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:52            -> to run methods on the triangles which we have defined -> e.g the area of the triangles. double triangleArea = triangle_name.findArea(); <- two inputs (base and height), then using the method on the instance of the class which we pre-defined. pow is a static method (not an instance method) -> instance methods are non-static methods (you need an instance to use it, they take arguments). .charAt() <- this was another example from before, and charAt is an instance method 
+
+
+-----------------------------------------------
+Video: Using instance methods in Java
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:20            -> the dot operator on triangles to access functions. In this case, she's adding a breakpoint using the debugger where the function was called. When the function is called, we can see the values of the attributes (the base and the height of the triangles which we're using). In this example, double triangleBArea = triangleB.findArea(); <- so we first define the variable to store the triangle area, and it takes two different arguments (the base and the height), then B is input into it. Then we print the value of that variable which stores the variable using System.out.println(variable_name); 
+
+0:02:44            -> when you run the code in the console, then the area of the triangle is printed (in the IDE in this case) 
+
+
+-----------------------------------------------
+Video: Instance and class variables in Java
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:28            -> the dot operator to access a behaviour or method. System.out.println(..... . ....); <- to print something -> there is a difference between accessing a variable (no dot) and calling a function or method on something (dot). Static and non-static variables -> ones which stay vs do not stay the same from triangle to triangle (in this case). A static variable is a constant one, accessed using the . operator (the dot operator). In this example, she's made a static variable using static int numOfSides = 3; <- it's a static constant which doesn't change and it's stored in a variable -> then you can System.out.println it to return it in the console when the code is called 
+
+
+-----------------------------------------------
+Video: Review: Classes vs. instances
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:03            -> chapter summary -> JS can be used to create classes (for instance a triangle class), these classes contain methods and constructors (in this example to make new triangles). Instance variables -> these are the variables whose values change from class to class 
+
+0:01:45            -> instance functions / non-static methods -> these are accessed using the . operator and (). There are also static class variables and methods -> which you don't need to create an instance for 
+
+
+-----------------------------------------------
+Video: Challenge: Student profile
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:26            -> classes vs instances -> constructors, how to create and use instances etc -> in this example, it's a university student's profile being represented using a JS class. This includes information about the students course etc, which you would typically find on student records. Students should have at least one behaviour -> there should be a function which models the student's expected year to graduate -> so we're creating the class for students, then creating a constructor which can be used to generate profiles for the students 
+
+
+-----------------------------------------------
+Video: Sample solution: Student profile
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:57            -> representing a students profile in JS using a class -> she first creates a new class in a separate file public class ..... {} <- and in the {}'s, we first have String FirstName; etc -> a list of the different properties which we require for the profile. There is also double ...; int ....; etc -> then after the information about the students, we have public void incrementExpectedGraduationYear() {}, then we have this.expectedYearToGraduate -> she's increasing it by 1. Then she's creating different profiles for students -> this is done using StudentProfile profileOne = new StudentProfile(arguments); Then, we test the code -> always test the code 
+
+
+***********************************************
+Chapter: Conclusion
+***********************************************
+
+
+-----------------------------------------------
+Video: Next steps for learning Java
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:39            -> creating classes and instances in JS -> e.g word counting games etc 
+

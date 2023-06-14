@@ -1,0 +1,377 @@
+Course Title: Learning C#
+
+Description: The C# language got its start on Windows, but today you can find it almost everywhere.  Whether it’s running on the cloud, to desktops with MacOS and Linux, to mobile operating systems like Android and iOS, C# has grown into a mature, powerful language for almost any programming purpose. In this course, Joe Marini dives into the fundamentals of C#, starting with a basic overview of language constructs like program flow and data types. He then gets into more advance topics such as functions, object-oriented programming techniques, and string processing. After this course, you’ll have a better understanding of C#, and how its combination of power, simplicity, and expressiveness make it an extremely versatile programming language that can be used for almost any scenario.
+
+
+***********************************************
+Chapter: Introduction
+***********************************************
+
+
+-----------------------------------------------
+Video: An introduction to learning C#
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:07            -> C# -> this started on Windows and has a library on .net 
+
+
+-----------------------------------------------
+Video: What you should know
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:50            -> pre-requisites -> knowledge of programming, object-oriented programming (classes, C# is object-oriented). Text editors, terminal and IDEs (this course uses VS code) 
+
+
+-----------------------------------------------
+Video: Setting up your environment
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:37            -> setting up the environment -> download .net (from Microsoft), the SDK version will allow you to edit and create files using it. Framework was windows only, core was for an earlier version of Windows -> download the more modern one, for the right operating system, and the SDK so the files can be edited -> you can just install the VS code IDE which will install it. Then he opens a terminal window and types dotnet --version <- for the current version running on the computer. If there is an error then you need to repeat the process  
+
+
+-----------------------------------------------
+Video: How to run the examples
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:25            -> He's downloaded the exercise files onto the desktop and cd'd into them in the terminal -> and then opened them in VS code (right clicked on them and opened in integrated terminal, this opened the terminal in VS code, it's the same as running it in the terminal) 
+
+
+***********************************************
+Chapter: 1. Overview of C#
+***********************************************
+
+
+-----------------------------------------------
+Video: Hello World C#
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:56            -> in the terminal, writing a hello world program in C#. In the terminal, he cd's into the exercise files -> dotnet new console <- this creates a new program, then ls and it's created a new folder. He opens this file in vs code -> at the top of the file is a statement which says 'using system' -> namespace HelloWorld <- namespaces stop the code from colliding with variables / statements which are defined elsewhere. There is also a class Program -> static void Main(string[] args) <- the program looks for where there is a main entry point and starts the program there 
+
+0:05:57            -> Console.WriteLine("Hello World!"); <- this is the syntax for printing statements in C#. Then he runs the program in the terminal (which returns hello world). He then adds code into the file which is asking the user for the name -> the question is printed, then string str = Console.ReadLine() <- readline lets the user enter the text, and WriteLine writes it out into the console. So we're setting a variable equal to a string which is read from the user. Running this in the terminal asks the user for their name and returns it to them (in their program) 
+
+0:06:40            -> in Microsoft 9, there is simpler syntax for this. He deletes a lot of the code and indents each of the previous lines -> he's calling this the boiler plate 
+
+
+-----------------------------------------------
+Video: Variables and data types
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:04:13            -> types of data in C# and how to declare and use variables. In VS code, there are several variables defined -> this is an object oriented language. In C#, you tell it which type of variable it is -> int i = ....; you also have decimal, char, float and string. This helps to cut down on the amount of time needed to parse the code. C# also uses the var type -> var x = 10; <- the compiler figures out which type it is. We can also create arrays int[] vals = new int[5]; <- this create an array of 5 initials. String[] strs = {"list", "of", "strings", "example"}. Another example is Console.WriteLine("{0},{1},{2}", i, c, b ) <- these are index variables which are replaced in the string with the value of the represented variable. It's similar to .format() in Python 
+
+0:06:27            -> we also have "null" values -> no value. Object obj = null; example <- if you try to print this, the value is null (there is none). Command + ` to get the terminal open -> if you try and call a null value nothing shows in the terminal. Then you can also define another variable, long bignum; bignum = i -> integer types can be implicity converted between different datatypes. Float i_to_f = i; for instance <- you need to type (float)i; in order to convert i into a float 
+
+0:07:32            -> to cast a float to an integer, it's int variable_name = (int)f; Then commenting out the previous examples we are met with a floating point number which was converted into an integer type 
+
+
+-----------------------------------------------
+Video: Operators
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:04:19            -> to declare variables -> datatypes in C#. Common operators for data -> in a static void Main he's created new variables to demonstrate operators on. Console.WriteLine(); <- in the brackets you can use it like a calculator -> WriteLine is the same as print. Adding strings together prints them out next to each other -> then x++ and x-- would increase and decrease the value of those variables by ±1. Then a +=b; would set a = a+b (you're adding them together). Logical operators are another type of operator -> one which returns a boolean. Console.WriteLine(x>y && y>=5); <- it's true if both the conditions are true, and || is the 'or' operator 
+
+0:08:03            -> two pipes || next to each other are or and && is and -> in logical operators (these return boolean values). There are also two more operators -> the null coalescing operator. The ?? operator -> this uses the left operator if there is a value and the right value if there isn't (this is the same as the null value). E.g str ?? "unknown string" -> if there is a value then the str is returned. We also have an operator ?= which does an operation if the answer is null - we're asking it - is there no value here? E.g str ??= "New String", he changes the value of the variable to have no value - and then the operation happens (in one case and not the other) 
+
+
+-----------------------------------------------
+Video: Writing C# comments
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:16            -> comments in C# -> there are several methods of doing this. Single line comments -> // insert comment. You can also use multi-line comments -> these start with /* notation and can carry on for several lines until another /* is typed in the source code. XML documentation comments are another method for this -> documentation can automatically be generated from the source code, if you type /// in the code to summarise what the different sections in the code do. In the /// tag, he's also written out <tags to format the documentation which will be created from these comments></> 
+
+0:05:40            -> when using XML tags, each line begins with ///. There is also documentation on the Microsoft website and more information is shown there. Back in the code, there are certain tools which can process the comments -> you can modify the file so it automatically creates documentation. He's modifying the .csproj file in VS code (the IDE). In there, he's typed <GenerateDocumentationFile></GenerateDocumentationFile>, then the second line in there specifies the name of the file we want to store the documentation for the file 
+
+0:06:35            -> in the terminal in the IDE< then he's typed dotnet build to make it generate the file with the documentation (it starts this with a build). This moves extracted comments into a separate documentation file 
+
+
+***********************************************
+Chapter: 2. C# Program Flow
+***********************************************
+
+
+-----------------------------------------------
+Video: Conditionals with "if"
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:04:11            -> ways to change the flow of the program in C# -> e.g performing repetitive operations. Conditional if -> making decisions -> int variable_value = 60; -> then if (variable_name == 50){} <- the conditions are contained within the {};s -> Console.WriteLine("") -> and we also have else conditions. Running the code in the terminal -> you can chain multiple statements together in else if statements. Console.WriteLine(""); <- this is used to print out values in the terminal. You can also use switch statements if you have too many if else blocks. There is also an operator called the Turnery operator which is used to condense down the amount of code 
+
+0:05:23            -> Console.WriteLine(variable_value < 50 ? "text" : "text"); <- if the condition is true, print this : else, print this. It's shorthand notation for an if else block in one line 
+
+
+-----------------------------------------------
+Video: Conditionals with "switch"
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:37            -> the switch statement is a more condensed way of making decisions (in less line of code). switch (arguments) {} <- in the {}'s we list the different case scenarios -> case 50: Console.WriteLine(""); break <- print this out in the event of this, and stop the code from running. We're listing out all of the different possible values the argument could take and telling it what to do in each of those cases -> if none of them are true then it runs to a default which is defined using default: .... break;. Running this in the console -> he's done an example where the condition deliberately isn't true 
+
+0:04:06            -> in C#7 and further, the case statements can be used on arguments which aren't just integers. In other words, if you have too many if... while... etc blocks of code then you can condense it by using switch statements 
+
+
+-----------------------------------------------
+Video: For loops
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:05:07            -> executing programs multiple times (e.g asking questions again and again, or reading lines in a spreadsheet again and again). The for loop -> for (int i = 0; i < myVal; i++) {} <- then in the {}'s -> Console.WriteLine("...."); <- so we're iterating from i = 0 to 14, adding 1 each time and printing out the result each time (the Console.WriteLine piece of code is printing this out). For each in loops are another type of loops -> to iterate over sequences of values. In this example, foreach (int i in nums) {} <- this is where nums is a list of numbers (for i in the list of numbers, do this {} <- and in the {}'s we're printing out different lines of code each time) 
+
+0:05:49            -> in another example, we have foreach (char in str) {} <- and in {}'s -> if (c=='o') {count++;}) <- so for each character in the list of characters, look for the letter o and increase a counter for the number of o's by 1 <- in this example to use a loop to count the number of o's in statements  
+
+
+-----------------------------------------------
+Video: While loops
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:42            -> while loops (for as long as a condition exists). In this example, we have a while loop -> while (inputStr != "exit") {conditions} <- in this case. we're reading code for as long as the user doesn't type for the program to be exited -> inputStr=Console.ReadLine() <- it's taking an input, reading it and if the input isn't exit, then it stays in the program 
+
+0:04:26            -> there is another example of loop type, called the do while loop. do {actions for it to execute} while(inputStr !="exit"}. The output looks the same -> but for regular while loops, the conditions are stated at the beginning of the code. The do while loop will execute the code at least once before the code is checked 
+
+
+-----------------------------------------------
+Video: Using break and continue
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:37            -> for and while loops -> two other statements are break and continue. To stop the execution of a loop before it's finished -> we have an array in this example int[] values = {....}; -> then we're iterating through it, if (val >=40){break]}. If we wanted to skip over the value 20, we would use =< and >= statements to work around the number we wanted to avoid. 
+
+0:03:39            -> for and while loops -> two other statements are break and continue. To stop the execution of a loop before it's finished -> we have an array in this example int[] values = {....}; -> then we're iterating through it, if (val >=40){break]}. If we wanted to skip over the value 20, we would use =< and >= statements to work around the number we wanted to avoid 
+
+
+-----------------------------------------------
+Video: Exceptions
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:05:39            -> troubleshooting in C# -> exception handling. In this example, we have a division and he's deliberately generating an error by dividing by 0. try {} <- he is running the code in a try block, and then defining another block catch {} and printing out an error message in it. In other words, if an error comes up in the code then we're telling it which error message to return back (if any). If we wanted to limit the value of x -> throw new name_of_error_type -> he's programing it to throw certain errors. finally {} <- this is the message it always runs 
+
+
+***********************************************
+Chapter: 3. C# Strings
+***********************************************
+
+
+-----------------------------------------------
+Video: String operations
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:04:36            -> working with string data in C# -> string name_of_string = "..."; then Console.WriteLine(string_name.Length); We also have foreach(char in ch in str1) -> then he defines an iteration loop to break the loop if we reach the letter b. Running this in the console (terminal simulator) in the IDE, we can see the code has worked. outstr = String.Concat(strs); -> he's taken a list of strings and make all of them into one string, then printed it out using WriteLine. Another example is String.Join('.',strs); -> this separates out the elements in the array of strings by .'s 
+
+0:08:27            -> the compare function is called directly on the string class -> this compares two strings. int result = String.Compare(list_of_strings); <- it's comparing / sorting two strings. You can also bool isEqual = string_one.Equals(string_two) <- which returns a boolean to test if two strings are equal or not. Console. WriteLine <- printing the result. You can return the index of a given string if you do Console.WriteLine(string)name.IndexOf("fox")) for instance. We also have LastIndexOf, and the replace function which works in this example according to variable_name = string_one.Replace("this","with this"); 
+
+
+-----------------------------------------------
+Video: String formatting
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:07:44            -> formatting strings -> the .format notation from Python. Specifying the index -> we have different formats of number (e.g X is hexadecimal). He's using the console to do this, in a printing function it's ...{0}", val1}; -> and running it in the terminal replaces one of the two values with another. In another example, we're formatting an array of decimals. In a print statement, it's "{0,12} {1,12}" etc -> we're listing out the numbers in specific formats. You can also format them as currencies, for instance {0,12:C0}, then intlMixPct[0] e.g -> which returns the currency in dollars and as a percentage of the total funds we have in each {} 
+
+
+-----------------------------------------------
+Video: String interpolation
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:05:01            -> string interpolation -> placing variables from expressions placed directly into a string. We have a few strings which can be put into text. $"{year} {make}"$ <- year and make in this example are the names of the variables which contain the strings we want to embed into the text (in Python this would be the .format{} method). You can also format it as currency if you {price:C2} for instance (this is dollars). You can also type miles*1.6:F2 in there -> in this case, if we're formatting it as a floating point number. You can use {{{}}} to embed them (it's written in the text as {}) 
+
+
+-----------------------------------------------
+Video: Using StringBuilder
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:06:13            -> building strings out of other strings -> C# class builder. In the using System.Text; name space -> we're creating a string builder. StringBuilder sb = new StringBuilder("text",200) <- it's a variable type called string builder -> the text is the initial string content and the 200 is the maximum capacity for it. In this example, he's printing out sb.Capacity and sb.Length. You can add content to it via sb.Append("text you want to append to it"); You can also add lines to it via sb.AppendLine(); and can join more than one together via sb.AppendJoin(',' animals); <- this joins it into the string builder. We can also replace strings -> sb.Replace("this","with this"); and have sb.Insert(0,"text"); to insert text at index 0. Then we can convert the output to a string -> sb.ToString(); 
+
+0:07:20            -> i.e using a string builder class to combine different strings. There is documentation on the Microsoft website 
+
+
+-----------------------------------------------
+Video: String parsing
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:12            -> parsing the contents of a string into C# datatypes, e.g you have numbers which are stored as strings and you want to extract the numbers. string variable_name = ...; -> he's putting it into a try {} block to catch any errors which come up. In this example, he's defined a variable which is -> variable_name = int.Parse(variable_name_2); -> then he's printing it out. By writing int.Parse, we're converting the number which was stored as a string into an integer, and it works in the console 
+
+0:04:35            -> if we then try and convert a floating point number into an integer -> in other words, if we take a 2.0 and convert it into a 2 (you can't convert a 2.2 into an integer). We have variable_name = int.Parse(number, NumberStyles.Float); -> it's expecting the number to be a certain format. Then we copy and paste in the same line, but it's NumberStyles.AllowThousands -> you can also parse in 'or' -> so NumberStyles.Float) | NumberStyles.AllowThousands <- using a pipe symbol to tell it to expect this, or this 
+
+0:08:02            -> then in the output we have the expected results and each of them are integers. With booleans, e.g Console.WriteLine($"bool.Parse(""True)"); -> you can also write float instead of bool, and replace True with a 1.234 for instance. Running this also works -> we can round the decimal place in this case. There is another example called try parse -> Int.TryParse(numStr1, out targetNum); <- it's returning the value back out to us (it returns the converted value there). Running this code rounds the value which is input into it in this example -> but the parsing function was used like type() in Python 
+
+
+-----------------------------------------------
+Video: Challenge: Guess the number
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:41            -> in the terminal, guess the number game -> dotnet run in the terminal, the game chooses a number between 0 and 20 and the user has to enter a guess then it tells the user to guess above or below and repeats until the correct number is guessed 
+
+
+-----------------------------------------------
+Video: Solution: Guess the number
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:24            -> a guess the number game in the terminal -> we have variables which store the user's guess and the number -> the user enters the value using the ReadLine(); line of code. If they type something which isn't a number then there's a block of code which checks and will return an error. Then we have two different cases, they guess the right one or they don't -> in which case different messages are output to the user. The (more condensed) Turnery operator is used to tell the user to guess higher or lower -> and the code circuit repeats until they get the correct answer or not 
+
+
+***********************************************
+Chapter: 4. C# Functions
+***********************************************
+
+
+-----------------------------------------------
+Video: Function basics
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:04:20            -> how to define and work with functions (methods). Functions are used to reuse code -> functions can have a return value. E.g float ...(float miles) {} <- float result = miles * 1.6; return float -> return return values -> you can also have void values. E.g void ....() {} 
+
+
+-----------------------------------------------
+Video: Named and default parameters
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:35            -> functions in C# -> in this example, the function takes two arguments -> you can change the function so that the arguments have default values. This is done when first specifying the name of the argument = ...  when defining the function (rather than just writing function_name = ... You can call the function using the name of the parameter(); When you call the function it doesn't matter which order you state its arguments in 
+
+
+-----------------------------------------------
+Video: Reference and out parameters
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:05:56            -> the value of variables is local to a function -> in this example +=10 <- he's increasing the value of a term by 10. If you change it's value inside the function then outside of the function it won't change. In another example, we have ref int arg1 -> we're using ref inside the function, this means the variable inside the function can be referred to (even if it's defined from inside the function). Out is another keyword -> parameters return values instead of supplying data to the function. static void PlusTimes (int argument_1, out int product) {} <- having out in the list of arguments for the function refers to the value we want it to return 
+
+
+-----------------------------------------------
+Video: Returning multiple values
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:04:46            -> returning more than one values from a function -> the out keyword. We can use tuples (they're like coordinates which contain information). In this example, we have (int a, int b) tup = (5,10); <- they're coordinates (tup means tuple). You can also set variables equal to tuples -> then tup.Item1="this"; <- you can set methods. To insert variables in text Console.WriteLline($"{variable_name}");. These can be used to return multiple values from functions -> return (1+b, a*b); <- you tell the function to return an entire tuple 
+
+
+-----------------------------------------------
+Video: Challenge: Palindrome
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:43            -> in the console, a function which detects if a string is the same string written backwards. dotnet run in the terminal, then type the word, it returns a boolean if it's a palindrome or not. It's also case and publication independent. The rules are -> program reads input, ignores case and punctuation and returns a tuple (boolean if it's a palindrome and an integer with the number of characters in the word) 
+
+
+-----------------------------------------------
+Video: Solution: Palindrome
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:31            -> thought process -> we want the output in the form of a tuple, so we first define a tuple which we use for the output. Then we take care of the intricacies (make everything uppercase and strip out the whitespace / punctuation). variable = sb.ToString(); <- we're converting it to a string (for instance if a number is entered) -> the whole idea is to first standardise the format of the input. Then, we operate on it -> using a while loop. We first define the index we are iterating over -> int i=0, j=teststr.Length-1; <- so, from the 0th character in the string to the end looping backwards (in increments of -1) 
+
+0:03:29            -> then we're iterating through in a while loop -> the indices are looking at the first and last, then the next in. We're comparing each pair -> if the ith element isn't equal to the jth element then return a false -> then move i along by 1 -> i=i++, and j=j-- iterate j moving in -> then return the tuple. So the thought process is -> take the input from the user and standardise it (get rid of punctuation etc), then compare the first and last element of the string, then carry on moving inwards, then return a tuple 
+
+
+***********************************************
+Chapter: 5. Object-Oriented C#
+***********************************************
+
+
+-----------------------------------------------
+Video: Defining C# classes
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:07            -> so in this C# class of books, we have three things - 1. a list of the different attributes, in a block, #2 all of those combined into a constructor (for a book, which can be used to generate instances of the class), and then #3 methods which return information the user requires when calling it 
+
+0:03:40            -> C# is object oriented -> working with C# objects. To define a class in C#, public class Book <- public means any other code in the program can use it. Then in the class definition, we declare fields -> so, string _name; e.g. We also have constructor functions -> to make instances of the objects. So inside the definition of the class, we have public Book(arguments) {} <- and in the {} it's _name = name; etc all the different information we can have about a book. The final thing is to add methods which return information about the books in this case -> public string name_of_method() {} <- then in {} he defines what the method does (in this case returns certain information about the book) 
+
+0:04:56            -> in the main code, he is defining examples of books. Book b1 = new Book(arguments); <- name_of_class name_of_variable = new name_of_class(arguments); -> he's defined two books. Then, we're testing the different methods on the book - name_of_variable.method_from_the_defined_class(); <- and printed it out using Console.WriteLine() to print it in the console. In the code, he's then changing the name of one of the books -> to do this, e.g book_name._name="new book name" - you need to change its associated permissions 
+
+
+-----------------------------------------------
+Video: Access modifiers
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:06            -> access modifiers in C# -> to control how variables can be accessed and changed. The three most common ones are public (any other code in the program can access the method), protected (it's limited to the subclass or current code) and private (the method can only be accessed within its definition). So, public is - it can be accessed anywhere, the difference between protected and private is whether it can be accessed in subclasses or not 
+
+0:03:03            -> then in an example in the code, he's changed some variables -> some are private, public and protected. He's changed the name of the book in the class of books to be public (so the name of the book can be changed once it's defined). Running it -> dotnet run, and the name of the book has been changed (this is not good practice). In the other examples protected and private, you can make public methods which operate on those variables -> e.g public string ...() {} <- then in the {}'s return _name; <- and the argument it takes is string s -> you can define other functions which are public and change variables which can be used across different classes 
+
+0:05:46            -> in another example, he's used these functions and tested them in the console. It is cumbersome to define separate functions to change each field -> the next video is how to get around this using the C# properties feature 
+
+
+-----------------------------------------------
+Video: Defining properties
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:30            -> methods -> using them for more than setting and getting values, e.g for properties. In the code, we have the book class example with name, author and pagecount. We can declare a public property -> public string Name {} <- then in the {}'s -> get {} <- in these it's return _name; then he defines another one (not nested under get, at the same level of indentation as it), we have another one called set {} <- and in these it's _name = value; (and the value is set into each function in this example). This is to get and set the value of (in this example) the name of the book 
+
+0:02:30            -> in this example name is a backing field -> the property that we're changing is private (it can't be accessed - changed etc anywhere apart from in the function where it's defined, but in this case the setting and getting is changing it, we're defining a function / method which is changing it). There is a shorthand way of doing this called an expression body property 
+
+0:04:03            -> in an example with the other two private fields, we have public string Author {}, then get => _author; and set => _author = value; <- it's a shorthand notation for get and set -> for changing the different values. He repeats the process for different fields (in this example it's pagecount). To make one of the properties read only or right only, he's made a public string -> then get => $""; 
+
+0:05:18            -> in another example, we're looking at autogenerated properties (these hold the data, they don't have backing fields in the class, and they also control the data access). He's adding a public string called IBSN -> and then a get; set; in the same line. Then testing this code in the console returns the various properties. There is more information in the documentation (see Microsoft webpages) 
+
+
+-----------------------------------------------
+Video: Inheritance
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:18            -> C# is object oriented (we can build class hierarchies using inheritance). In this example, we have a class of books and we want to build another class called magazine. Books and magazines have similar fields -> we want magazines and books to inherit properties from a parent class in case something changes -> so we're defining a parent class called Publication. This class is another class, with the properties which book and class have in common -> and then we're defining book and magazine as sub-classes of it. : base(arguments) <- he's put this under book and magazine, class Magazine : Publication <- the magazine class is inheriting from the publication class 
+
+0:06:03            -> then we have public virtual string ....() {} <- and in the {} we're returning the different relevant properties. The method was declared virtually, so he's using public override string GetDescription() {} <- then leaving it out of the magazine class (because those properties are already inherited). Running it in the terminal -> we have the different information returned (and the inherited features return 'Name cannot be blank' (in this case the name is an inherited property from the parent class) 
+
+
+-----------------------------------------------
+Video: String representation
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:48            -> classes inherit from base object classes in C# -> they inherit the .ToString method (more information can be shown on the documentation pages). In an example file, he's trying out builtin classes -> e.g Console.WriteLine(c.ToString()); <- converting the variable c into a string. We have another function which he's running using dotnet run. We have the book class with different information about the books -> public override string ToString {} <- and in the {}'s he's returning the different information about the book -> override to overwrite over the default setting 
+
+0:06:57            -> running the code in the terminal -> we can also overload the two string function -> public string ToString(char format) {} <- not using the overriding keyword because there is no base class which takes a character parameter. Depending on if the user enters B or F, the code is returning different parameters about the book 
+
+
+-----------------------------------------------
+Video: Challenge: Bank
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:59            -> creating a set of classes -> a checking and savings account -> depositing and withdrawing money methods, and restrictions (no negative bank balance). The classes are the checking and savings account -> code to do this is in the form of (under a public static void), CheckingAcct checking = new CheckingAcct(arguments), then we define other properties (the name of the account owner, the interest -> saving.ApplyInterest();. In the terminal, running the code shows the different information (the amount of money in the account and the different withdrawals from the account) 
+
+0:04:41            -> common operations - deposit, withdrawal, free withdrawals, no interest etc -> different account types and their different features (interest, withdrawal fees) 
+
+
+-----------------------------------------------
+Video: Solution: Bank
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:00            -> different classes -> base class called bank account -> think of an umbrella, and we're categorising things. We want two different classes of bank accounts - but they are both types of bank accounts, so we put them under a parent class of bank accounts. We are taking the different features they have in common and making them be inherited from the parent class called BankAccount. He's put the parent class in one file, and the two child classes of bank account types which inherit its properties in two different files (so we have three files in total) 
+
+0:02:50            -> the general format of each of the files is public class ...{} <- then in the {}'s we first define the different attributes private string _....;, then the methods which act on them (public BankAccount(...){} <- and in those {}'s it's _firstname=...; etc. Methods are also defined so that money can be withdrawn from the account. These are defined as virtual classes so that their properties can be changed in a subclass 
+
+0:04:24            -> public class ... : ..... <- this is how you define a class which inherits from another class. He's defined different bank account types which derive off the parent class, and manipulated them with slightly different features each time 
+
+
+***********************************************
+Chapter: Conclusion
+***********************************************
+
+
+-----------------------------------------------
+Video: Next steps
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:10            -> this course was C# -> VS Essential Training for training on the IDE, others are ASP.net training courses 
+

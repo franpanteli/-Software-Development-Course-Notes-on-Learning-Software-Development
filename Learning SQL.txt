@@ -1,0 +1,316 @@
+Course Title: Learning SQL Programming
+
+Description: More from LinkedIn Learning's top expertsProgramming Languages NewsletterStructured Query Language (SQL) is a common tool for retrieving data from relational databases such as SQL Server, MySQL, MariaDB, and PostgreSQL. This course provides an introduction to this core programming language. Learn how to request data from a database, limit and sort the responses, aggregate data from multiple tables with joins, and edit and delete data. Instructor Scott Simpson also shows how to perform simple math operations and transform data into different formats.
+
+
+***********************************************
+Chapter: Introduction
+***********************************************
+
+
+-----------------------------------------------
+Video: Learning SQL programming
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:11            -> databases -> the language of databases is SQL, this course is SQL basics (the language using an existing database, getting information from database tables, adding and modifying databases and pitfalls in SQL), this is for data science and administration 
+
+
+-----------------------------------------------
+Video: Exercise files
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:37            -> course exercise files -> on github -> these contain the files for the database -> SQLite (this contains the database), notes (those files are his notes) and other DBMS (the same data in a different format). The database contains information about people and a fictional quiz they took - then the states table has information about where they are from 
+
+
+-----------------------------------------------
+Video: Exploring DB Browser for SQLite
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:34            -> tools which let us write software and sent it to the database to retrieve data. The SQL statements are embedded in the software -> this course uses DB Browser for SQLite -> this is pronounced 'sequel lite' and can be downloaded from their website. In the program, he's imported the exercise files using the open database tab. He's then exploring the database which has been opened -> we also have an execute SQL tab, to write SQL to manipulate the dataset. Edit > preferences <- this allows us to change the font size for the SQL, it can also be used to change the colour of the SQL in the software 
+
+0:04:24            -> SELECT * FROM people; <- this is an example of SQL types in the Execute SQL tab -> you press F5 or the play button to play it. This returns a section of the database (it looks like a spreadsheet) with a status message showing what the code did and how long it took to do it. There are also side panels which can be changed using the view menu > simplify window view. There is another panel called the SQL log -> this is a log of the different commands entered into the computer 
+
+0:05:27            -> SELECT first_name FROM people; <- this example runs all of the statements in the query box -> we can also run a single query, or run a single one by highlighting it and clicking run (or F5). You can also copy and paste from the log of all of the commands that have been run, into the command box. This is for changing and running SQLite databases -> it allows the database to be offline and local without external servers -> this software is also across Windows/ Linux and Mac 
+
+
+-----------------------------------------------
+Video: What is a database?
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:27            -> databases -> collections of information. We have different types of information organised in columns -> columns are fields and rows are records, combining these makes a table and combining tables make databases. Databses allow us to add more tables and to set up relations between different tables. The schema is the set of rules which maps different tables to each other -> these are relational databases. Databases are useful if we want to extract more complicated information  
+
+
+-----------------------------------------------
+Video: What is SQL?
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:21            -> SQL <- structured query language (for changing databases and retrieving information from them, it's a coding language for making structured queries from databases). It relies on other maths which is beyond the scope of this course. It's a way of asking a computer a question about a database -> these questions are broken down into a series of smaller questions. SQL has been adopted into many DBMSs. SQL is pronounced 'see quel' -> it was originally called SEQUEL (Structured English Query Language) 
+
+0:03:59            -> it's ether pronounced 'see quel' or 'S-Q-L.' SQL statements have similar formats -> they are white space independent, so you can spread lines of code apart to make them more readable. Statements are made up of clauses -> clauses are components of statements -> SELECT first_name e.g FROM WHERE ORDER BY -> we have keywords which tell the database to take some specific actions, field names which tell it which property to look at and predicates which are used to specify a condition we are looking for (the condition is called an expression) 
+
+0:05:46            -> there are also operators which can be used to compare data -> these are uppercase (but don't have to be). Semicolons are at the end of each statement; (unlike in C# where you can find them almost at the end of every line). Not all database software requires this. SQL which takes actions is a statement -> we also have queries which use 'select' keywords. SQL can also be used  to return records. Another term is DMA, which a data manipulation language, CRUD is short for create, read, update, delete -> DDL data definition language -> SQL can be used to manipulate data 
+
+0:06:14            -> DDL data definition language -> SQL can be used to manipulate data 
+
+
+***********************************************
+Chapter: 1. Ask for Data from a Database
+***********************************************
+
+
+-----------------------------------------------
+Video: Ask for data with SELECT
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:04:36            -> SELECT <- to ask for information from the database using SQL -> SELECT 'text'; <- this returns what we are searching for back to us. When searching for information in the database, we should know what it looks like -> SELECT first_name FROM people; <- you can type 'first_name' which returns strings. You can also type first_name, last name <- swapping the order of them swaps the order they're printed in. * represents all of the fields in a given section in a table. Selecting data doesn't change the database 
+
+
+-----------------------------------------------
+Video: Narrow down a query with WHERE
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:04:11            -> WHERE -> e.g SELECT * FROM people WHERE ...; <- we're selecting everything -> `` is case sensitive -> this can be programmed in using the case schema when defining the database. WHERE variable_name='what it equals'; where you type the lines of code -> they're order sensitive (they need to be in a specific order -> which is when whitespace comes in use) 
+
+
+-----------------------------------------------
+Video: Adding more criteria to a statement
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:49            -> SELECT ..., .... FROM .... WHERE .....='....' AND ....='....' ; <- you can have multiple AND statements on the same line, we also have != which is not equals. There is also IS and IS NOT, <> <- this is the same as !=. We also have. If you have an OR... AND .... then it considers the OR statement and then the AND statement separately. We can put brackets around the different conditions in order to make this the case 
+
+
+-----------------------------------------------
+Video: Broadening and limiting responses
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:04:01            -> LIKE '%' <- % represents the part of the field which is less relevant -> LIKE 'C%' <- return variables which have C followed by something. We also have %J% for instance, which would return strings which have J anywhere in them. Columns can also be defined to be case sensitive. In another example, he's done B%N -> which looks for strings which have B....N (in this example it's case insensitive). LIMIT n is another example -> a quota on the number of results it returns -> LIMIT 10; <- this sets the number of results which are returned to 10 
+
+0:04:04            -> another example is LIMIT 5 OFFSET 5; <- we have a limit (quota) of 5 results it returns, but it offsets the first 5. So, we have 5 results, but it skips the first 5 
+
+
+-----------------------------------------------
+Video: Organize responses with ORDER BY
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:48            -> ORDER BY -> in an example, we have columns returned -> ORDER BY first_name -> in this case we're sorting by alphabetical order (you can also enter ASC/ DESC; after first_name 
+
+
+-----------------------------------------------
+Video: Find information about the data
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:01            -> there is another function called the count function -> SELECT COUNT (*) // FROM ... // WHERE ... = '..'; <- and it returns the number of times a given entry appears -> it's counting the number of times certain entries appear in the tables 
+
+0:02:49            -> to find out how long the values and fields are, the number of distinct values and how many of them match a given criteria. In this example, SELECT .... LENGTH(...) // FROM ...;  <- and it's printing the length of the strings in the given column. In another example, SELECT DISTINCT (....) // FROM ...; <- it's not returning duplicates (it only returns distinct entries). You can also have ORDER BY ...; at the end of the clause -> and in this example distinct is still being used to stop the code from returning duplicates 
+
+
+-----------------------------------------------
+Video: Challenge: Retrieve data from the database
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:04            -> this is an example where we have the results of a quiz, which we want broken down by the name / team and score of the person -> and to return the given prize they are entitled to 
+
+
+-----------------------------------------------
+Video: Solution: Retrieve data from the database
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:59            -> the thought process is -> we know which information we want it to return back -> so we are writing code which returns just it, and then ordering it. SELECT ..... // FROM // ORDER BY ...; <- you can list the terms which go after 'ORDER BY' and it will organise them according to how they are listed 
+
+
+***********************************************
+Chapter: 2. Ask for Data from Two or More Tables
+***********************************************
+
+
+-----------------------------------------------
+Video: Ask for data across two or more tables
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:04:26            -> JOIN -> there are a few different ways of using this -> we're asking for data which have things in common (for example data which are contained in two different tables, and combining them together in the results). It looks like a matrix operation. SELECT * FROM states; <- we're selecting everything -> then JOIN states ON people.state_code=states.state_abbrev; <- in this case, we're using JOIN to combine the information from two different tables. This notation looks like methods in C# and the result from the SQL software returns the information from the two tables joined together. In the SELECT clause, he's stated all of the information we want to extract (from both columns) as standard practice 
+
+0:06:18            -> another clause we can use is WHERE ... LIKE ... AND ...  <- then it returns all of the clauses which match the search. You can also combine more information from different tables (>2 tables) using more JOIN clauses. In these cases, we have to select all of the information which is being used -> there are also implicit joins where this information is not stated (you can sometimes accidentally combine information from more than one table). We can also use aliases for the different tables, for instance FORM people ppl, states st <- which tells the code to recognise the people table by the shorthand ppl for instance 
+
+0:06:46            -> implicit joins -> the best joins are explicit (this avoids the potential for errors) 
+
+
+-----------------------------------------------
+Video: Understand JOIN types
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:43            -> cross join -> if we have two different tables and we want to join them, sometimes the tables can have overlap (for instance if the 5th row on one table maps to the 6th row on the other and it's not a 1:1 relationship). Outer joins can be thought of as rows which don't overlap and inner joins rows which overlap. Inner joins are the spaces which do overlap. In other words, not all of the cells overlap -> map to each other, so if you join the entire tables via a left (outer) join, then some of the cells from the joined cells can have null values. There is another join type, right (outer) join -> which shows the null values in the left most table (these null values appear in the right most table for a left outer join). There is also a full outer join, there the null cells would appear in both of the joined tables 
+
+0:05:37            -> not all join types are supported by different softwares. In another example, we have SELECT people.first_name and people.last_name -> we're selecting different names. Then FROM people // JOIN states ON people.state_code=...; <- this joins two different table types. It can also work to keep the order we reference things in the same. To change it from just the cells which map to the ones which don't, we use LEFT JOIN, and then the results this returns will show NULL in their cells 
+
+0:06:37            -> we can match different abbreviations -> SELECT DISTINCT(...),.... // ODER BY ...; <- then it's moving all of the cells with NULL in them to the top of the results. It's also getting rid of all of the cells with NULL in them which are repeats (so we only have one cell each with NULL in it) 
+
+
+-----------------------------------------------
+Video: Grouping results
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:14            -> dividing results using the group keyword. SELECT ... COUNT(..) // FROM ... // GROUP BY ...; <- it's returned the number of times ... appears in a table (so we're, in this example, searching for the first name of the person and counting the number of times a given first name appears in the table). You can select the first name and group them by surnames -> sometimes there is no physical significance to the results returned. You need to ask something which makes sense for the context 
+
+0:03:31            -> in another example, SELECT ...., COUNT(...) // FROM .... // GROUP BY ...; <- in this example, it's quiz points and we're grouping by people from a given state. We need to group by state then quiz points -> so he's listing two different values under GROUP BY (it's very important to check that the results the SQL return make sense for the context) 
+
+
+-----------------------------------------------
+Video: Challenge: Practice with JOINs
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:25            -> JOINS -> creating a summary of the number of hats which need sending per state and the number of each of them per geographic location 
+
+
+-----------------------------------------------
+Video: Solution: Practice with JOINs
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:19            -> the number of hats which need to go to each state -> SELECT ...., COUNT ... // FROM ...// JOIN .. ON .. // WHERE.... // GROUP BY ...; <- then going back and grouping the results. He's showing the results its returned and checking the results make the same. You can see in the results how the information is being sorted 
+
+
+***********************************************
+Chapter: 3. Data Types, Math, and Helpful Features
+***********************************************
+
+
+-----------------------------------------------
+Video: Data types in SQL
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:04:22            -> fields in a database - names, dates, ID numbers etc -> which kind of information they contain (we need to define this). Different kinds of data are stored in different ways -> we can search based off of the data type. Categories are binary information, dates and times, numbers and test -> then in each category are more types. Binary (1010101m and for files / long strings), date and time, number (floating points, integers), text types (varchar - variable characters and chars for individual characters), booleans (or Null, which means the total absence of a datatype) -> null is a value which means no value 
+
+
+-----------------------------------------------
+Video: Math in SQL
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:06:25            -> maths in SQL using SELECT -> these are assumed to involve integers, you can also use <> etc. We also have SUM() AVG() (it's like a spreadsheet). SELECT 1/3.0; returns 0.333... SELECT 3>2 is another example -> 0 is false and 1 is true (booleans are binary values). WHERE ...>....; -> and it's returning certain values. SELECT MAC(...), MIN(....) // FROM ...;. In another example, he's trying SELECT ...., COUNT(*), SEUM(...) -> and it's returning a column which does the maths for each of the different operations we list 
+
+
+-----------------------------------------------
+Video: Compound Select
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:45            -> using more than one select statement -> subqueries / subselects -> SELECT ..., ...., .... // FROM //// // WHERE ... = (SELECT MAX(...) FROM ...); <- we have a select inside a select so it returns the correct data (one value) 
+
+
+-----------------------------------------------
+Video: Transforming data
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:05:33            -> SELECT ....// FROM ...; in this example we're converting it all into lowercase using SELECT. In another example, we're selecting substrings -> SELECT SUBSTR(last_name, start, stop, step) <- this selects the first x letters of last name (according to start, stop, step). If the step is negative, it can be used to return the string backwards. Another one is SELECT REPLACE(first_name, "a", "-") <- this is like find and replace, it's finding a and replacing it with - in the table the SQL returns and it's also case sensitive. We can also use ORDER BY CASE(.... AS CHAR) <- this is ordering data in a different way, it's converting numbers into letters (in this example) and comparing them 
+
+
+-----------------------------------------------
+Video: Creating aliases with AS
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:17            -> the names of fields which are returned are the names of the fields which we request. Another example is SELECT ..., UPPER(...) AS .... // FROM ....; <- if we tell it to select a field 'AS' something, then in the spreadsheet which is returned the name of the columns will be the term we tell it after 'AS' in the SQL. This is common for more complex queries 
+
+
+-----------------------------------------------
+Video: Challenge: Calculate participant metrics
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:24            -> to find the maximum and average quiz score, and sort it using SQL 
+
+
+-----------------------------------------------
+Video: Solution: Calculate participant metrics
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:01            -> while grouping from the state code -> we're ordering by (ORDER BY) the average points DESC;. We're also using AS to return more appropriate headings for the different columns in the table returned. This is important for more complex functions 
+
+
+***********************************************
+Chapter: 4. Add or Modify Data
+***********************************************
+
+
+-----------------------------------------------
+Video: Add data to a table
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:04:21            -> INSERT -> adding records to tables -> INSERT INTO tablename (field1, field2). He's done an example -> where we've added a new row to a table. INSERT INTO ... // (...,....,...,) // VALUES (....,....,...); <- then printing out the table we have a list of the values. You can also have multiple VALUES lines, which adds multiple rows to the table with the information -> and it returns errors if information has been left off (where there is no information you specifically type NULL). You can look at the data again from SELECT * FROM ...; You can use this to do CRUD in SQL 
+
+
+-----------------------------------------------
+Video: Modify data in a table
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:40            -> we can update the information in the table via UPDATE -> changing information which is already there. He's first selecting information from the table -> SELECT last_name // FROM people // WHERE ...='....' AND ...='...'; <- we're selecting the right entry, then to change that entry it's UDATE ....// SET .....='...' // WHERE .... . Then we're testing the clause was changed using SELECT * -> you need to make sure you are changing the right data because there is no undo on the dataset in this software 
+
+0:04:37            -> you can change multiple fields in the data -> first select the right information then UPDATE .... SET .... WHERE 
+
+
+-----------------------------------------------
+Video: Removing data from a table
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:31            -> DELETE (to remove a line from a table) -> e.g DELETE FROM people; for the entire people row. In another example, he first selects the information we want -> SELETE FROM .... WHERE ...='...'; -> you can also remove more than one record with information which matches more than one record. He first selects the information we want to delete -> and makes sure we're selecting the right information. You can also remove NULL values -> DELETE FROM ... WHERE .... IS NULL; 
+
+
+-----------------------------------------------
+Video: Challenge: Practice working with data
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:29            -> DDL <- Data Definition Language (we can use SQL to make tables and also to delete information). In this example, we have a dataset, we want to add a record, change one and delete another 
+
+
+-----------------------------------------------
+Video: Solution: Practice working with data
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:07            -> in this example, he first selects the information we want to alter -> then uses the UPDATE query to change the information -> and uses SET to do this. Then when deleting information, we again select the right information using SELECT and change SELECT to DELETE. The final stage is checking that the correct information was deleted 
+
+
+***********************************************
+Chapter: Conclusion
+***********************************************
+
+
+-----------------------------------------------
+Video: Overcoming common SQL mistakes
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:18            -> common SQL mistakes -> the syntax needs to be spelt right (if this is wrong, try different lines of the code individually when troubleshooting), the strings need to be surrounded by '' marks -> and field names by ` (back ticks). Type information in plain text (not word) -> another example is smart quotes vs straight quotes. NULL values are also not zeroes (use is null or is not null) 
+
+
+-----------------------------------------------
+Video: Next steps
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:40            -> SQL to work with databases -> database management 
+

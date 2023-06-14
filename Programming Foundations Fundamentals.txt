@@ -1,0 +1,605 @@
+Course Title: Programming Foundations: Fundamentals
+
+Description: Gain the core knowledge to begin programming in any language. In this course, instructor Annyce Davis uses Python to explore the core concepts and structure of programming languages and helps you grasp what’s going on under the hood. After going over basic statements and expressions in Python, Annyce explores strings, variables, and conditional code—which are common topics in all programming languages. She also shows how to work with different kinds of data and troubleshoot a variety of errors. Along the way, she compares how code is written in several different languages and provides guidance on the criteria to use when choosing a programming language. Upon wrapping up this course, you’ll have the knowledge you need to continue your coding journey in whichever language piques your interest.
+
+
+***********************************************
+Chapter: Introduction
+***********************************************
+
+
+-----------------------------------------------
+Video: The fundamentals of programming
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:26            -> need for qualified computer programmers 
+
+0:00:41            -> IDE = integrated development environment 
+
+
+-----------------------------------------------
+Video: Following along with the course
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:31            -> exercise files              
+
+0:01:19            -> there are exercise files from the beginning and the end of the video 
+
+
+***********************************************
+Chapter: 1. Programming Basics
+***********************************************
+
+
+-----------------------------------------------
+Video: What is programming?
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:36            -> programing -> process of converting code into instructions for a computer to execute 
+
+0:01:06            -> it's giving the computer instructions -> a set of instructions 
+
+0:01:19            -> instructions we provide to computers 
+
+0:02:01            -> and when it crashes there's a mistake in the instructions 
+
+0:02:42            -> order matters -> we have a desired outcome, we write the code and in the right order, when writing it there are errors we find etc 
+
+0:02:49            -> the concept of sequentiality 
+
+
+-----------------------------------------------
+Video: What is a programming language?
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:05            -> programming languages -> syntax/ semantics -> the semantics is the meaning of the word and the syntax is it in that language 
+
+0:01:50            -> C++ <- the syntax is formatted in a specific way (see course for examples) 
+
+0:02:13            -> different languages can do the same thing, but they're formatted in different ways (syntax) 
+
+0:02:28            -> the syntax is the code in that language and the semantics is the meaning 
+
+0:03:17            -> different languages which do the same thing -> and all of them are broken down into machine language (1010101010) 
+
+
+-----------------------------------------------
+Video: Writing source code
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:15            -> high level languages -> not 10010101 (these are the ones people use), which then get converted into machine language so the computer can read them 
+
+0:00:48            -> source code -> you can draft it in txt files 
+
+0:01:28            -> rich text is text which can italic/ bold/ underline -> code is written in plane text 
+
+0:01:45            -> you can draft code in plane text and paste it into other text readers 
+
+0:02:24            print("Hello world!") <- source code example 
+
+0:03:09            -> the best practice is to save the plane test as an extension which corresponds to the language it's written in -> .js, .pl, .kt 
+
+
+-----------------------------------------------
+Video: Running your code
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:08            -> transferring the code written in the high level language to machine language 
+
+0:00:59            -> python is an interpreted language -> compiling and interpreting code is a way of getting the code from the high level language the person understands to the machine language the machine understands -> like a translator 
+
+0:01:56            -> example of translating from Mandarin to English, compiling is like a computer interpreter -> translating the source code into machine language 
+
+0:02:12            -> compilers also perform optimisation 
+
+0:02:25            -> PHP, Java <- interpreted languages 
+
+0:02:25            -> C, C++, Objective = compiled languages 
+
+0:02:29            -> Java, C#, Python <- combination of both 
+
+
+-----------------------------------------------
+Video: Using an IDE
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:58            -> IDE <- integrated development environments -> to speed up code development, it's like an application 
+
+0:01:46            -> X Code <- application used to write Apple software, includes syntax highlighting 
+
+0:01:58            -> VS code -> this is an example of an IDE 
+
+0:02:21            -> it incudes code suggestions 
+
+0:02:37            -> you can run Python code from within the IDEs 
+
+0:02:51            -> Android studio <- example IDE for Android apps 
+
+0:02:59            -> there are lots of different IDEs 
+
+0:03:17            -> IDEs -> write, debug and run the source code 
+
+
+***********************************************
+Chapter: 2. Programming Syntax
+***********************************************
+
+
+-----------------------------------------------
+Video: Why Python?
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:51            -> Java, Python, JavaScript, C++, C# <- Python and Java have fewer syntax requirements and are easier to learn, more high level 
+
+0:01:10            -> Java, for web applications (think of sipping coffee while reading websites) 
+
+0:01:17            -> Python - webs apps, games, scientific computing 
+
+
+-----------------------------------------------
+Video: Installing Python on a Mac
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:50            -> Python can be ran from the terminal -> changes in the languages result in different versions 
+
+0:02:24            -> Python in the terminal -> >>> type python here, or exit (and it exits Python) 
+
+
+-----------------------------------------------
+Video: Running Python on the command line on Mac
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:37            -> in the terminal, if you type Python3, you can launch Python, the terminal shows >>>, which means you're typing Python 
+
+0:02:00            -> syntax errors -> your code has to be formatted in a specific way or it won't be understood by the computer 
+
+0:02:11            exit() <- to get out of the Python prompt 
+
+0:02:24            cd <- change directory         
+
+0:02:43            -> in the terminal, is cd'ing into the exercise files 
+
+0:02:56            -> in order to read the Python file in the terminal, she has the exercise files stored on the machine, cd's into the directory with them and does 'python3 [name of the file]', then the output of the file is shown in the terminal 
+
+
+-----------------------------------------------
+Video: Installing Visual Studio Code on a Mac
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:26            -> VS code -> this is an example of an IDE -> an application for writing the code 
+
+0:00:42            -> IDE = integrated development environment 
+
+0:01:59            -> in visual studio code -> there's an interface overview in the learn section -> source code management, extensions, launching and management 
+
+0:02:15            -> i.e VS code can't just run Python, it needs to be installed as an extension -> assuming the same goes of other languages 
+
+0:02:16            -> i.e VS code can't just run Python, it needs to be installed as an extension -> assuming the same goes of other languages 
+
+0:02:18            -> i.e VS code can't just run Python, it needs to be installed as an extension -> assuming the same goes of other languages 
+
+0:02:19            -> Python extensions -> tools and languages -> Python 
+
+0:02:33            -> you need the Python extension for VS code 
+
+0:02:45            linting, debugging etc         
+
+0:03:14            -> after installing an extension, you have to quit VS code and re-start it 
+
+0:03:36            -> so you take the IDE, install Python as an extension, then install an interpreter -> to convert the code into machine language 
+
+0:03:36            -> then you need an interpreter for the code -> to get the code into machine language 
+
+0:03:39            -> command shift P -> shortcut in VS code for searching 
+
+0:03:40            -> the whole meaning of high level coding language is one which people can understand -> like the lower levels are the ones which are closer to the 1's and 0's the computer can understand 
+
+
+-----------------------------------------------
+Video: Running Python in an IDE
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:54            -> open the exercise files from the course into VS code 
+
+0:01:21            -> line numbers -> in "the gutter" on the LHS of the IDE 
+
+0:01:51            -> syntax highlighting -> shows different sections of the code in different colours 
+
+0:02:16            -> it knows which colours to highlight which sections of the code because they're formatted in a section way for that language 
+
+0:02:18            -> to run the code in VS code, right click > run python file in terminal (this is done in a py file in VS code) 
+
+0:02:45            -> can run sections of the code -> e.g only line 3 -> right click, run selection or line in terminal 
+
+0:03:27            -> she shell where it runs the code in VS code is a linux terminal, can type code inside it -> >>> means you are using Python in a linux environment 
+
+
+-----------------------------------------------
+Video: Basic statements and expressions
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:27            -> statements -> actions you want the program to take 
+
+0:00:41            -> operators, tell the computer to perform an action 
+
+0:01:03            -> operators are the things which go into calculators (it's a big calculator) 
+
+0:02:08            -> arithmetic operators + operands = expressions <- operators are the maths symbols and operands are the variables/ numbers which are being operated on 
+
+0:02:25            -> BIDMAS                      
+
+0:02:43            -> the computer follows the same order as calculators (it's a big calculator) 
+
+0:03:26            -> essentially use a lot of brackets when you use Python for maths 
+
+
+-----------------------------------------------
+Video: Troubleshooting issues
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:24            -> troubleshooting -> there are always going to be issues when writing the code 
+
+0:00:38            -> understanding which type of error we're looking at 
+
+0:03:45            -> syntax (format, go through each line of code), runtime (happens when the code is running, example when it tries to divide something by 0, look up the error on stack overflow, can paste the error message into it), semantic error (output of program is unexpected, when the output is in a different format -> it won't tell you it's in a different format, it will just output it in that format) <- in the terminal it's Python3 to start a Python shell 
+
+0:03:59            -> mindset when see errors -> going on walks to figure out where the error is, thinking about it, importance of humour / etc when you encounter errors 
+
+
+***********************************************
+Chapter: 3. Variables and Data Types
+***********************************************
+
+
+-----------------------------------------------
+Video: Introduction to variables and data types
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:17            -> handling information -> storing information in variables (assigning the value to the variable with the = operator) 
+
+0:01:28            -> the computer stores information in the variable 
+
+0:02:12            -> >>> is for Python           
+
+0:03:30            -> there are different datatypes -> floats (numbers) / text (string), and they can be checked using type() 
+
+
+-----------------------------------------------
+Video: Variables across languages
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:32            -> in some coding languages you have to define the type of variable 
+
+0:01:05            -> in Java you can't re-assign datatypes, but in Python you can 
+
+0:01:30            -> some languages are more relaxed than others, Python is higher level -> you won't need to specify the datatype 
+
+0:01:49            -> more relaxed vs more strict coding languages 
+
+0:03:02            -> variable names shouldn't be keywords in Python (e.g and) 
+
+0:03:05            -> in Python, variable names shouldn't start with numbers, should contain no spaces (so use this_for_instance), are case sensitive (Number != number) 
+
+0:03:11            -> import keyword // print(keyword.kwlist) <- to see the list of keywords 
+
+
+-----------------------------------------------
+Video: Working with numbers
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:36            -> variables -> to store the data for the given context, whole or fractional 
+
+0:01:39            -> in the terminal, Python3, you can type in basic maths calculations -> 2**3=8, your computer is basically a calculator 
+
+0:02:07            -> 3//2 <- this returns the remainder 
+
+0:02:28            -> 5%3 <- this is the modulo, which returns the remainder 
+
+0:03:04            -> if you have a huge number, 45,000 you don't use a comma -> or it returns a tuple 
+
+0:04:20            -> in Java the decimal and whole numbers are the same, but in Python they're called floats (decimal numbers are called floats, in comparison to whole integers) 
+
+
+-----------------------------------------------
+Video: Working with strings
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:12            -> you can round the number of decimal points in floats 
+
+0:00:49            -> strings - string of characters -> "" in Python 
+
+0:01:53            -> "" vs '' <- depending on the contents of the strong -> you can't embed '' inside "" 
+
+0:02:10            -> don't mix single and double quotes together 
+
+0:02:23            -> the default quotes for strings are "" 
+
+
+-----------------------------------------------
+Video: Properly using whitespace
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:31            -> white space <- deliberate empty lines in the code to make it easier to read 
+
+0:00:54            -> she's running it in vs code 
+
+0:01:02            -> adding extra lines makes it easier to read 
+
+0:01:34            -> most programmers spend more time reading and understanding code than they do writing it -> it needs to be as easy to read as possible 
+
+0:02:07            -> in VS code, you can write code in Python and then right click and run it in a terminal shell on the bottom 
+
+0:03:28            -> whitespace matters the most when using keywords in Python 
+
+0:04:00            -> syntax errors -> when space is expected after the keyword (she's doing an example on if) 
+
+
+-----------------------------------------------
+Video: Working with comments
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:00            -> the importance of whitespace in making code more readable 
+
+0:00:52            -> comments in code -> # in Python -> you can spread code over multiple files, the comments are important because otherwise you loose track of where you are / it's harder to come back to 
+
+0:01:22            -> in this example, the comment is being used in Python in an IDE to show what each section of code does 
+
+0:01:42            -> it's like a more complicated calculator, and commenting what each section of the calculator does 
+
+0:02:18            -> input(...) <- asks for input from the user 
+
+0:02:40            -> command / <- to comment out certain sections of code to test them 
+
+
+-----------------------------------------------
+Video: Challenge: What's the output?
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:00            -> she's commented out certain sections of the program, ran it again and shown how the output changes 
+
+0:00:27            -> interpreting someone elses program is like figuring out the thought process behind it 
+
+
+-----------------------------------------------
+Video: Solution: What's the output?
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:00            -> there's a challenge which is going through each line of code presented and figuring out what it does 
+
+0:01:05            -> she's going through line by line and saying what they do -> when you're reading through somebody else's code, go line by line and figure out what each of them do 
+
+0:01:31            -> she's keeping a separate list of all the variables and their values 
+
+
+***********************************************
+Chapter: 4. Conditional Code
+***********************************************
+
+
+-----------------------------------------------
+Video: Making decisions in code
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:31            -> conditional code -> different options 
+
+0:00:56            -> true / false <- boolean     
+
+0:03:31            -> relational operators -> equality operator (example), == is a boolean value asking if a variable is equal to another, = is setting one variable equal to something 
+
+0:04:36            -> while one sets the value, the other tests if that value is equal to something 
+
+
+-----------------------------------------------
+Video: Exploring conditional code
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:00            -> relational operators -> e.g !=  <- operators to test the value of certain variables 
+
+0:00:53            -> if statements -> if the condition is true it does the thing which is inside it 
+
+0:01:28            if 5<6: (insert condition on the next line, print("...")) 
+
+0:02:05            -> blocks are the intended lines of code below the if statements / conditional statements 
+
+0:03:41            -> she's doing an example writing if statements in VS code -> run the code and if the input isn't what the code expects then the code after the statements isn't ran 
+
+0:04:21            -> you get errors if you forget to indent the blocks for conditional statements 
+
+
+-----------------------------------------------
+Video: Working with simple conditions
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:43            -> conditions -> if/ else -> if ....: // else .....: 
+
+0:02:14            -> she's doing an example on the if else statement -> if the first condition isn't satisfied, it moves onto the else statement 
+
+
+-----------------------------------------------
+Video: Conditionals across languages
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:36            -> syntax -> format of the code 
+
+0:01:05            -> she's doing an example for python vs Java, for the same if statement -> and they're formatted differently 
+
+0:01:41            -> Ruby is a similar structure to Java, but the syntax is different for doing this 
+
+
+-----------------------------------------------
+Video: Challenge: Guessing game
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:03            -> once you know the general ideas from one coding languages, you can apply them to different ones 
+
+
+-----------------------------------------------
+Video: Solution: Guessing game
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:22            -> guessing game example -> guess=input("..."), involves a few if statements, runs the code (example), in VS code 
+
+0:01:47            -> you can use the equals, or the not equals operator -> there are different ways of solving the same problems -> code is just a tool to solve problems 
+
+
+***********************************************
+Chapter: 5. Modular Code
+***********************************************
+
+
+-----------------------------------------------
+Video: Introduction to functions
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:07            -> IDE = integrated development environment 
+
+0:00:30            -> functions = methods = subroutines, depending on the language we're looking at 
+
+0:00:39            -> there are inbuilt functions, e.g print() 
+
+0:01:52            -> they stop you from having to write the same code 
+
+
+-----------------------------------------------
+Video: Creating and calling functions
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:21            -> without functions, if you repeated the same lines of code and made a mistake you would have to go back and change hundreds of them -> the lack of repetition functions create mean if there's a mistake in the function there are less places where you have to fix the error 
+
+0:01:47            -> to define a function def ... : // body of the function 
+
+0:02:29            -> blocks are inside if functions and the body of code is inside the definition of a function 
+
+0:02:43            -> you call the function from the name of the function() 
+
+
+-----------------------------------------------
+Video: Setting parameters and arguments
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:11            -> example of a function with different car wash options -> def wash_car(), and printed on different lines are stages in the car wash, there are two car wash options and each of them have separate stages, so she's defined an argument to the function and an if statement depending on which car wash option was selected 
+
+0:04:09            -> the car wash option is a function of the amount paid -> another way of doing is is for the function to input the cost of the car wash and == statements to output the stages of the corresponding car wash type 
+
+0:05:03            -> error, missing a positional argument -> when you call the function it needs an argument, unless when you define the function it's defined with a default 
+
+
+-----------------------------------------------
+Video: Returning values from functions
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:13            -> functions can change based off of their arguments and parameters 
+
+0:01:26            -> she's defined another function, an example for withdrawing money - to return values. Arguments to the function are the current balance and the amount wish to withdraw. Using an if statement to check there is enough money in the account 
+
+0:03:25            -> using return in the function -> return [name of variable] at the end of the function 
+
+0:04:24            -> you can embed the return in an if statement 
+
+
+-----------------------------------------------
+Video: Functions across languages
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:22            -> functions -> can have arguments and return values 
+
+0:00:43            -> Java -> example of a function with no argument or return values 
+
+0:01:29            -> example function with a void in front of the function name -> means void, no value -> stops it from returning a value -> in Java you have to specify the return value you want for it  
+
+0:02:08            -> fun {} in Java to specify the function -> but you need to state the function value 
+
+0:03:08            -> generally there is a function wherever you see return / def / else etc in the coding language 
+
+
+-----------------------------------------------
+Video: Solution: Favorite cities
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:11            -> write a function which produces favourite cities 
+
+0:01:46            -> it inputs a string and outputs another string with the inputted string manipulated 
+
+
+***********************************************
+Chapter: Conclusion
+***********************************************
+
+
+-----------------------------------------------
+Video: Exploring languages
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:32            -> you can look at the most popular coding languages (there's a league table for them in the TOBE index) 
+
+0:00:38            -> Java, Python and C++ all took ideas from an older language C 
+
+0:00:47            -> C from compile              
+
+0:01:07            -> #include <...> <- link code which someone else wrote into the program 
+
+0:01:29            -> code libraries -> for reusing the same functions -> other programers can verify the functions in the library 
+
+0:01:41            -> contains variables and functions 
+
+0:02:19            -> main -> this is the function where the program begins 
+
+0:02:54            -> C is a low level language which requires more programming knowledge 
+
+0:03:35            -> Java -> you can compile it and run it on different devices cross-platform, is class based language and can be  compiled 
+
+0:03:55            -> C++ <- C based language, easier than C because has garbage collection (cleans unused variables), used for games 
+
+0:04:11            -> C++ game engines            
+
+0:04:21            -> Swift and Objective - C for iOS, Ruby and Java for web <- basically different languages are for different purposes 
+
+0:04:31            -> knowing which language to use 
+
+
+-----------------------------------------------
+Video: Next steps
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:22            -> outline - source code, VS code, Python 
+
+0:00:34            -> practice it                 
+
+0:01:10            -> practice don't only take courses, you need to practice coding on a consistent basis -> local Meetup groups, online communities in chosen language, create programs 
+

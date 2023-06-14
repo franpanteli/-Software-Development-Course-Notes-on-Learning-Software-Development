@@ -1,0 +1,588 @@
+Course Title: Programming Foundations: Databases
+
+Description: More from LinkedIn Learning's top expertsProgramming Languages NewsletterOnce you get beyond basic programming, you'll need a database. Databases provide a consistent, organized structure for storing and retrieving large amounts of data. They allow programmers to build more complex applications that can take orders, process payments, make recommendations, authenticate users, and more. This course provides the foundation you need to get started in database programming. Explore the terminology: normal forms, ACID and CRUD, referential integrity, transactions, records, and tables. Learn what role keys and unique values play in a relational model. Discover how to design the best system to contain your data, starting with the tables and relationships at the core of your database. Find out how to write queries to extract the data you need, and how to juggle the different demands of storage, access, performance, and security. Instructor Scott Simpson provides practical examples and clear explanations that will help you design databases that can withstand the needs of your applications, your data, and your users.
+
+
+***********************************************
+Chapter: Introduction
+***********************************************
+
+
+-----------------------------------------------
+Video: Why use a database?
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:09            -> databases -> working with a lot of data 
+
+0:00:18            -> have security features      
+
+0:00:42            -> relational database -> content management systems 
+
+
+-----------------------------------------------
+Video: What you should know
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:27            -> this is databases in general (not database servers) 
+
+
+-----------------------------------------------
+Video: Understanding databases: Benefits of spreadsheets
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:18            -> adding structures to the data -> you need it to be protected and to use data to answer questions 
+
+0:00:48            -> some customers who refer more people and order more get specific benefits 
+
+0:01:06            -> databases store the information about the customers, and allow you to sort the data 
+
+0:01:17            -> allows you to automate the emails etc 
+
+0:01:30            -> spreadsheets add structure -> you can see gaps in the data 
+
+0:02:06            -> rows called records and columns called fields 
+
+
+-----------------------------------------------
+Video: Understanding databases: Benefits of structured data
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:30            -> tracking which customer orders which item on the menu and how many times 
+
+0:01:04            -> you can convert the menu items into columns (tables) 
+
+0:01:26            -> databases can contain multiple tables 
+
+0:01:35            -> structure of database = schema 
+
+0:01:46            -> for instance, cross comparing different databases 
+
+
+***********************************************
+Chapter: 1. Database Foundations
+***********************************************
+
+
+-----------------------------------------------
+Video: Relational databases
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:20            -> types of databases for different data -> the relational database is the most common type 
+
+0:00:54            -> tables are made up of rows, and columns contain relations 
+
+0:01:16            -> customers have attributes -> things which belong to them (email addresses etc) 
+
+0:01:41            -> a specific customer is an instance of the entity called customer -> an entity is like an object 
+
+0:02:12            -> information in the database can take any value 
+
+
+-----------------------------------------------
+Video: Keys and unique values
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:02            -> accessing specific information in a database -> e.g calling a customer, looking up their number in the database -> you would need a first name and a surname if there were multiple people with the same first name 
+
+0:01:22            -> unique values -> if you want to look up specific values in the table, for instance a customer ID 
+
+0:01:36            -> synthetic and surrogate keys -> unique values, there are primary keys for some tables 
+
+0:01:38            -> there can be different keys in the table (e.g the primary key) 
+
+0:02:13            -> you need to add a column to the table and add keys (for instance, the key is the number row for that customer in the database) 
+
+0:02:16            -> composite key -> when you use two or more pieces of information to be the key 
+
+
+-----------------------------------------------
+Video: Relationships
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:01            -> foreign key -> when you reference the primary key in one table in another 
+
+0:00:40            -> there are multiple relations between databases - one to many, many to many, one to one 
+
+0:00:51            -> what determines the relation is the context 
+
+0:00:52            -> you want to define relationships between different databases -> two different tables can be cross-referenced -> relational -> we have two tables and we're finding the relations between them 
+
+0:00:59            -> one to many associates, for instance, which one item on the menu was preferred by many customers -> the menu is in one database and the customers are in another -> and one to many is the most common relation 
+
+0:01:58            -> each of the dishes in the menu has a key (an item, it's the xth item in the table), then use that item in the table of customers to link them -> this is the relation 
+
+0:02:14            -> one to one relationships -> one record is associated with another target data 
+
+
+-----------------------------------------------
+Video: ACID and transactions
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:56            -> modifying databases -> e.g removing a customer is simple, but transferring money between bank accounts needs to be more complicated -> checking the balance of both accounts and transferring 
+
+0:01:21            -> when transferring money, we use transactions -> there are a set of criteria which have to be satisfied and if one check fails then all of them do 
+
+0:02:11            -> ACID -> atomic (indivisible, it can't be speared out), consistent (outputs are consistent), isolated (nothing else can change the database when it's being processed, can't make two transfers at the same time), durable (information changed gets written to the database) <- a transaction is an update in a database 
+
+0:02:50            -> transactions don't have to deal with financial services -> for instance, transactions can happen when we check the stock or customers which have reserved a table 
+
+
+-----------------------------------------------
+Video: Basic SQL
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:00            -> it's part of DBMS -> you tell the software you're doing a transaction and it follows ACID 
+
+0:00:25            -> SQL -> structured query language <- this is for databases 
+
+0:00:36            -> database management system (or DBMS) 
+
+0:00:36            -> ANSI SQL <- most common, but some types of SQL are for specific contexts 
+
+0:00:49            -> there are also open source DBMS's 
+
+0:01:08            -> you can write statements for it -> DML -> data manipulation language 
+
+0:01:21            -> SQL is a DDL, dada definition language, DCL data control language 
+
+0:02:07            -> SQL -> clause (an instruction), predicate (the quantity you want) 
+
+0:02:43            -> SELECT FirstName, LastName FROM customers <- in SQL, it tells you to select the first name and the last name from the database of customers 
+
+0:02:57            -> you can list the different things which you want it to return 
+
+0:03:09            -> you can also order the database you want, queries 
+
+0:03:25            -> readability (which is why they put the keywords in uppercase) 
+
+0:03:44            -> CRUD -> create, read, update, delete 
+
+0:03:46            -> SQL is pronounced "sequel"  
+
+0:03:47            -> SQL is what you use to ask the DBMS to return something you ask it for 
+
+
+***********************************************
+Chapter: 2. Tables
+***********************************************
+
+
+-----------------------------------------------
+Video: Modeling and planning a database
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:35            -> before making a database, entity relationships diagrams are first drafted by hand (like pseudocode but for databases) 
+
+0:00:57            -> writing the value of variables in a notes file as you go along/ drafting out how want the database to look first 
+
+0:01:17            -> using peoples' information to offer them specific discounts 
+
+0:01:38            -> consider the different information we know about the customer, in a customer record 
+
+0:02:12            -> then if we are organising events, we put them in separate databases 
+
+
+-----------------------------------------------
+Video: Naming tables
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:04            -> so there are customers, dishes and events -> three different types of tables 
+
+0:00:25            -> example, have three different types of tables 
+
+0:00:36            -> each of the tables are labelled, starting with a capital letter, no spaces and numbers 
+
+0:00:54            -> there are fields in the tables, for instance FirstName 
+
+0:01:04            -> FirstName is in upper camel case 
+
+0:01:23            -> avoid spaces in the names for the fields -> even if the software lets you do it 
+
+0:01:35            -> the names of the fields need to be chosen carefully 
+
+
+-----------------------------------------------
+Video: Columns and data types
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:28            -> the database needs to know the type of information -> strings (letters, the length of this is important, CHAR - fixed numbers of characters, VARCHAR - variable number of characters up to a maximum length, others - it needs to know their max lengths) 
+
+0:02:03            -> VARCHARs <- you set the upper limit larger and it's not reached if it's picked correctly 
+
+
+-----------------------------------------------
+Video: Numbers and other types
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:04            -> dates - DATE type <- timestamp, date, datetime; timestamp records the time the database was updated 
+
+0:00:32            -> integers, floating numbers -> there are different types of numbers, and we have to choose the most appropriate one for the context 
+
+0:01:09            -> phone numbers <- stored as characters rather than numbers 
+
+0:01:25            -> there is also geographic data 
+
+0:01:59            -> for descriptions, longer fields -> SQL server 
+
+0:02:19            -> NULL <- there is no data there 
+
+0:02:30            -> instead of FALSE, it's NULL 
+
+0:02:39            -> NULL or NOT NULL            
+
+0:03:13            -> NULL means nothing is there, if it contains NULL then it contains a value so it's NOT NULL 
+
+
+-----------------------------------------------
+Video: Primary and foreign keys
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:17            -> look for keys, or make them -> what you use to label the data 
+
+0:00:26            -> e.g the xth data            
+
+0:01:04            -> some customers can share the same information -> so you add customer ID -> PK is the primary key, AI means auto increment it 
+
+0:01:13            -> UUID -> more secure than an integer key -> universally-unique identifier 
+
+0:01:34            -> the keys need to take a specific format, for example TablenameID 
+
+0:01:47            -> TablenamePK (PK is primary key) 
+
+0:02:02            -> some dishes on menus contain unique names for instance, so add a synthetic name there 
+
+0:02:12            -> events and order IDs        
+
+0:02:30            -> composite keys -> use more than one field to identify a record -> e.g phone, first and surname 
+
+
+***********************************************
+Chapter: 3. Relationships
+***********************************************
+
+
+-----------------------------------------------
+Video: Creating relationships
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:12            -> connecting pieces of data   
+
+0:00:38            -> one to many, many to many, one to one relationships 
+
+
+-----------------------------------------------
+Video: One-to-many relationships
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:07            -> one to many relationships -> most common, one piece of data in one table to many in another <- creating them by hand is tedious -> so we use the key 
+
+0:01:38            -> using the keys -> one dish can be the favourite of many customers 
+
+0:01:59            -> one to many same thing as many to one, they just go in different directions 
+
+0:02:29            -> another example is the number of reservations per one customer 
+
+
+-----------------------------------------------
+Video: Many-to-many relationships
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:10            -> many-to-many <- orders and dishes, many orders can contain the same dish and the same dish can be contained in many orders 
+
+0:01:55            -> there is a linking table -> combining the table with one of the variables and another table with another side which you're comparing it to (forming relations with) 
+
+0:02:34            -> linking tables -> you can have multiple ones (for instance allergens, customers events etc) 
+
+0:03:03            -> many:many relations -> these are 1:many relationships with linking tables 
+
+
+-----------------------------------------------
+Video: One-to-one relationships
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:05            -> it's an iterative process   
+
+0:00:30            -> if two rows have 1:1 relations it might imply they can be the same rows 
+
+0:00:43            -> e.g for security            
+
+0:01:07            -> another example is for assigning resources from a table of them -> one person gets one iPad 
+
+
+-----------------------------------------------
+Video: Relationship rules and referential integrity
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:00            -> 1:1 are shown by one line from one row in one table to another row in another table 
+
+0:01:16            -> referential integrity -> the database is aware of the relationships and stops people from changing the database in a way which violates the relationships -> if we have one value it might not let them add the related variable (for instance a most liked dish needs to be on the menu) 
+
+0:02:08            -> this can be used to stop records from being deleted -> the database can perform a cascading delete -> the orders are deleted along with the customer when they are deleted -> but the dish they liked wouldn't be removed from the menu 
+
+
+***********************************************
+Chapter: 4. Database Optimization
+***********************************************
+
+
+-----------------------------------------------
+Video: Normalization
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:05            -> context dependent           
+
+0:00:33            -> normalisation rules -> first, second and third normal form -> 1NF, 2NF, 3NF 
+
+0:00:58            -> it's like an iterative process and through each stage it's normalised to that form -> normalise all the way up to third normal form 
+
+
+-----------------------------------------------
+Video: First normal form
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:22            -> they might need normalising again if the schema (plan/ outline) changes 
+
+0:01:17            -> first normal form - cells are atomic, tables don't repeat -> so there are no duplicates, and the number of rows and columns don't matter -> repeating groups mean each customer can't have three most liked dishes, and each cell has to have one cell <- it's formatting the table (database) -> and the different tables we have are linked 
+
+0:01:47            -> the entire thought process is, for this context, how which information do we have -> then cleaning it and putting it into the same format 
+
+0:02:36            -> 1NF can also add keys to differentiate between repeated values -> sequence of rows/ columns doesn't matter 
+
+
+-----------------------------------------------
+Video: Second normal form
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:25            -> second normal form -> on values depends on a key which can be used to rep the row - 
+
+0:00:27            -> second normal form -> on values depends on a key which can be used to rep the row 
+
+
+-----------------------------------------------
+Video: Third normal form
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:04            -> this is in case we have composite keys -> keys which are made of multiple variables -> e.g the name and the date 
+
+0:00:06            -> sometimes two pieces of information (and event name and where it is held) are in multiple rows 
+
+0:00:41            -> third normal form means we shouldn't be able to figure out the row the data is on if the information we're using to identify it isn't a key 
+
+0:01:29            -> if we store lunch price in every column -> we're wasting data because we could store that information in another table 
+
+0:02:07            -> the data needs to be unique, and in the most basic form possible 
+
+0:02:18            -> so the database has low duplication 
+
+
+-----------------------------------------------
+Video: Denormalization
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:13            -> there is a gain in speed for a reduction in consistency 
+
+0:00:28            -> denormalisation -> you deliberately duplicate information in tables, which is done after the normalisation of it 
+
+0:00:35            -> normalising -> so all of the databases not look the same, but have the same common format 
+
+0:01:28            -> for instance if information in the database was changed and not updated in a different column 
+
+0:01:44            -> the server can be overloaded if it's slow or there are a lot of requests -> so we record the quantity and time when the orders are made 
+
+
+***********************************************
+Chapter: 5. Querying a Database
+***********************************************
+
+
+-----------------------------------------------
+Video: Creating a database
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:14            -> plan, design and normalise the database -> then create it 
+
+0:00:55            -> to create the database -> SQL / use software -> SQL structured query language (language use to create the database, change its values), DDL - data definition language (to put data into the tables), DML (data manipulation language (to change the data put into the table) 
+
+
+-----------------------------------------------
+Video: Creating tables
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:13            -> DBMS <- software for the database 
+
+0:01:54            -> creating database example -> CREATE TABLE -> is doing an example in SQL, stores the customer ID -> which means for every row added to the database a new number is added, VARCHAR (the variable is input with a variable number of characters, but up to a max), there are certain name requirements, NOT NULL -> data which has to be entered into the database (e.g phone) 
+
+
+-----------------------------------------------
+Video: Writing SQL queries
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:00            -> DishID in this example is a foreign key, which compares an item in the menu to an item in this database (this is relational) 
+
+0:00:25            -> manipulating data in the database with SQL -> queries, return information which are asked for 
+
+0:02:03            -> SELECT * <- * is a wildcard, meaning search over all the possible values in the table (in real life this is looking over large databases and inefficient), FROM Customers -> so we have SELECT * FROM Customers <- returns a list of all the customers -> can change Customers to other values (Dishes, which returns the menu items) 
+
+
+-----------------------------------------------
+Video: Narrowing query results
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:01            -> you can also change the system to take LastName, Email, etc FROM customers -> it's like in Python from ... import 
+
+0:00:15            -> SELECT <- to find specific rows in the table 
+
+0:00:26            -> asking for specific rows in the table -> where clause, to search for ones which satisfy specific criteria 
+
+0:02:17            -> SELECT .... FROM Customers WHERE ... <- the where clause decreases the amount of results returned, can also add OR, or LIKE "C%" e.g <- the C% returns ones which start with C and end in something else 
+
+0:03:17            -> SELECT * FROM Reservations WHERE ... AND .... <- returns all of the items in reservations table, and can ask it for data which satisfies specific conditions (for instance the time) 
+
+
+-----------------------------------------------
+Video: Sorting results
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:57            -> returning data in alphabetical order SELECT * FROM Dishes ORDER BY 'Name' ASC (or DESC); <- take everything (*) from the dishes column (essentially all of the items in the menu) and order them in ascending order 
+
+
+-----------------------------------------------
+Video: Aggregate functions
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:06            -> you can sort them by price, order dates of the reservations, WHERE ... AND ...  ORDER BY ... 
+
+0:01:13            -> aggregate functions -> more than one piece of data to generate a value (e.g count) -> SELECT COUNT(Firstname) FROM Customers <- it's counting the number of first names in the database, and we know that because of the rules each customer has to contain a first name in the database 
+
+0:02:29            -> SELECT SUM(Price) FROM Dishes; <- the sum of the prices of all of the dishes, can also AVE(Price), MIN(Price), MAX(Price) <- can use those in subqueries 
+
+
+-----------------------------------------------
+Video: Joining tables
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:20            -> joining tables -> i.e connecting tables -> if the customer has a favourite dish, but that dish in the table is coded as a number corresponding to a key -> can insert the name of the dish where the number is. To do this, JOIN Dishes ON Customers.FavouriteDish; <- and you need to add SELECT Dishes. 'Name' (all of the right information has to be selected) 
+
+0:02:55            -> SELECT * FROM Reservations; <- selects all of the reservations -> with the customer IDS there, we want to replace the number of the ID with the name of the customer -> the importance of being selective with which information we extract from the database and which we don't 
+
+0:03:09            -> SQL is like data extraction from tables 
+
+
+-----------------------------------------------
+Video: Modifying data
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:12            -> SQL can modify data from table (CRUD = Create Update Delete), INSERT INTO Customers(FirstName, LastName...) // VALUES ("....","..."...) <- to add a new customer to the database, we INSERT INTO the parameters, then type them in the next line in coordinates 
+
+0:01:39            -> there are two examples of customers who have the same name -> which he's extracted from SELECT * FROM Customers WHERE FirstName="" AND LastName="..."  <- change WHERE to CustomerID=1, then have the customer whose name is repeated which we want. UPDATE Customers SET Email = "...." WHERE .... 
+
+0:02:04            -> NULL in the table where we're missing information 
+
+0:03:02            -> he's changed the email while we have the specific customer already selected (but when he's writing the code to change the email he's deleted all of the code which came before it selecting that customer in the first place) -> and being careful to select that customer and not all of them 
+
+0:03:50            -> deleting rows from tables -> deleting one of the repeated customers -> being careful to delete the right one -> DELETE FROM Customers WHERE CustomerID=26 <- deletes the customer with customer ID = 26, so we first instruct it to delete from customers, then where exactly from in customers (not both of the repeated customers) 
+
+0:04:06            -> you can cascading delete the customer across all databases, but you have to delete the right data  
+
+
+***********************************************
+Chapter: 6. Further Database Topics
+***********************************************
+
+
+-----------------------------------------------
+Video: Indexes, transactions, and stored procedures
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:15            -> DBMS tools can do indexes, transactions and stored procedures -> it's getting the code to look up values (by hand this would be tedious), using indexes to look them up -> but sometimes you can delete the indexes if it makes the database smaller/ faster 
+
+0:01:28            -> the queries can't cause integrity problems with the database -> transactions group it into a set of activities 
+
+0:01:42            -> transactions are a set of conditions, all of which have to be satisfied for the operation to be carried out (so the database won't be half complete if something goes wrong) 
+
+
+-----------------------------------------------
+Video: Access control, compliance, and injection
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:01            -> stored procedures -> it's like inbuilt functions, you save procedures you already use -> it's like defined functions in python which you can reuse -> sometimes they only let you interact with the database through the stored procedures, so as to stop the ones by hand messing it up 
+
+0:00:52            -> security for simple databases -> access control mechanisms -> control over who can access certain information and who can't -> some user can create and delete data, but not change the structure/ schema of it 
+
+0:01:23            -> PII = personally identifiable information -> aka, there are laws controlling the data (GDPR) 
+
+0:02:26            -> SQL injection -> an attack where part of SQL commands which we think we're running are changed -> this is where values are entered which are parts of an SQL command -> when the hackers enter the first and last name, e.g the last name of the person is entered by the hacker as SQL code -> which deletes the customers column 
+
+0:02:40            -> design of access control, best practices, safety features, processing of data 
+
+0:02:48            -> SQL injection -> the hacker sends the last name of the person as an entire line of SQL which deletes the customers collunm 
+
+
+-----------------------------------------------
+Video: Software options
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:03            -> "sequel" not "SQL"          
+
+0:00:14            -> i.e consider security in the creation/ management of databases 
+
+0:00:40            -> there are different software can use to manage databases -> some give graphical interfaces and some text consoles where SQL is written 
+
+0:00:59            -> desktop databases -> not on a server (for smaller databases) 
+
+0:01:31            -> enterprise databases -> for larger businesses/ multiple people/ clients can access them 
+
+0:02:09            -> there are some software for large and small datasets (the software you use depends on the size of the database, e.g Big Data etc) 
+
+0:02:33            -> NoSQL -> not only SQL databases -> this is for data which doesn't have relational tables 
+
+
+***********************************************
+Chapter: Conclusion
+***********************************************
+
+
+-----------------------------------------------
+Video: Next steps
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:12            -> plan/ diagram/ normalise/ query databases 
+
+0:00:38            -> further suggested steps are -> learning SQL (coding language for databases) 
+
